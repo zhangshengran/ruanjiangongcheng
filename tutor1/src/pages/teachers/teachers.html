@@ -1,0 +1,44 @@
+<!--
+  Generated template for the TeachersPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <div class="teachs">
+        <ion-icon name="ios-arrow-back-outline" class="teachs1" (click)="goback4()"></ion-icon>
+        <p class="teachs2">教师简介</p>
+    </div>
+</ion-header>
+
+<ion-content>
+  <div style="width: 94%;background-color: white !important;margin-left: 3%;margin-top: 16px;">
+    <div class="teachs3">
+        <ion-item>
+        <ion-avatar item-start> 
+          <img src="assets/imgs/img1.png">
+        </ion-avatar>
+          <p>李其林&nbsp;&nbsp;&nbsp;&nbsp;<span>男</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>18岁</span></p>
+          <p>教授科目：数学</p>
+          <p>现就读于xxxx学校xxxx专业</p>
+          <p>现读大二</p>
+        </ion-item>
+    </div>
+    <div class="teachs4">
+        <button style="width: 80px;height: 30px;" (click)="gotalk()">联系教师</button>
+    </div>
+  </div>
+    <div class="teachs5">
+        <input type="text" placeholder="我现就读于xxx大学xxx专业">
+    </div>
+  <div >
+    <p>&nbsp;&nbsp;教师风采：</p>
+    <div class="teachs6">
+        <img src="assets/imgs/img1.png" >
+      </div>
+      <div class="teachs6"> 
+        <img src="assets/imgs/img1.png" >
+      </div>
+    </div>
+      <button style="width: 180px;height: 30px; margin: 30px 25% 0 25%;background-color:#FFA500; "  (click)="godingdan()">直接下单</button>
+</ion-content>

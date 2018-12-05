@@ -1,0 +1,61 @@
+page-openlesson {
+    .scroll-content{
+        padding:0px!important;
+        margin:0px;
+    } 
+    .navList{   /*上方列表*/
+        width:100%;
+        padding-left:0px!important;
+        height:55px;
+        margin:0;
+        font-size:16px;
+        .first{ 
+             border-bottom:3px solid rgb(96,117,236);
+            }
+            li{
+                float:left;
+                height:50px;
+                width:50%;
+                button{
+                    padding:0;
+                    margin:0;
+                    width:100%;
+                    height:50px;
+                    color:black;
+                    border-radius:5px;
+                    span{
+                        height:50px;
+                        line-height:50px;
+                    }
+                }
+            }
+    }
+    .content1{  /*下方内容*/
+        width:100%;
+        margin-top:10px;
+        font-size:14px;
+        color:rgb(77,80,69);
+        ul{
+            padding:0;
+            margin:0;
+            .lis{
+                border-bottom:2px solid rgb(213,213,213);
+                padding:0 5%;
+                .p1{
+                    height:20px;
+                    margin:3px 0 10px 0;
+                }
+                .p2{
+                    height:20px;
+                    margin:8px 0 20px 0;
+                    .span-left{
+                        float:left;
+                    }
+                    .span-right{
+                        float:right;
+                    }
+                }
+            }
+        }
+    }
+}

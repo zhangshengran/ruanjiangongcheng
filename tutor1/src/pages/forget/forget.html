@@ -1,0 +1,41 @@
+
+<ion-content>
+  <div class="fg1">
+      <ion-icon name="ios-arrow-back-outline" class="fg1-1" (click)="goback()"></ion-icon>
+      <p class="fg1-2">找回密码</p>
+  </div>
+  <div class="fg2">
+    <div class="fg2-3">
+      <ion-item class="fg2-0">
+        <ion-icon name="ios-phone-portrait" item-start></ion-icon>
+        <ion-input type="number" placeholder="请输入手机号"></ion-input>
+      </ion-item>
+    </div>
+    <div class="fg2-3">
+      <ion-item class="fg2-1">
+          <ion-icon name="ios-leaf" item-start></ion-icon>
+          <ion-input type="number" placeholder="请输入验证码"></ion-input>
+      </ion-item> 
+      <p class="fgbut">
+          <button class="button button-light">获 取<span>(10)</span></button>
+      </p>
+    </div>
+    <div class="fg2-3">
+      <ion-item class="fg2-2">
+          <ion-icon name="ios-key" item-start></ion-icon>
+          <ion-input type="number" placeholder="请输入密码"></ion-input>
+      </ion-item>
+    </div>
+    <div class="fg2-3">
+      <ion-item >
+          <ion-icon name="ios-key" item-start></ion-icon>
+          <ion-input type="number" placeholder="请确认密码"></ion-input>
+      </ion-item>
+    </div>
+      <div class="fgbut1">
+        <button class="button button-light" (click)="gologin()">确认修改密码</button>
+      </div>
+  </div>
+    
+
+</ion-content>

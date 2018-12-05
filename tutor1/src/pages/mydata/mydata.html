@@ -1,0 +1,82 @@
+<ion-header>
+    <div class="mdfshead">
+        <ion-icon name="ios-arrow-back-outline" class="mdfshead1" (click)="goback()"></ion-icon>
+        <p class="mdfshead2">个人信息</p>
+      </div>
+</ion-header>
+
+<ion-content>
+  <div class="mdfscon">
+    <ion-list >
+      <ion-item >
+        <ion-label>教师姓名:</ion-label>
+        <ion-input type="text" placeholder="2-4个汉字"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label>教师年龄:</ion-label>
+        <ion-input type="number" placeholder="请填写"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label>教师性别:</ion-label>
+        <ion-input type="text" placeholder="请填写"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label>教师教龄:</ion-label>
+        <ion-input type="number" placeholder="请填写"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label>邮  箱:</ion-label>
+        <ion-input type="text" placeholder="请正确填写"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label>教学年级:</ion-label>
+        <ion-label class="checkbox">
+          小学 &nbsp;<input type="checkbox" class="check1">
+        </ion-label>
+        <ion-label class="checkbox">
+          初中 &nbsp;<input type="checkbox">
+        </ion-label>
+        <ion-label class="checkbox">
+          高中 &nbsp;<input type="checkbox" >
+        </ion-label>
+      </ion-item>
+      <ion-item >
+        <ion-label>教学科目:</ion-label>
+        <ion-input type="number" placeholder="请填写"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label>现读学校:</ion-label>
+        <ion-input type="number" placeholder="请填写"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label>现读专业:</ion-label>
+        <ion-input type="number" placeholder="请填写"></ion-input>
+      </ion-item>
+      <ion-item style="width:100%">
+          <ion-label class="check1">年级:</ion-label>
+          <ion-label class="checkbox">
+            大一 &nbsp;<input type="checkbox" >
+          </ion-label>
+          <ion-label class="checkbox">
+            大二 &nbsp;<input type="checkbox">
+          </ion-label>
+          <ion-label class="checkbox">
+            大三 &nbsp;<input type="checkbox">\n
+          </ion-label>
+          <ion-label class="checkbox">
+            大四 &nbsp;<input type="checkbox">
+          </ion-label>
+      </ion-item>
+      <ion-item >
+        <ion-label>备  注:</ion-label>
+        <ion-label class="textarea1">
+          <textarea placeholder="Comments"></textarea>
+        </ion-label>
+        
+      </ion-item>
+    </ion-list>
+  </div>
+  <div class="mdfscon1">
+    <button class="button button-light" (click)="goback()">确认修改</button>
+  </div>
+</ion-content>

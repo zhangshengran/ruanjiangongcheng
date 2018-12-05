@@ -1,0 +1,104 @@
+
+<!-- <ion-content>
+    <div class="mycon">
+        <div class="mycondata" (click)="godata(1)">
+            <span class="mycondata1">
+                个人资料
+            </span>
+            <span class="mycondata2">
+                    <ion-icon name="ios-arrow-forward" ></ion-icon>
+            </span>
+        </div>
+        <hr>
+        <div class="myconcourse" (click)="gocourse()">
+            <span class="myconcourse1">
+                我的课程
+            </span>
+            <span class="myconcourse2">
+                <ion-icon name="ios-arrow-forward" ></ion-icon>
+            </span>
+        </div>
+        <hr>
+        <div class="myconprove" (click)="goprove()">
+            <span class="myconprove1">
+                认证管理
+            </span>
+            <span class="myconprove2">
+                <ion-icon name="ios-arrow-forward" ></ion-icon>
+            </span>
+        </div>
+        <hr>
+        <div class="mycontalk" (click)="gotalk()">
+            <span class="mycontalk1">
+                评价管理
+            </span>
+            <span class="mycontalk2">
+                <ion-icon name="ios-arrow-forward" ></ion-icon>
+            </span>
+        </div>
+        <hr>
+        <div class="myconsetting" (click)="gosetting()">
+            <span class="myconsetting1">
+                设置
+            </span>
+            <span class="myconsetting2" >
+                <ion-icon name="ios-arrow-forward" ></ion-icon>
+            </span>
+        </div>
+    </div>
+</ion-content> -->
+<ion-content>
+        <div class="myhead" >
+            <div class="myhead1">
+                <img src="../assets/imgs/myhead.png" alt="头像" width="20%" height="20%">
+            </div>
+            <div class="myhead2">
+                张 宁
+            </div>
+        </div>
+        <div class="e">
+            <ion-card (click)="godata(1)"> 
+                <div class="a">
+                    <p>
+                    <ion-icon class="e-1" md="md-albums"></ion-icon>
+                    </p>
+                    <p class="e-2">个人资料</p>
+                </div>
+            </ion-card>
+            <ion-card (click)="gocourse()">
+                <div class="a">
+                    <p>
+                        <ion-icon class="e-1" name="book"></ion-icon>
+                      </p>
+                      <p class="e-2">我的课程</p>
+                </div>
+            </ion-card>
+            <ion-card (click)="goprove()">
+                <div class="a">
+                    <p>
+                        <ion-icon class="e-1" md="md-bookmark"></ion-icon>
+                    </p>
+                    <p class="e-2">认证管理</p>
+                </div>
+            </ion-card>
+            <ion-card (click)="gotalk()">
+                <div class="a">
+                    <p>
+                        <ion-icon class="e-1" ios="ios-clipboard" md="md-clipboard"></ion-icon>
+                    </p>
+                    <p class="e-2">评价管理</p>
+                </div>
+            </ion-card>
+        </div>
+        <div class="setting" (click)="gosetting()">
+            <ion-card >
+                <div class="setting1">
+                    <p>
+                        <ion-icon class="setting2" ios="ios-cog" md="md-cog"></ion-icon>
+                    </p>
+                    <p class="e-2">设置</p>
+                </div>
+            </ion-card>
+        </div>
+</ion-content>
+  

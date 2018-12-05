@@ -1,0 +1,42 @@
+<!--
+  Generated template for the AffirmPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar  color="orange">
+      <ion-title>
+         订单详情
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class="top">
+        <div class="img"><img src="../../assets/imgs/mine2.png"/></div>   <!--头像-->
+        <div class="jianjie">   <!--简介-->
+            <p>
+              <span>{{item?.name}}张宁</span>  
+              <span>{{item?.sex}}男</span>
+              <span>{{item?.age}}18岁</span>   
+            </p>
+            <p class="p1">
+                <span>擅长于：xxxx{{item?.techang}}</span>
+            </p>
+            <p>
+                <span>现读于{{item?.school}}xxxx学校{{item?.zhuanye}}xxxx专业</span> 
+            </p>
+        </div>
+        <button ion-button color="orange" (click)="gotalk()">联系教师</button>
+      </div>
+      <div class="middle">
+        <p class="p1">上课时间：{{item?.classtime}}</p>
+        <p>上课地址：{{item?.address}}</p>
+        <p class="p1">下单时间：{{item?.time}}</p>
+        <p>订单编号：{{item?.number}}</p>
+      </div>
+      <div class="bottom">
+          <button ion-button color="orange">已下单</button>
+      </div>
+
+</ion-content>

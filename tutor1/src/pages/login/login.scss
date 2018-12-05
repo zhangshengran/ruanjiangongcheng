@@ -1,0 +1,127 @@
+page-login {
+    ion-content{
+        background-repeat: repeat-x,repeat-y;
+        background: url(../assets/imgs/loginbg1.jpg);
+        background-size: cover;
+        .title1{
+            .ta{
+                font-size: 300%;
+                color: black;
+                margin-top: 70px;
+                font-family: "幼圆";
+                text-align: center;
+            }
+            .tb{
+                font-size: 100%;
+                color: black;
+                font-weight: 100;
+                text-align: center;
+            }
+
+        }
+        .loginList{
+            //background-color: #ffdb2c;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            .login{
+                //background-color: #fff;
+                margin: 0 auto;
+                width: 20%;
+                border-bottom:2px solid #ffdb2c;
+            }
+            .logina{
+                //background-color: #fff;
+                margin: 0 auto;
+                width: 20%;
+                border-bottom:2px solid #ffdb2c;
+            }
+            li{
+                padding: 0 ;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+                height: 44px;
+                width: 20%;
+                font-size: 120%;
+            }
+        }
+
+
+        .login1{
+            text-align: center;
+            float: center;
+            margin-top: 10%;
+            ion-item{
+                .input-cover{
+                    position: static;
+                }
+                background: transparent;
+                //float: left;
+                margin: 0 auto;
+                width: 80%;
+                // border: 0.6px solid #878c8e;
+                ion-icon{
+                    color:#878c8e;
+                }
+                input::-webkit-input-placeholder {
+                    color: #878c8e;
+                    font-size: 14px;
+                    opacity: 0.7;
+                }
+            }
+            .login2-2{
+                display: flex;
+                margin: 0 auto;
+                flex-direction: row;
+                width: 85%;
+                .login2-1{
+                    width: 60%;
+                }
+                .lgbut{
+                    float: left;
+                    width: 20%;
+                    button{
+                        opacity: 0.7;
+                        width: 100%;
+                        height: 40px;
+                        font-size: 10px;
+                        background-color: #fff;
+                        border:1px solid #878c8e;
+                        border-radius: 5px;
+                        span{
+                        font-size: 8px;
+                        }
+                    } 
+                }
+            }   
+        }
+        .login3{
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            position: relative;
+            width: 80%;
+            background-color: #ffdb2c;
+            height: 50%;
+            margin-top: 10%;
+            p{
+                color: white;
+                font-size: 16px;
+            }
+        }
+        .login6{
+            display: flex;
+            justify-content: center;
+            margin-top: 5%;
+            text-align: center;
+            font-size: 60%;
+            p{
+                color: #878c8e;
+                text-decoration: none;
+            }
+            
+        }
+    }
+}

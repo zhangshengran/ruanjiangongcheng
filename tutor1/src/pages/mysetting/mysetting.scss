@@ -1,0 +1,53 @@
+page-mysetting {
+    ion-content{
+        background-color: rgb(250,250,250)!important;
+        .set{
+            margin: 5% 0px -20px 0px;
+            width: 100%;
+            height: 70px;
+            .setlogo{
+                font-size: 26px;
+                float: left;
+                color: #383838;
+                margin-left: 10px;
+                margin-top: 8px;
+            }
+            .seta{
+                font-size: 16px;
+                float: left;
+                color: #383838;
+                margin-top: 10px;
+                margin-left: 5%;
+            }
+            .setb{
+                color: #383838;
+                font-size: 16px;
+                float: right;
+                margin-right: 10px;
+                margin-top: 10px;
+            }
+            .setd{
+                color: #383838;
+                font-size: 24px;
+                float: right;
+                margin-right: 10px;
+                margin-top: 10px;
+            }
+
+        }
+        .setc{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10%;
+            height: 6%;
+            button{
+                width: 70%;
+                background-color: #ffb006;
+                font-size: 16px;
+                border-radius: 15px;
+                height: 100%;
+            }
+        }
+    }
+}
