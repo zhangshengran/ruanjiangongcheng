@@ -1,0 +1,48 @@
+<ion-header>
+  <div class="mprohead">
+      <ion-icon name="ios-arrow-back-outline" class="mprohead1" (click)="goback()"></ion-icon>
+      <p class="mprohead2">教师认证</p>
+    </div>
+</ion-header>
+<ion-content>
+  <div class="mprocon">
+    <p>&nbsp;&nbsp;&nbsp; 学历认证:</p>
+    <div class="mprocon1">
+      <button>请上传学历照片</button>
+    </div>
+  </div>
+  <div class="mprocon">
+    <p>&nbsp;&nbsp;&nbsp; 教师资格证认证:</p>
+    <div class="mprocon1">
+      <button>请上传教师资格证照片</button>
+    </div>
+  </div>
+  <div class="mprocon">
+    <p>&nbsp;&nbsp;&nbsp; 实名认证:</p>
+    <ion-list>
+      <ion-item>
+        <ion-label>真实姓名:</ion-label>
+        <ion-input type="text" placeholder="2-4个汉字"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>身份证号码:</ion-label>
+        <ion-input type="text" placeholder="2-4个汉字"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div class="mprocon1">
+      <button>请上传身份证证照片</button>
+    </div>
+  </div>
+  <div class="mprocon3">
+    <p>请参照以下形式进行拍照:</p>
+    <span>
+      <img src="../assets/imgs/mpro1.jpg" alt="" style="width:49%;">
+    </span>
+    <span>
+      <img src="../assets/imgs/mpro2.jpg" alt="" style="width:49%;">
+    </span>
+  </div>
+  <div class="mprocon2">
+    <button class="button button-light" (click)="tijiao()">提交</button>
+  </div>
+</ion-content>

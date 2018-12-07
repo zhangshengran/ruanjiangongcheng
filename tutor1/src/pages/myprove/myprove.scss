@@ -1,0 +1,85 @@
+page-myprove {
+    ion-header{
+        .mprohead{
+            display: flex;
+            width: 100%;
+            height: 50px;
+            background-color: #00adb5;
+            .mprohead1{
+                width: 20%;
+                font-size: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .mprohead2{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 18px;
+                color: #fff;
+                width: 60%;
+            }
+        }
+    }
+    ion-content{
+        background-color: rgb(245,245,245)!important;
+        .mprocon{
+            ion-list{
+                ion-item{
+                    background: transparent;
+                    .input-cover{
+                        position: static;
+                    }
+                    input::-webkit-input-placeholder {
+                        color: #878c8e;
+                        font-size: 12px;
+                        opacity: 0.4;
+                    }
+                    ion-label{
+                        font-size: 14px;
+                    }
+                }
+            }
+            .mprocon1{
+                width: 90%;
+                height:130px;
+                background-color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+                border:1px solid #878c8e; 
+                button{
+                    border: 1px solid #eee;
+                    background-color: #fff;
+                    height: 40%;
+                    width: 50%;
+                }
+            }
+        }
+        .mprocon2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            margin-bottom: 20%;
+            margin-top: 5%;
+            .input-cover{
+                position: static;
+            }
+            button{
+                margin-top: 10%;
+                width: 50%;
+                height: 100%;
+                border-radius: 20px;
+                background-color: #ffb006;
+            }
+        }
+        .mprocon3{
+            p{
+                text-align: center;
+            }
+        }
+    }
+}

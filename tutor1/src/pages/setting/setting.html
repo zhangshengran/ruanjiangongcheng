@@ -1,0 +1,40 @@
+<ion-header text-center no-border>
+    <ion-navbar color="setnav">
+      <ion-title>
+        设置
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only>
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding >
+  <div class="set"> 
+    <p>
+      <ion-icon ios="ios-warning" md="md-warning" class="setlogo"></ion-icon>
+      <span class="seta">清除缓存</span>
+      <span class="setb">666.6KB</span>
+    </p>
+  </div>
+  <div class="set">
+      <p>
+          <ion-icon ios="logo-reddit" md="logo-reddit" class="setlogo"></ion-icon>
+          <span class="seta">关于我们</span>
+          <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward" class="setb"></ion-icon>
+        </p>
+  </div>
+  <div class="set">
+      <p>
+          <ion-icon ios="ios-information-circle-outline" md="md-information-circle" class="setlogo"></ion-icon>
+          <span class="seta">版本信息</span>
+          <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward" class="setb"></ion-icon>
+        </p>
+  </div>
+  <div class="setc">
+    <p (click)="gologinPage()">退出登录</p>
+  </div>
+</ion-content>

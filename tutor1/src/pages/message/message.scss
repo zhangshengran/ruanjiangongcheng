@@ -1,0 +1,56 @@
+page-message {
+    .scroll-content{
+        padding:0px!important;
+        margin:0px;
+    }
+    ion-title{
+        text-align:center;
+    }
+    ion-content{
+        width:100%;
+        height:100%;
+        .navList{
+            padding:0;
+            margin:0;
+            height:100%;
+        li{
+            float:left;
+            border-bottom:2px solid rgb(212,212,212);
+            width:100%;
+            height:12.5%;
+            img{
+                float:left;
+                width:15%;
+                border-radius:50%;
+                margin-left:3%;
+                padding:1% 0;
+           }
+           .middle{
+               float:left;
+               margin-left:3%;
+               padding:1% 0;
+               p{
+                   margin:0; padding:0;
+                   color:rgb(136,136,136);
+               }
+               .p1{
+                   margin-bottom:15%; //相对于父元素middle的宽度
+                   font-size:18px;
+                   font-weight:600;
+                   color:black;
+             }
+           }
+           .right{
+               float:right;
+               width:15%;
+               padding:2% 0;
+               p{
+                   margin:0;
+                   color:rgb(136,136,136);
+                }
+           }
+        }
+    }
+    }
+
+}
