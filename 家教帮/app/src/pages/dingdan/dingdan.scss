@@ -1,0 +1,71 @@
+page-dingdan {
+    .scroll-content{
+        padding:0px!important;
+        margin:0px;
+    }
+    ion-title{   
+        padding-right:48px;  /*返回按钮为48px*/
+        text-align:center;
+    }
+    ion-content{
+        width:100%;
+        .top{
+            height:19%;
+            margin-top:20px;
+            padding:0 5%;
+            width:100%;
+            .img{
+                float:left;
+                width:23%;
+                margin-right:4%;
+                img{
+                    border-radius:50%;
+                }
+            }
+            .jianjie{
+                width:55%;
+                float:left;
+                .p1{
+                    margin:5% 0;  /*margin百分比的属性相对于父元素的宽度*/
+                }
+                p{
+                    margin:0;
+                }
+            }
+            button{
+                float:left;
+                width:18%;
+                margin:0;
+                padding:0;
+                text-align:center;
+                margin-top:5%;
+                height:30px;
+                // border-radius:10%;
+                color:black;
+                font-size:13px;
+                background-color: #fafafa;
+            }
+        }
+        .middle{
+            padding:0 8%;
+            ion-input{
+                border:2px solid rgb(222,222,222);
+                .text-input{
+                    margin:10px 8px;
+                }
+            }
+        }
+        .bottom{
+            margin-top:20%;  //margin-top和bottom父元素宽度的20%
+            button{
+                padding:0;
+                margin:0 10%!important; //margin-left right相对于父元素的宽度
+                width:80%!important;
+                color:white!important;
+                background-color: #00adb5;
+                // border-radius:5%;
+            }
+        }
+
+    }
+}

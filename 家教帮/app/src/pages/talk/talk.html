@@ -1,0 +1,52 @@
+<!--
+  Generated template for the TalkPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--发送消息和表情能实现-->
+<ion-header>
+
+  <ion-navbar color="setnav" >
+    <ion-title >{{touser.username}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<div >
+  <ion-icon name="ios-arrow-back-outline" class="myclass1" (click)="goback1()"></ion-icon>
+  <p class="myclass2">我的课件</p>
+  <button ion-button round small class="nav1">上传</button>
+</div>
+
+<ion-content>
+    <div *ngFor="let message of messages" class="messages">
+        <!-- 判断被发送人消息是否发送 ，根据true和false决定两个div哪个显现-->
+        <div *ngIf="touser.id === message.userId">
+          <img class="pic-left" [src]="touser.pic"/>
+          <div class="bubble left">  
+            <div class="message" [innerHTML]="message.text"> </div>
+          </div>
+          <div class="c"></div>   <!--避免下一行的元素在上一行堆积-->
+        </div>
+    
+        <!-- 判断发送人消息是否发送 ，根据true和false决定两个div哪个显现-->
+        <div *ngIf="user.id === message.userId">
+          <img  class="pic-right" [src]="user.pic"/>
+          <div class="bubble right ">
+            <div class="message" [innerHTML]="message.text"></div>
+          </div>
+        </div>
+        <div class="c"></div>
+    </div>
+    <div id="a">     <!--在ion-content中添加，才能显示滚动条-->      
+    </div>
+</ion-content>
+
+<!-- 底部固定的内容 -->
+
+<ion-footer>
+  
+        <ion-input id="input" [(ngModel)]="txt" placeholder="请输入内容" [ngModelOptions]="{standalone: true}"></ion-input>
+        <span><ion-icon name="md-happy" id="face"></ion-icon></span>  <!--表情-->
+        <button ion-button  (click)="send(txt)" style="height:30px;" color="setnav">发送</button>  <!--点击发送按钮可以发送数据-->
+</ion-footer>

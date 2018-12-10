@@ -1,0 +1,43 @@
+<!--
+  Generated template for the TeachersPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="setnav" >
+      <ion-title>教师简介</ion-title>
+  </ion-navbar>  
+</ion-header>
+
+<ion-content>
+<div style="width: 94%;background-color: white !important;margin-left: 3%;margin-top: 16px;">
+  <div class="teachs3">
+      <ion-item>
+      <ion-avatar item-start> 
+        <img src="assets/imgs/img3-1.png">
+      </ion-avatar>
+        <p>{{tea_content?.tea_name}}&nbsp;&nbsp;&nbsp;&nbsp;<span>{{tea_content?.tea_sex}}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>{{tea_content?.tea_age}}岁</span></p>
+        <p>教授科目：{{tea_content?.stu_grade+tea_content?.stu_courses}}</p>
+        <p>学校：{{tea_content?.tea_school}}</p>
+        <p>专业：{{tea_content?.tea_major}}</p>
+        <p>学历：{{tea_content?.tea_grade}}</p>
+      </ion-item>
+  </div>
+  <div class="teachs4">
+      <button style="width: 80px;height: 30px;background-color: #fafafa" (click)="gotalk()">联系教师</button>
+  </div>
+</div>
+  <div style="width:100%;text-align: center;color:#00adb5;font-size:20px;margin-top:15px;"><span>--简历--</span></div>
+  <div class="teachs5">
+      <p>{{tea_content?.remark}}</p>
+  </div>
+<div >
+  <div style="width:100%;text-align: center;color:#00adb5;font-size:20px;margin-top:5px;"><span>--教师风采--</span></div>
+  <div class="teachs6"style="margin-top:20px;">
+      <img style="margin-left:-20px"src="assets/imgs/img1.png" >
+      <img src="assets/imgs/img1.png" >
+    </div>
+  </div>
+    <button  ion-button block style="background-color: #00adb5;width:40%;margin-left:30%;color:white;"(click)="godingdan()">直接下单</button>
+</ion-content>

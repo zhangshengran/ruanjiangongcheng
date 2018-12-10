@@ -1,0 +1,79 @@
+page-mydata {
+    ion-header{
+        ion-title{
+            text-align:center; 
+            padding-right:48px;  /*返回按钮为48px*/
+        }
+    }
+    ion-content{
+        background-color: rgb(250,250,250)!important;
+        .tixing{
+            text-align: center;
+            color: #00adb5;
+            font-size: 16px;
+        }
+        .mdfscon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+            ion-list{
+                width: 100%;
+                p{
+                    margin-bottom: -1%;
+                    color: #878c8e;
+                    text-align: center;
+                    font-size: 16px;
+                }
+                ion-item{
+                    background: transparent;
+                    .input-cover{
+                        position: static;
+                    }
+                    input::-webkit-input-placeholder {
+                        color: #878c8e;
+                        font-size: 14px;
+                        opacity: 0.4;
+                    }
+                    ion-label{
+                        font-size: 16px;
+                        color: #878c8e;
+                        width: 30%;
+                        display: flex;
+                        // justify-content: center;
+                        align-items: center;
+                        flex-direction: row;
+                        flex-wrap:wrap;
+                        textarea{
+                            background: transparent;
+                        }
+                    }
+                    .textarea1{
+                            margin-left:-70%;  
+                    }
+                }
+            }
+        }
+        .mdfscon1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            margin-bottom: 20%;
+            .input-cover{
+                position: static;
+            }
+            button{
+                margin-top: 10%;
+                width: 50%;
+                height: 100%;
+                color:white;
+                background-color: #00adb5;
+            }
+        }
+        #d{  /*复选框*/
+            color: #878c8e;
+            font-size: 16px;
+        }
+    }
+}

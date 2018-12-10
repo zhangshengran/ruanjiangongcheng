@@ -1,0 +1,105 @@
+page-forget {
+    ion-content{
+        background: url(../assets/imgs/loginbg1.jpg);
+        
+        background-repeat: repeat-x,repeat-y;  
+        background-size: cover;
+        .fg1{
+            display: flex;
+            width: 100%;
+            height: 50px;
+            //background-color: #00adb5;
+            .fg1-1{
+                width: 20%;
+                font-size: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .fg1-2{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 18px;
+                color: #000;
+                width: 60%;
+            }
+        }           
+        .fg2{
+            width: 100%;
+            margin-top: 10%;
+            .fg2-3{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                //background-color: red;
+                ion-item{
+                    .input-cover{
+                        position: static;
+                    }
+                    width: 70%;
+                    padding-top: 3%;
+                    margin-bottom: 5%;
+                    background: transparent; 
+                    
+                } 
+                .fg2-1{    
+                    width: 52%;
+                    font-size: 12px;
+                    margin-bottom: 5%;
+                }  
+            }
+                .fgbut{
+                    width: 18%;
+                    display: flex;
+                    justify-content: center;
+                    button{
+                        opacity: 0.7;
+                        width: 100%;
+                        height: 35px;
+                        font-size: 6px;
+                        background-color: #fff;
+                        border:1px solid #878c8e;
+                        border-radius: 5px;
+                        span{
+                            font-size: 6px;
+                        }
+                    }
+                }
+                
+                .fg2-0{
+                    padding-top: 10%;
+                }
+                
+                ion-icon{
+                    color:#878c8e;
+                    font-size: 30px;
+                }
+                input::-webkit-input-placeholder {
+                    color: #878c8e;
+                    font-size: 12px;
+                    opacity: 0.7;
+                }
+                .fgbut1{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 auto;
+                    width: 50%;
+                    button{
+                        opacity: 0.7;
+                        width: 100%;
+                        height: 40px;
+                        font-size: 8px;
+                        background-color: #fde400;
+                        border:1px solid #878c8e;
+                        border-radius: 5px;
+                        span{
+                        font-size: 8px;
+                        }
+                    }
+                }
+        }
+              
+    }
+}

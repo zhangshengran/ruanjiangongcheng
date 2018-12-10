@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-navbar color="setnav" >
+    <ion-title >成为老师</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <p class="tixing">若想成为老师请如实填写以下信息！</p>
+  <div class="mdfscon">
+    <ion-list >
+      <ion-item >
+        <ion-label>教师年龄:</ion-label>
+        <ion-input type="number" placeholder="请填写" [(ngModel)]="tea_age"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label>教师性别:</ion-label>
+        <ion-input type="text" placeholder="请填写" [(ngModel)]="tea_sex"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label>邮  箱:</ion-label>
+        <ion-input type="text" placeholder="请正确填写" [(ngModel)]="tea_email"></ion-input>
+      </ion-item>
+    <ion-item>   <!--复选框-->
+      <form  id="d">
+        <label>教学年级：</label>
+        <label><input type="checkbox" name="checkbox" id="a" value="小学"/>&nbsp;小学</label>
+        <label><input type="checkbox" name="checkbox" id="b" value="初中" />&nbsp;初中</label>
+        <label><input type="checkbox" name="checkbox" id="c" value="高中"/>&nbsp;高中</label>
+      </form>
+    </ion-item>
+      <ion-item >
+        <ion-label>教学科目:</ion-label>
+        <ion-input type="text" placeholder="请填写" [(ngModel)]="stu_courses"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label>现读学校:</ion-label>
+        <ion-input type="text" placeholder="请填写" [(ngModel)]="tea_school"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label>现读专业:</ion-label>
+        <ion-input type="text" placeholder="请填写" [(ngModel)]="tea_major"></ion-input>
+      </ion-item>
+      <ion-item style="width:100%">
+          <ion-label class="check1">年级:</ion-label>
+          <ion-label class="checkboxa">
+            大一 &nbsp;<input type="radio" name="group" [(ngModel)]="tea_grade" value="大一">
+          </ion-label>
+          <ion-label class="checkboxa">
+            大二 &nbsp;<input type="radio" name="group" [(ngModel)]="tea_grade" value="大二">
+          </ion-label>
+          <ion-label class="checkboxa">
+            大三 &nbsp;<input type="radio" name="group" [(ngModel)]="tea_grade" value="大三">
+          </ion-label>
+          <ion-label class="checkboxa">
+            大四 &nbsp;<input type="radio" name="group" [(ngModel)]="tea_grade" value="大四">
+          </ion-label>
+      </ion-item>
+      <p>-----------------实名认证-----------------</p>
+      <ion-item >
+        <ion-label>姓名:</ion-label>
+        <ion-input type="text" placeholder="请填写" [(ngModel)]="tea_name"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label>身份证号:</ion-label>
+        <ion-input type="text" placeholder="请填写" [(ngModel)]="userID"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label>备  注:</ion-label>
+        <ion-label class="textarea1" >
+          <textarea placeholder="说点什么吧。。。" [(ngModel)]="remark"></textarea>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    
+  </div>
+  <div class="mdfscon1">
+    <button class="button button-light" (click)="goback()">成为老师</button>
+  </div>
+</ion-content>

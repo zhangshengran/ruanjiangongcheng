@@ -1,0 +1,169 @@
+<link rel="stylesheet" href="assets/font/iconfont.css">
+<ion-header>
+  <ion-navbar>
+      <ion-searchbar (ionInput)="getItems($event)"  placeholder="请输入想查找的课程" mode="ios" 
+      class="search"></ion-searchbar>
+      <div class="div2">
+          <i class="iconfont" (click)="goback()">&#xe603;</i>
+      </div>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-slides  class="myslides" autoplay="600" speed="800" loop="true" pager (ionSlideAutoplayStop)="autoplay">
+    <ion-slide>
+      <img src="assets/imgs/1.jpg" />
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/2.jpg" />
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/3.jpg" />
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/4.jpg" />
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/5.jpg" />
+    </ion-slide>
+  </ion-slides>
+  <ion-card> 
+    <div class="cards">
+      <div>
+        <ion-item >
+          <ion-avatar item-start>
+            <img src="assets/imgs/img1.png">
+          </ion-avatar>
+          <h2>李其林</h2>
+          <p>距离最近开课时间还有xxx</p>
+        </ion-item>
+      </div>
+    <div>
+        <ion-item style="padding-top:8px; ">
+          <ion-icon name="arrow-dropright" style="text-align: center;font-size: 30px;" (click)="go1()"></ion-icon>
+        </ion-item> 
+    </div>
+  </div>
+  
+</ion-card>
+  <div class="div4">
+      <button (click)="go2()">
+        <i class="iconfont  icon-wendang-copy-copy "></i><br><br>
+        <span style="font-size: 14px;">我的课件</span>
+      </button>
+      <button (click)="go3()">
+        <i class="iconfont icon-tuijian"></i><br><br>
+        <span >老师推荐</span>
+      </button>
+      <button (click)="go4()">
+          <i class="iconfont icon-zuoye1"></i><br><br>
+          <span>我的作业</span>
+      </button>
+  </div>
+  <br>
+  <hr>
+  <div>
+    <div>
+      <ion-item class="span1">
+        <span>--热门学科--</span>
+      </ion-item>
+      <ion-item  no-lines style="text-align: center;"> 
+        <ion-avatar item-start></ion-avatar>
+        <button class="button" ion-button round  (click)="isClick(1)">语文
+        </button>
+        <button class="button" ion-button round  (click)="isClick(2)">数学
+        </button>
+        <button class="button" ion-button round  (click)="isClick(3)">英语
+        </button>
+          <!-- <ion-label>
+            <button class="button" ion-button block  (click)="isClick(1)">语文
+              <span class="span2">语文</span>
+            </button>
+            <button class="button" ion-button block  (click)="isClick(2)">数学
+              <span class="span2">数学</span>
+            </button>
+            <button class="button" ion-button block  (click)="isClick(3)">英语
+              <span class="span2">英语</span><br/>
+            </button>
+          </ion-label> -->
+        <ion-avatar item-end></ion-avatar>
+      </ion-item>
+    </div>
+    <div>
+      <ion-item  no-lines style="text-align: center;">
+        <ion-avatar item-start></ion-avatar>
+        <button class="button" ion-button round  (click)="isClick(4)">物理
+        </button>
+        <button class="button" ion-button round  (click)="isClick(5)">化学
+        </button>
+        <button class="button" ion-button round  (click)="isClick(6)">生物
+        </button>
+          <!-- <ion-label>
+            <button class="button" ion-button block  (click)="isClick(4)">物理
+
+            </button> 
+            <button class="button" ion-button block  (click)="isClick(5)">化学
+    
+            </button>
+            <button class="button" ion-button block  (click)="isClick(6)">生物
+          
+            </button>
+          </ion-label> -->
+        <ion-avatar item-end></ion-avatar>
+      </ion-item>
+    </div>
+    <div>
+      <ion-item no-lines style="text-align: center;"> 
+         <ion-avatar item-start></ion-avatar>
+         <button class="button" ion-button round  (click)="isClick(7)">历史
+        </button>
+        <button class="button" ion-button round  (click)="isClick(8)">地理
+        </button>
+        <button class="button" ion-button round  (click)="isClick(9)">政治
+        </button>
+          <!-- <ion-label>
+            <button class="button" ion-button block  (click)="isClick(7)">历史
+            </button>
+            <button class="button" ion-button block  (click)="isClick(8)">地理
+
+            </button>
+            <button class="button" ion-button block  (click)="isClick(9)">政治
+
+            </button>
+          </ion-label> -->
+        <ion-avatar item-end></ion-avatar>
+      </ion-item>
+    </div>
+  </div>
+  <p></p>
+  <div>
+    <ion-item item-end  class="span1">
+      <span>--学习圈--</span> 
+      <!-- <i class="iconfont icon-xiangyou fr" style="color:#DAA520;"(click)="go5()"></i> -->
+      </ion-item>
+      <div class="studySpace">
+        <ion-item no-lines  (click)="go5()">
+            <ion-avatar item-start> 
+                <img src="assets/imgs/img1.png">
+            </ion-avatar>
+            <h2>李其林</h2>
+        </ion-item>
+        <ion-item no-lines>
+            <p>今天学习目标</p>
+            <ion-avatar item-start> 
+            </ion-avatar>
+          <div>
+              <img src="assets/imgs/img1.png" class="fl icon_img">
+              <img src="assets/imgs/img1.png" class="fl icon_img">
+              <img src="assets/imgs/img1.png" class="fl icon_img">
+              <img src="assets/imgs/img1.png" class="fl icon_img">
+              <img src="assets/imgs/img1.png" class="fl icon_img">
+              <img src="assets/imgs/img1.png" class="fl icon_img">
+          </div>
+        </ion-item>
+        <ion-item no-lines>
+            <div class="learing" style="text-align: right; " (click)="go5()"><span style="font-size:12px; color:#00adb5">查看更多>></span></div>
+        </ion-item>
+      </div>
+      
+  </div>
+</ion-content>

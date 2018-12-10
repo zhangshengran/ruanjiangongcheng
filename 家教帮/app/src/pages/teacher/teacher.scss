@@ -1,0 +1,18 @@
+page-teacher {
+    ion-title{
+        text-align:center; 
+        padding-right:48px; 
+    }
+    ion-content{
+        background-color: rgb(245,245,245) !important;
+        div{
+            float: left;
+        }
+        .item{
+            width: 100%;
+            display: inline-flex;
+            justify-content: space-around;
+            /*background-color: #d3d3d3;*/
+        }
+    }
+}
