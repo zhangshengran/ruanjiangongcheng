@@ -42,23 +42,25 @@ export class OpenlessonPage {
         time = new Date(res[i].course_time).toISOString().replace(/T/g,' ').replace(/\.[\d]{3}Z/,'')
         res[i].course_time = time;
         console.log(time);
+        var video=document.getElementsByTagName('video');
         for(var j=0; j<this.arr1.length; j++) {
-          console.log('data');
           $(function($){ 
-            console.log('aa');
           $(".video-play").on("loadeddata", function (e) {
             console.log('bb');
-            var obj = e.target;
-            var scale = 0.8;
+            var obj = e.target;  //获取video标签
+            //console.log(obj)
             var canvas = document.createElement("canvas");
-            canvas.width = obj.videoWidth * scale;
-            canvas.height = obj.videoHeight * scale;
+            canvas.width =obj.width;
+            canvas.height = obj.height ;
+            canvas.setAttribute("crossOrigin",'*');
+            obj.setAttribute("crossOrigin",'*'); 
+           // console.log(canvas.attributes); //查看属性
             canvas.getContext('2d').drawImage(obj, 0, 0, canvas.width, canvas.height);
-           obj.onload=function(){
-            obj.setAttribute("poster", canvas.toDataURL("image/png"));}
+            obj.setAttribute("poster",canvas.toDataURL("image/png")); // 解析图片格式
+            console.log('haha');
          } )
         })
-        }
+      }
       }
       console.log(this.arr1);
       console.log(this.arr2);

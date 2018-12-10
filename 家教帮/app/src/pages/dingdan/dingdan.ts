@@ -23,6 +23,7 @@ export class DingdanPage {
   tea_id:number = this.navParams.data.tea_id;  //接收teachers页面传递过来的参数 
   tea_content=this.navParams.data.tea_content;
   stu_id:number=parseInt(window.localStorage.getItem('tokenID'));
+  stu_course:string=this.navParams.data.tea_content.stu_courses;
   class_time:string;
   order_address:string;
   order_time:string=new Date().getFullYear()+'-'+new Date().getMonth()+'-'+new Date().getDate()+' '+new Date().getHours()+":"+new Date().getMinutes()+":"+new Date().getSeconds();
@@ -46,13 +47,15 @@ export class DingdanPage {
     console.log("上课时间："+this.class_time);
     console.log("上课地址："+this.order_address);
     console.log("下单时间："+this.order_time);
+    console.log("授课科目："+this.stu_course);
 
     var params = {
       stu_id:this.stu_id,
       tea_id:this.tea_id,
       class_time:this.class_time,
       order_address:this.order_address,
-      order_time:this.order_time
+      order_time:this.order_time,
+      stu_course:this.stu_course
     }
     this.http.post('http://www.zhuoran.fun:3000/order_set',this.encodeHttpParams(params)).subscribe(res => {
         console.log(res);

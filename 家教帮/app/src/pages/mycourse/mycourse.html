@@ -1,29 +1,17 @@
-
 <link rel="stylesheet" href="assets/font/iconfont.css">
 <ion-header>
   <ion-navbar color="setnav" >
-    <ion-title >我的课程</ion-title>
+    <ion-title >我的家教</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content>
-  <ul>
-    <li>
-        <div class="mcoursecon">
-            <div class="mcoursecon2">
-              <p>我的课程: 
-                <span>xx</span>
-                <span>学生</span>
-                <span>xx</span>
-                <span>课程</span></p>
-              <p class="mcoursecon1">未完成{{item}}</p>
-            </div>
-            
-            <div class="">
-              <i class="iconfont  icon-shanchu"></i>
-            </div>
-          </div>
-          <hr>
-    </li>
+  <ul  *ngFor="let item of arr;"style="text-align: center;">
+    <li >
+        <ion-item>
+              <p>姓名：{{item?.stu_name}}{{item?.tea_name}}</p>
+              <p>科目：{{item?.stu_grade}}{{item?.order_course}}{{item?.stu_courses}}</p> 
+              <p>时间：{{item?.class_time}}</p>
+              <p>地点：{{item?.order_address}}</p>
+        </ion-item>
   </ul>
-  
 </ion-content>

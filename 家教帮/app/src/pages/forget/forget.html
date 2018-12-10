@@ -8,28 +8,28 @@
     <div class="fg2-3">
       <ion-item class="fg2-0">
         <ion-icon name="ios-phone-portrait" item-start></ion-icon>
-        <ion-input type="number" placeholder="请输入手机号"></ion-input>
+        <ion-input type="number" placeholder="请输入手机号"  [(ngModel)]="fgtel" ></ion-input>
       </ion-item>
     </div>
     <div class="fg2-3">
       <ion-item class="fg2-1">
-          <ion-icon name="ios-leaf" item-start></ion-icon>
-          <ion-input type="number" placeholder="请输入验证码"></ion-input>
+          <ion-icon name="ios-leaf" item-start ></ion-icon>
+          <ion-input type="number" placeholder="请输入验证码" [(ngModel)]="fgyanzheng" ></ion-input>
       </ion-item> 
       <p class="fgbut">
-          <button class="button button-light">获 取<span>(10)</span></button>
+        <button  ion-button id="a" round [disabled]="!verifyCode.disable" (click)="yanzheng()" >{{verifyCode.verifyCodeTips}}</button>
       </p>
     </div>
     <div class="fg2-3">
       <ion-item class="fg2-2">
           <ion-icon name="ios-key" item-start></ion-icon>
-          <ion-input type="number" placeholder="请输入密码"></ion-input>
+          <ion-input type="password" placeholder="请输入密码" [(ngModel)]="fgpsw"></ion-input>
       </ion-item>
     </div>
     <div class="fg2-3">
       <ion-item >
           <ion-icon name="ios-key" item-start></ion-icon>
-          <ion-input type="number" placeholder="请确认密码"></ion-input>
+          <ion-input type="password" placeholder="请确认密码" [(ngModel)]="fgpswagain"></ion-input>
       </ion-item>
     </div>
       <div class="fgbut1">

@@ -4,7 +4,7 @@
     </ion-navbar>  
 </ion-header>
 <ion-content>
-<ion-card  *ngFor="let item of arr;">
+<ion-card  *ngFor="let item of arr,let idx=index;">
     <div class="item">
         <div>
           <ion-item >
@@ -17,7 +17,7 @@
         </div>
       <div>
           <ion-item style="padding-top:8px; ">
-              <i class="iconfont icon-xiangyou fr" (click)="isClick(item?.tea_id)"></i>
+              <i class="iconfont icon-xiangyou fr"  (click)="isClick(idx)"></i>
           </ion-item> 
       </div>
     </div>

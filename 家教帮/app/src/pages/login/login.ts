@@ -96,6 +96,7 @@ presentAlert(data) {
         if(res["status"]==0){  //登录成功
           console.log("res",res);
           window.localStorage.setItem('tokenID',res["tokenID"]);
+          window.localStorage.setItem('teacherID',res["tea_token"]);
           console.log('tokenID',window.localStorage.getItem('tokenID'));
           this.navCtrl.push(TabsPage);
         }else{

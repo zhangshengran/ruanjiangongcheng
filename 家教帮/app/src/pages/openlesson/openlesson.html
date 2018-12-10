@@ -9,7 +9,7 @@
             <li class="lis" *ngFor="let item1 of arr1;let idx=index;">
             <p class="p1">课程名称:{{item1.course_name}}</p>
             <div class="video">
-              <video class="video-play" width="100%" height="150" controls="controls" >
+              <video class="video-play" width="250" height="150" controls="controls" style="display:block;margin:0 auto!important;" >
                  <source src="{{item1.course_src}}" type="video/mp4">
             </video>
             </div>
@@ -22,7 +22,7 @@
               <li class="lis" *ngFor="let item2 of arr2;let idx=index;">
               <p class="p1">课程名称:{{item2.course_name}}</p>
               <div class="video">
-                 <video class="video-play" width="100%" height="150" controls="controls" >
+                 <video class="video-play" width="250" height="150" controls="controls"style="display:block;margin:0 auto!important;"  >
                     <source src="{{item2.course_src}}" type="video/mp4">
                </video>
               </div>

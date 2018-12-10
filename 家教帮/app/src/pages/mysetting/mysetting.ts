@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 
 /**
@@ -16,11 +16,12 @@ import { LoginPage } from '../login/login';
 })
 export class MysettingPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public app:App) {
+    
   }
   clear(){}//清除缓存信息
   gologinPage(){
-    this.navCtrl.push(LoginPage);
+    this.app.getRootNavs()[0].setRoot(LoginPage);
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad MysettingPage');
