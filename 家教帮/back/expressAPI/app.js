@@ -8,6 +8,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var student = require('./models/student');
 var teacher = require('./models/teacher');
+var video = require('./models/video');
+var order = require('./models/order');
 var session = require('express-session');
 var FileStore = require('session-file-store')(session);
 var app = express();
@@ -43,21 +45,23 @@ app.use('/users', usersRouter);
 //API -----------------------------------------------------------------
 // 老师接口
 app.post('/register_tea',teacher.register_tea);
-
+app.get('/select_tea',teacher.select_tea);
 
 // 学生接口
 app.post('/register_stu',student.register_stu);
 app.get('/verify',student.verify);  
 app.post('/login',student.select_stu);
 
-
-
-
+// 视频接口
+app.get('/select_video',video.select_video);  
 
 
 
 //API -----------------------------------------------------------------
-// 
+// 订单
+app.post('/order_set',order.order_set);  
+app.get('/select_order_stu',order.select_order_stu)
+app.get('/select_order_tea',order.select_order_tea)
 
 // ---------------------------------------------------------------------------
 

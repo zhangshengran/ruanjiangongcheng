@@ -1,14 +1,7 @@
 var request = require('request');
 var querystring = require('querystring');
-const mysql = require('mysql'),
-    con = mysql.createConnection({
-        host: '39.105.111.123',
-        user: 'root',
-        password: 'xingyun2016',
-        database: 'tutor'
-    });
 
-
+var con = require('./db').con;
 
 // 验证码接口
 exports.verify = function(req,res){
@@ -93,7 +86,7 @@ exports.select_stu = function (req, res) {
     var stu_phone = req.body.stu_phone;
     var stu_password = req.body.stu_password;
 
-    con.query('select stu_password,stu_id from students where stu_phone = ?', [stu_phone], (err, result) => {
+    con.query('select stu_password,stu_id,is_tea_ID from students where stu_phone = ?', [stu_phone], (err, result) => {
 
         if (err) {
             res.send({
@@ -113,11 +106,12 @@ exports.select_stu = function (req, res) {
                 console.log('数据库查到的ID' + result[0].stu_id);
                 console.log('数据库查到的密码' + result[0].stu_password);
                 if (result[0].stu_password == stu_password) {
-
+                console.log(result);
                     res.send({
                         status: 0,
                         info: 'OK',
                         tokenID: result[0].stu_id,
+                        tea_token: result[0].is_tea_ID,
                         message: '密码匹配正确'
                     })
                 }
