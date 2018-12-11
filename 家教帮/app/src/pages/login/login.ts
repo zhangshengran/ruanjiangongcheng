@@ -34,6 +34,7 @@ export class LoginPage {
   error:any;
   yzma:Number;
   a:string='3';
+  t;
   isClick(i){
     this.isActive = i;
   }
@@ -62,6 +63,7 @@ presentAlert(data) {
   goforget(){     //忘记密码页
     this.navCtrl.push(ForgetPage);
   }
+  
   //--------包装成为json数据--------
   private encodeHttpParams(params: any): any {
     if (!params) return null;
@@ -137,6 +139,9 @@ presentAlert(data) {
 
         }else{
           this.presentAlert(res["message"]);
+          clearTimeout(this.t);
+          this.verifyCode.verifyCodeTips = "获取验证码";
+          this.verifyCode.disable = true;
         }
       },error =>{
         loading.dismiss();
@@ -156,9 +161,9 @@ presentAlert(data) {
     }else if(!telreg.test(this.zhucetel)){
       this.presentAlert('请正确输入合法手机号！');
     }else {
+      this.getCode();
         this.http.get("http://www.zhuoran.fun:3000" + "/verify?stu_phone=" + this.zhucetel ).subscribe(data => {
         console.log(data);
-        this.getCode();
         this.yzma = data["tpl_value"];
       },error=>{
         this.presentAlert('服务器连接错误，请重试'); 
@@ -177,7 +182,7 @@ presentAlert(data) {
     countdown: 60,
     disable: true
   }
-  settime() {
+  settime(){
     if (this.verifyCode.countdown == 1) {
     this.verifyCode.countdown = 60;
     this.verifyCode.verifyCodeTips = "获取验证码";
@@ -186,13 +191,13 @@ presentAlert(data) {
     } else {
     this.verifyCode.countdown--;
     }
-
     this.verifyCode.verifyCodeTips = "重新获取(" + this.verifyCode.countdown + ")";
-    setTimeout(() => {
+    this.t=setTimeout(() => {
     this.verifyCode.verifyCodeTips = "重新获取(" + this.verifyCode.countdown + ")";
     this.settime();
     }, 1000);
 }
+
 getCode() {
     //发送验证码成功后开始倒计时
     this.verifyCode.disable = false;

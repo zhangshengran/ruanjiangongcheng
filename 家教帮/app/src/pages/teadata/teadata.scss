@@ -1,3 +1,24 @@
 page-teadata {
-
+    ion-header{
+        ion-title{
+            text-align:center; 
+            padding-right:48px;  
+        }
+    }
+    ion-content{
+        ion-list{
+            width:100%;
+            padding:0!important;
+            ion-item{
+                padding:0!important;
+                width:100%;
+                ion-label{
+                    width:35%;
+                }
+                ion-input{
+                    width:65%;
+                }
+            }
+        }
+    }
 }

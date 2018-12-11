@@ -27,6 +27,7 @@ export class ForgetPage {
   fgpswagain: string;
   yzma: Number;
   a: string = '3';
+  t;
 
   constructor(
     public navCtrl: NavController,
@@ -64,15 +65,12 @@ export class ForgetPage {
         console.log(data);
         this.getCode();
         this.yzma = data["tpl_value"];
-        this.presentAlert(data['message']);
       }, error => {
         this.presentAlert('服务器连接错误');
         console.log("Error", error);
       });
     }
   }
-
-
   goback() {
     this.navCtrl.pop();
   }
@@ -110,10 +108,12 @@ export class ForgetPage {
             this.http.post('http://www.zhuoran.fun:3000/forget', this.encodeHttpParams(params)).subscribe(res => {
               loading.dismiss();
               if (res["status"] == 0) {
-                this.presentAlert('修改成功');
                 this.navCtrl.push(LoginPage);
               } else {
                 this.presentAlert(res["message"]);
+                clearTimeout(this.t);
+                this.verifyCode.verifyCodeTips = "获取验证码";
+                this.verifyCode.disable = true;
               }
             }, err => {
               loading.dismiss();
@@ -151,7 +151,7 @@ export class ForgetPage {
     }
 
     this.verifyCode.verifyCodeTips = "重新获取(" + this.verifyCode.countdown + ")";
-    setTimeout(() => {
+   this.t= setTimeout(() => {
       this.verifyCode.verifyCodeTips = "重新获取(" + this.verifyCode.countdown + ")";
       this.settime();
     }, 1000);

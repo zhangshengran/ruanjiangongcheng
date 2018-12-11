@@ -39,6 +39,8 @@ import { JobsPage } from '../pages/jobs/jobs';
 import { IonicStorageModule } from '@ionic/storage'
 import { StartPage } from '../pages/start/start';
 import { StatusBar } from '@ionic-native/status-bar';  //状态栏设置
+import { TeadataPage } from '../pages/teadata/teadata';
+import { StudataPage } from '../pages/studata/studata';
 
 
 
@@ -76,7 +78,9 @@ import { StatusBar } from '@ionic-native/status-bar';  //状态栏设置
     TeachersPage,
     HotCoursePage,
     JobsPage,
-    StartPage
+    StartPage,
+    TeadataPage,
+    StudataPage
   ],
   imports: [
     BrowserModule,
@@ -121,7 +125,9 @@ import { StatusBar } from '@ionic-native/status-bar';  //状态栏设置
     TeachersPage,
     HotCoursePage,
     JobsPage,
-    StartPage
+    StartPage,
+    TeadataPage,
+    StudataPage
   ],
   providers: [
     StatusBar,

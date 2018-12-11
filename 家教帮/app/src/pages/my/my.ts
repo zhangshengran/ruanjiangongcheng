@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http } from '@angular/http';
-import { MydataPage } from '../mydata/mydata';
+// import { MydataPage } from '../mydata/mydata';
 import { MycoursePage } from '../mycourse/mycourse';
 import { MyprovePage } from '../myprove/myprove';
 import { MytalkPage } from '../mytalk/mytalk';
 import { MysettingPage } from '../mysetting/mysetting';
 import 'rxjs/add/operator/toPromise';
-import { MydataforstudentPage } from '../mydataforstudent/mydataforstudent';
+// import { MydataforstudentPage } from '../mydataforstudent/mydataforstudent';
+import { StudataPage } from '../studata/studata';
+import { TeadataPage } from '../teadata/teadata';
 
 /**
  * Generated class for the MyPage page.
@@ -28,18 +30,18 @@ export class MyPage {
   }
   godata(id){
     if(id == 1){
-      this.navCtrl.push(MydataPage)
+      this.navCtrl.push(StudataPage);
     }else if(id == 0){
-      this.navCtrl.push(MydataforstudentPage)
+      this.navCtrl.push(TeadataPage);
     }
   };
     
   gocourse(){
     this.navCtrl.push(MycoursePage);
   }
-  goprove(){
-    this.navCtrl.push(MydataPage);
-  }
+  // goprove(){
+  //   this.navCtrl.push(MydataPage);
+  // }
   gotalk(){
     this.navCtrl.push(MytalkPage);
   }
