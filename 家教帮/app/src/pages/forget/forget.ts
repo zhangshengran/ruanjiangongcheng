@@ -60,12 +60,13 @@ export class ForgetPage {
     } else if (!telreg.test(this.fgtel)) {
       this.presentAlert('请正确输入合法手机号！');
     } else {
-      this.http.get("http://www.zhuoran.fun:3000" + "/verify?stu_phone=" + this.fgtel).subscribe(data => {
+      this.http.get("http://www.zhuoran.fun:3000" + "/findVerify?stu_phone=" + this.fgtel).subscribe(data => {
         console.log(data);
         this.getCode();
         this.yzma = data["tpl_value"];
+        this.presentAlert(data['message']);
       }, error => {
-        this.presentAlert('您输入的手机号未注册！');
+        this.presentAlert('服务器连接错误');
         console.log("Error", error);
       });
     }
@@ -100,8 +101,8 @@ export class ForgetPage {
           } else {
 
             var params = {
-              phone: this.fgtel,
-              password: this.fgpsw,
+              stu_phone: this.fgtel,
+              stu_password: this.fgpsw,
             }
             let loading = this.loadingCtrl.create({
               content: '修改中，请稍后...'

@@ -21,6 +21,8 @@ export class MysettingPage {
   }
   clear(){}//清除缓存信息
   gologinPage(){
+    window.localStorage.removeItem('tokenID');
+    window.localStorage.removeItem('teacherID');
     this.app.getRootNavs()[0].setRoot(LoginPage);
   }
   ionViewDidLoad() {
