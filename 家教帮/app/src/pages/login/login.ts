@@ -99,6 +99,10 @@ presentAlert(data) {
           console.log("res",res);
           window.localStorage.setItem('tokenID',res["tokenID"]);
           window.localStorage.setItem('teacherID',res["tea_token"]);
+          window.localStorage.setItem('pea_name',res["information"].stu_name);
+          window.localStorage.setItem('pea_sex',res["information"].stu_sex);
+          window.localStorage.setItem('pea_age',res["information"].stu_age);
+          window.localStorage.setItem('head',res["information"].head_src);
           console.log('tokenID',window.localStorage.getItem('tokenID'));
           this.navCtrl.push(TabsPage);
         }else{

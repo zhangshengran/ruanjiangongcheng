@@ -21,25 +21,78 @@ import { AlertController } from 'ionic-angular';
   templateUrl: 'myimg.html',
 })
 export class MyimgPage {
-  
+
   constructor(public navCtrl: NavController, public navParams: NavParams,private file: File,private transfer: FileTransfer,private imagePicker: ImagePicker,private fileTransfer:FileTransferObject,
     public actionSheetCtrl:ActionSheetController,private toast: Toast,private http:HttpClient,public alertCtrl: AlertController) {
     this.fileTransfer= this.transfer.create();
+    this.head=window.localStorage.getItem('head'); //头像的路径
+
   }
   teacherID;
-  studentID=window.localStorage.getItem('tokenID');
+  head;
+  arr;
+  stu_id;
+  tea_id;
+  pea_name;
+  pea_age;
+  pea_sex;
   bianji(){
-    this.teacherID=window.localStorage.getItem('teacherID');
-    console.log(this.teacherID);
     if(this.teacherID=='null'){  //后台返回的参数类型是字符串
-      this.navCtrl.push(StudataPage);
+      this.http.get('http://www.zhuoran.fun:3000'+'/showdata_stu?stu_id='+this.stu_id).subscribe(res => {
+             console.log("res:",res);
+             this.arr=res[0];
+             this.navCtrl.push(StudataPage,{
+              stu_content:this.arr
+            }) 
+        },
+       error=>{
+        console.log("error:",error);
+       });
+       
     }else{
-      this.navCtrl.push(TeadataPage);
+      this.tea_id=window.localStorage.getItem('teacherID');
+      this.http.get('http://www.zhuoran.fun:3000'+'/showdata_tea?tea_id='+this.tea_id).subscribe(res => {
+             console.log("res:",res);
+             this.arr=res[0];
+             this.navCtrl.push(TeadataPage,{
+              tea_content:this.arr
+            }) 
+        },
+       error=>{
+        console.log("error:",error)
+       });
     }
   }
-  back(){
-    this.navCtrl.pop();
+
+  ionViewWillEnter() {  //一进来时，就会调用,变量就会及时更新
+       this.pea_name=window.localStorage.getItem('pea_name');
+       this.pea_age=window.localStorage.getItem('pea_age');
+       this.pea_sex=window.localStorage.getItem('pea_sex');
+       this.stu_id=window.localStorage.getItem('tokenID');
+       this.teacherID=window.localStorage.getItem('teacherID');
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 调用相册时传入的参数
 private imagePickerOpt = {
   maximumImagesCount: 1,//选择一张图片
@@ -78,7 +131,7 @@ presentAlert(data) {
 showPicActionSheet() {
   this.useASComponent();
   var params = {
-     stu_id:this.studentID
+     stu_id:this.stu_id
   }
   this.http.post('http://www.zhuoran.fun:3000/upload_head',this.encodeHttpParams(params)).subscribe(res => {
     this.presentAlert(res["message"]); 
@@ -139,7 +192,7 @@ private uploadImg(path:string) {
   .then((data)=> {
   if (this.upload.success) {
   this.upload.success(JSON.parse(data.response));
-  this.presentAlert('上传成功'); 
+  this.presentAlert('上传成功 '); 
   }
   }, (err) => {
   if (this.upload.error) {

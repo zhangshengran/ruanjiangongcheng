@@ -31,7 +31,7 @@ export class TeacherPage {
   isClick(i){
     this.id=i;
     this.navCtrl.push(TeachersPage,{  //通过将数据传递给push方法的第二个参数，来将数据传递给下一个页面。
-      tea_id:this.id,
+      tea_id:this.arr[i].tea_id,
       tea_content:this.arr[i]
     });
   }

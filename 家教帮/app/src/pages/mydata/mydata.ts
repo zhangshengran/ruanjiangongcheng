@@ -100,9 +100,8 @@ presentAlert(data) {  //提示框
   }
   goback(){
     this.tokenID=window.localStorage.getItem('tokenID');
-    this.teacherID=window.localStorage.getItem('tea_token');
-    console.log(this.teacherID);
-    if(this.teacherID==null){
+    this.teacherID=window.localStorage.getItem('teacherID');
+    if(this.teacherID!='null'){
       this.presentAlert('您已经注册过一次，不能再次注册！');
     }else{
     var emailreg=/^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/; //验证邮箱

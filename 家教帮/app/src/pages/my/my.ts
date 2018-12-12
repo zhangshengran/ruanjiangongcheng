@@ -26,8 +26,12 @@ import { TeadataPage } from '../teadata/teadata';
 })
 export class MyPage {
   id=Number;
+  head: string;
+  pea_name: string;
   constructor(public http: Http,public navCtrl: NavController, public navParams: NavParams) {
     //this.id = this.navParams.get('id');
+    this.head=window.localStorage.getItem('head'); //头像
+    this.pea_name=window.localStorage.getItem('pea_name');//名字
   }
   godata(id){
     if(id == 1){

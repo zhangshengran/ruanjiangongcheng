@@ -20,8 +20,11 @@ export class HomePage {
   i=Number;
   id=Number;
   @ViewChild(Slides) slides: Slides;
+  head: string;
+  pea_name: string;
   constructor(public navCtrl: NavController) {
-
+    this.head=window.localStorage.getItem('head');
+    this.pea_name=window.localStorage.getItem('pea_name');
   }
 
   go(){
