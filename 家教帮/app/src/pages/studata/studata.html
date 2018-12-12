@@ -6,39 +6,40 @@
 -->
 <ion-header>
 
-  <ion-navbar color="setnav">
-    <ion-title>学生个人信息</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-    <ion-list >
-        <ion-item >
-            <ion-label>姓名:</ion-label>
-            <ion-input type="text" placeholder="请填写"></ion-input>
+    <ion-navbar color="setnav">
+      <ion-title>学生个人信息</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+      <ion-list >
+          <ion-item >
+              <ion-label>姓名:</ion-label>
+              <ion-input type="text" placeholder="请填写"></ion-input>
+            </ion-item>
+          <ion-item >
+            <ion-label>年龄:</ion-label>
+            <ion-input type="number" placeholder="请填写" ></ion-input>
           </ion-item>
+          <ion-item >
+              <ion-label>性别:</ion-label>
+              <ion-input type="text" placeholder="请填写"></ion-input>
+            </ion-item>
+          <ion-item>
+          <ion-label>年级:</ion-label>
+          <ion-input type="text" placeholder="请正确填写"></ion-input>
+        </ion-item>  
         <ion-item >
-          <ion-label>年龄:</ion-label>
-          <ion-input type="number" placeholder="请填写" ></ion-input>
+            <ion-label>邮  箱:</ion-label>
+            <ion-input type="text" placeholder="请正确填写" ></ion-input>
         </ion-item>
-        <ion-item >
-            <ion-label>性别:</ion-label>
-            <ion-input type="text" placeholder="请填写"></ion-input>
-          </ion-item>
-        <ion-item>
-        <ion-label>年级:</ion-label>
-        <ion-input type="text" placeholder="请正确填写"></ion-input>
-      </ion-item>  
-      <ion-item >
-          <ion-label>邮  箱:</ion-label>
-          <ion-input type="text" placeholder="请正确填写" ></ion-input>
-      </ion-item>
+        </ion-list>
+        <ion-list class="but">
+          <button ion-button (click)="affirm()">确认修改</button>
       </ion-list>
-      <ion-list class="but">
-        <button ion-button>确认修改</button>
-    </ion-list>
-      
-
-</ion-content>
+        
+  
+  </ion-content>
+  

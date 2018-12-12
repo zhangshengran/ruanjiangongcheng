@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http } from '@angular/http';
-// import { MydataPage } from '../mydata/mydata';
+import { MydataPage } from '../mydata/mydata';
 import { MycoursePage } from '../mycourse/mycourse';
 import { MyprovePage } from '../myprove/myprove';
 import { MytalkPage } from '../mytalk/mytalk';
 import { MysettingPage } from '../mysetting/mysetting';
 import 'rxjs/add/operator/toPromise';
-// import { MydataforstudentPage } from '../mydataforstudent/mydataforstudent';
+import { MydataforstudentPage } from '../mydataforstudent/mydataforstudent';
+import { MyimgPage } from '../myimg/myimg';
 import { StudataPage } from '../studata/studata';
 import { TeadataPage } from '../teadata/teadata';
 
@@ -39,9 +40,9 @@ export class MyPage {
   gocourse(){
     this.navCtrl.push(MycoursePage);
   }
-  // goprove(){
-  //   this.navCtrl.push(MydataPage);
-  // }
+  goprove(){
+    this.navCtrl.push(MydataPage);
+  }
   gotalk(){
     this.navCtrl.push(MytalkPage);
   }
@@ -49,6 +50,9 @@ export class MyPage {
     this.navCtrl.push(MysettingPage);
   }
   
+  goimg(){
+    this.navCtrl.push(MyimgPage);
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad MyPage');
   }

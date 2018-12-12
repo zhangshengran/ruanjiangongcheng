@@ -1,0 +1,47 @@
+<!--
+  Generated template for the MyimgPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="a">
+      <ion-title>个人信息</ion-title>
+    </ion-navbar>
+  
+</ion-header>
+
+<ion-content>
+    <ion-scroll scrollY="true">
+        <div class="a">
+          <img src="../../assets/imgs/mine2.png"/>
+          <div class="p">
+              <p>~hahaha~</p>
+              <p class="p2">女&nbsp;20岁</p>
+          </div>
+        </div>
+        <div class="b">
+          <p ><span>账号</span> 17732106685</p>
+          <p ><span>个人信息</span>  女&nbsp;20岁</p>
+          <div class="study">
+              <p>~hahaha~的学习圈 <ion-icon name="ios-arrow-forward-outline"></ion-icon> </p>
+          </div>
+          <div class="img">
+              <img src="../../assets/imgs/img1.png"/>
+              <img src="../../assets/imgs/img1.png"/>
+              <img src="../../assets/imgs/img1.png"/>
+              <img src="../../assets/imgs/img1.png"/>
+          </div>
+        </div>
+
+    </ion-scroll>
+      
+
+</ion-content>
+<!-- 底部固定的内容 -->
+
+<ion-footer>
+    <button ion-button style="height:30px;float:left;" color="setnav"(click)="showPicActionSheet()">修改头像</button>  
+    <button ion-button style="height:30px;float:right;" color="setnav" (click)="bianji()">编辑资料</button>  
+</ion-footer>

@@ -17,9 +17,8 @@ export class TeadataPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad TeadataPage');
+  affirm(){
+    this.navCtrl.pop();
   }
 
 }

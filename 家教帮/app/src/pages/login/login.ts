@@ -153,7 +153,7 @@ presentAlert(data) {
 
 
   yanzheng(){           //获取验证码
-    var b=document.getElementById('a');
+    var b=document.getElementById('a'); //变灰
     b.style.backgroundColor="#f5f5f5";
     var telreg = /^((1[3578][0-9]{1})+\d{8})$/; //手机号合法性验证
     if(this.zhucetel==null||this.zhucetel.length !==11){

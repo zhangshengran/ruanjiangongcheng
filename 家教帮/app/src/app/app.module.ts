@@ -39,10 +39,13 @@ import { JobsPage } from '../pages/jobs/jobs';
 import { IonicStorageModule } from '@ionic/storage'
 import { StartPage } from '../pages/start/start';
 import { StatusBar } from '@ionic-native/status-bar';  //状态栏设置
+import { MyimgPage } from '../pages/myimg/myimg';
 import { TeadataPage } from '../pages/teadata/teadata';
 import { StudataPage } from '../pages/studata/studata';
-
-
+import { ImagePicker } from '@ionic-native/image-picker';//图像选择器
+import { FileTransfer, FileUploadOptions, FileTransferObject }from'@ionic-native/file-transfer';//允许上载和下载文件
+import { File } from '@ionic-native/file'; //允许对驻留在设备上的文件进行读/写访问
+import { Toast } from '@ionic-native/toast';
 
 
 
@@ -79,6 +82,7 @@ import { StudataPage } from '../pages/studata/studata';
     HotCoursePage,
     JobsPage,
     StartPage,
+    MyimgPage,
     TeadataPage,
     StudataPage
   ],
@@ -126,6 +130,7 @@ import { StudataPage } from '../pages/studata/studata';
     HotCoursePage,
     JobsPage,
     StartPage,
+    MyimgPage,
     TeadataPage,
     StudataPage
   ],
@@ -133,6 +138,11 @@ import { StudataPage } from '../pages/studata/studata';
     StatusBar,
     //Camera,
     SplashScreen,
+    ImagePicker,
+    File,
+   FileTransferObject,
+   Toast,
+   FileTransfer,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

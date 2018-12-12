@@ -29,6 +29,9 @@ export class MydataPage {
   remark: any;
   tea_grade:any;  //?数字or字符串
   stu_grade=[];
+  values;
+  tokenID;
+  teacherID: string;
   ionViewWillEnter() {  //ts语法中没有checked属性    复选框,点击多次
     var that=this;
     $(function($){   
@@ -78,7 +81,8 @@ export class MydataPage {
              }
         })
         }
-        console.log(that.stu_grade);
+        that.values=that.stu_grade.join("");  //转化成字符串形式
+        console.log(that.values);
       })
     })
   }
@@ -95,6 +99,12 @@ presentAlert(data) {  //提示框
     return new HttpParams({fromObject: params});
   }
   goback(){
+    this.tokenID=window.localStorage.getItem('tokenID');
+    this.teacherID=window.localStorage.getItem('tea_token');
+    console.log(this.teacherID);
+    if(this.teacherID==null){
+      this.presentAlert('您已经注册过一次，不能再次注册！');
+    }else{
     var emailreg=/^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/; //验证邮箱
     var idreg=/^[1-9]\d{5}(18|19|20)\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/; //验证身份证 
     if(this.tea_age==null||this.tea_sex==null||this.stu_grade==null||this.stu_courses==null||this.tea_school==null||this.tea_major==null
@@ -105,10 +115,11 @@ presentAlert(data) {  //提示框
     }else if(!idreg.test(this.userID)){
       this.presentAlert('请输入合法的身份证号');  
     }else{
+    console.log("学生id："+this.tokenID);
     console.log("教师年龄："+this.tea_age);
     console.log("教师性别："+this.tea_sex);
     console.log("邮箱："+this.tea_email);
-    console.log("教学年级："+this.stu_grade);
+    console.log("教学年级："+this.values);
     console.log("教学科目："+this.stu_courses);
     console.log("学校："+this.tea_school);
     console.log("专业："+this.tea_major);
@@ -117,11 +128,12 @@ presentAlert(data) {  //提示框
     console.log("身份证号："+this.userID);
     console.log("备注："+this.remark);
     var params = {
+      stu_token:this.tokenID,  //学生id
       tea_name:this.tea_name,
       tea_age:this.tea_age,
       tea_sex:this.tea_sex,
       tea_email:this.tea_email,
-      stu_grade:this.stu_grade, //可教的学生年级 //复选框必须准备多个参数
+      stu_grade:this.values, //可教的学生年级 //复选框必须准备多个参数
       stu_courses:this.stu_courses,
       tea_school:this.tea_school,
       tea_major:this.tea_major,
@@ -132,12 +144,14 @@ presentAlert(data) {  //提示框
     this.http.post('http://www.zhuoran.fun:3000/register_tea',this.encodeHttpParams(params)).subscribe(res => {
         console.log(res);
         this.presentAlert(res['message']);
+        window.localStorage.setItem('teacherID',res["tea_token"]);
         this.navCtrl.pop();
       },error =>{
         this.presentAlert('服务器连接错误');
       })
     
   }
+}
 }
   constructor(public navCtrl: NavController, public navParams: NavParams,private http:HttpClient,public alertCtrl: AlertController,) {
   }

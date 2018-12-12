@@ -18,8 +18,8 @@ export class StudataPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad StudataPage');
+  affirm(){
+    this.navCtrl.pop();
   }
 
 }

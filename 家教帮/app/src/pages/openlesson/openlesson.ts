@@ -45,11 +45,14 @@ export class OpenlessonPage {
         var video=document.getElementsByTagName('video');
         for(var j=0; j<this.arr1.length; j++) {
           $(function($){ 
-          $(".video-play").on("loadeddata", function (e) {
+          $(".video-play").on("loadstart", function (e) {
             console.log('bb');
             var obj = e.target;  //获取video标签
             //console.log(obj)
             var canvas = document.createElement("canvas");
+            var currentTime=obj.currentTime.toFixed(1);
+            console.log(this.currentTime);
+           
             canvas.width =obj.width;
             canvas.height = obj.height ;
             canvas.setAttribute("crossOrigin",'*');
@@ -57,6 +60,7 @@ export class OpenlessonPage {
            // console.log(canvas.attributes); //查看属性
             canvas.getContext('2d').drawImage(obj, 0, 0, canvas.width, canvas.height);
             obj.setAttribute("poster",canvas.toDataURL("image/png")); // 解析图片格式
+            console.log(obj)
             console.log('haha');
          } )
         })
