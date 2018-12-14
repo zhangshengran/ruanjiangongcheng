@@ -33,12 +33,12 @@ exports.register_tea = function (req, res) {
                         })
                     } else {
                         var tea_id = result[0].tea_id;
-                        con.query('UPDATE students SET is_tea_ID = ? WHERE stu_id = ? ', [tea_id,stu_token], (err, result) => {
+                        con.query('UPDATE students SET is_tea_ID = ? WHERE stu_id = ? ', [tea_id, stu_token], (err, result) => {
 
                             res.send({
                                 status: 0,
                                 info: 'ok',
-                                tea_token:tea_id,
+                                tea_token: tea_id,
                                 message: "注册老师成功"
                             });
                         })
@@ -54,7 +54,9 @@ exports.register_tea = function (req, res) {
 
 }
 exports.select_tea = function (req, res) {
-    con.query('select * from teachers', (err, result) => {
+
+
+    con.query('select teachers.*,students.head_src from teachers,students where teachers.tea_id = students.is_tea_ID', (err, result) => {
         if (err) {
             res.send({
                 status: 1,
@@ -76,5 +78,56 @@ exports.select_tea = function (req, res) {
         }
 
 
+    })
+}
+
+
+// 老师更新信息
+exports.completed = function (req, res) {
+    var tea_id = req.body.tea_id;
+    var tea_name = req.body.tea_name;
+    var tea_age = req.body.tea_age;
+    var tea_sex = req.body.tea_sex;
+    var tea_email = req.body.tea_email;
+    var stu_grade = req.body.stu_grade;
+    var stu_courses = req.body.stu_courses;
+    var tea_school = req.body.tea_school;
+    var tea_major = req.body.tea_major;
+    var tea_grade = req.body.tea_grade;
+    var remark = req.body.remark;
+    console.log(req.body)
+    dbstr = 'UPDATE teachers'+
+    ' set tea_name = ?,tea_age = ?,tea_sex= ?,tea_email = ?,stu_grade = ?,stu_courses = ?,tea_school=?,tea_major=?,tea_grade =?,remark=?'+
+    ' WHERE tea_id = ?'
+    con.query(dbstr, [tea_name, tea_age, tea_sex, tea_email, stu_grade,stu_courses,tea_school,tea_major,tea_grade,remark,tea_id], (err, result) => {
+        if (err) {
+            
+            res.send({
+                status: 1,
+                info: 'error',
+                message: '数据库错误，未能更新资料'
+            })
+        } else {
+            res.send({
+                status: 0,
+                info: 'or',
+                message: '更新成功'
+            })
+        }
+    })
+}
+
+exports.showdata = function(req,res){
+    var tea_id = req.query.tea_id;
+    con.query('select * from teachers where tea_id = ?',[tea_id],(err,result)=>{
+        if(err){
+            res.send({
+                status:1,
+                info:'error',
+                message:'数据库错误'
+            })
+        }else{
+            res.json(result);
+        }
     })
 }
