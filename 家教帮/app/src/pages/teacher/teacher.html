@@ -4,22 +4,18 @@
     </ion-navbar>  
 </ion-header>
 <ion-content>
-<ion-card  *ngFor="let item of arr,let idx=index;">
-    <div class="item">
-        <div>
-          <ion-item >
-            <ion-avatar item-start>
-              <img src="assets/imgs/img3-1.png">
-            </ion-avatar>
-            <h2>教师姓名：{{item?.tea_name}}</h2>
-            <p>教授课程：{{item?.stu_grade+item?.stu_courses}}</p>
-          </ion-item>
-        </div>
-      <div>
-          <ion-item style="padding-top:8px; ">
-              <i class="iconfont icon-xiangyou fr"  (click)="isClick(idx)"></i>
-          </ion-item> 
-      </div>
-    </div>
-</ion-card>      
+    <ion-card  *ngFor="let item of arr,let idx=index;">
+              <ion-item >
+                <ion-avatar item-start>
+                  <img src="assets/imgs/img3-1.png">
+                </ion-avatar>
+                <div class="left">
+                    <h2>教师姓名：{{item?.tea_name}}</h2>
+                    <p>教授课程：{{item?.stu_grade+item?.stu_courses}}</p>
+                </div>
+                <div class="right">
+                    <i class="iconfont icon-xiangyou fr"  (click)="isClick(idx)"></i>
+                </div> 
+              </ion-item>   
+    </ion-card>      
 </ion-content>

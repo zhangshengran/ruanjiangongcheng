@@ -22,17 +22,18 @@
               </div>
             </div>
             <div class="b">
-              <p ><span>账号</span> 17732106685</p>
+              <p ><span>账号</span> {{pea_phone}}</p>
               <p ><span>个人信息</span>{{pea_sex}}&nbsp;{{pea_age}}岁</p>
               <div class="study">
-                  <p>{{pea_name}}的学习圈 <ion-icon name="ios-arrow-forward-outline"></ion-icon> </p>
+                  <p>{{pea_name}}的学习圈 <ion-icon name="ios-arrow-forward-outline" (click)="study()"></ion-icon> </p>
               </div>
-              <div class="img">
-                  <img src="../../assets/imgs/img1.png"/>
-                  <img src="../../assets/imgs/img1.png"/>
-                  <img src="../../assets/imgs/img1.png"/>
-                  <img src="../../assets/imgs/img1.png"/>
+              
+              <div  *ngFor="let item of arr1;let i=index">
+                    <div class="img" *ngIf="i<4">
+                        <img  src="{{item}}"/>
+                    </div>
               </div>
+        
             </div>
     
         </ion-scroll>

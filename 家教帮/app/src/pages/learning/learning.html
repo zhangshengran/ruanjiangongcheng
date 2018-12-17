@@ -1,77 +1,33 @@
 <ion-header>
 
-        <ion-navbar color="setnav" >
-          <ion-title >学习圈</ion-title>
-    
-        <ion-icon name="add-circle" style="color:white;"class="nav_style" (click)="go8()"></ion-icon>
-           
-        </ion-navbar>
-      
-      </ion-header>
-    <ion-content>
-        <!-- <img src="assets/imgs/1.jpg" style="width: 100%;height: 100px;"> -->
-        <div class="studySpace" >
-            <ion-item>
-                <ion-avatar item-start> 
-                    <img src="assets/imgs/img1.png">
-                </ion-avatar>
-                <h2>李其林</h2>
-                <!-- <p>今天学习目标</p> -->
-            </ion-item>
-            <ion-item>
-                    <p>今天学习目标</p>
-                <ion-avatar item-start> 
-                </ion-avatar>
-              <div>
-                  <img src="assets/imgs/img1.png" class="fl icon_img">
-                  <img src="assets/imgs/img1.png" class="fl icon_img">
-                  <img src="assets/imgs/img1.png" class="fl icon_img">
-                  <img src="assets/imgs/img1.png" class="fl icon_img">
-                  <img src="assets/imgs/img1.png" class="fl icon_img">
-                  <img src="assets/imgs/img1.png" class="fl icon_img">
-              </div>
-            </ion-item>
-          </div>
-          <div class="studySpace" >
-              <ion-item>
-                  <ion-avatar item-start> 
-                      <img src="assets/imgs/img1.png">
-                  </ion-avatar>
-                  <h2>李其林</h2>
-                  <p>今天学习目标</p>
-              </ion-item>
-              <ion-item>
-                  <ion-avatar item-start> 
-                  </ion-avatar>
-                <div>
-                    <img src="assets/imgs/img1.png" class="fl icon_img">
-                    <img src="assets/imgs/img1.png" class="fl icon_img">
-                    <img src="assets/imgs/img1.png" class="fl icon_img">
-                    <img src="assets/imgs/img1.png" class="fl icon_img">
-                    <img src="assets/imgs/img1.png" class="fl icon_img">
-                    <img src="assets/imgs/img1.png" class="fl icon_img">
-                </div>
-              </ion-item>
+    <ion-navbar color="setnav">
+        <ion-title>学习圈</ion-title>
+
+        <ion-icon name="add-circle" style="color:white;" class="nav_style" (click)="go8()"></ion-icon>
+
+    </ion-navbar>
+
+</ion-header>
+<ion-content>
+    <div class="studySpace" *ngFor="let item of arr1">
+        <ion-item no-lines>
+            <ion-avatar item-start>
+                <img src="{{item.head_src}}" alt="头像">        
+            </ion-avatar>
+            <h2>{{item.stu_name}}</h2>
+        </ion-item>
+        <ion-item>
+            <div class="a">{{item.content}}</div>         
+            <ion-avatar item-start>
+            </ion-avatar>
+            <div>
+                <img src="{{item?.img_src1}}" class="fl icon_img">
             </div>
-            <div class="studySpace">
-                <ion-item>
-                    <ion-avatar item-start> 
-                        <img src="assets/imgs/img1.png">
-                    </ion-avatar>
-                    <h2>李其林</h2>
-                    <p>今天学习目标</p>
-                </ion-item>
-                <ion-item>
-                    <ion-avatar item-start> 
-                    </ion-avatar>
-                  <div>
-                      <img src="assets/imgs/img1.png" class="fl icon_img">
-                      <img src="assets/imgs/img1.png" class="fl icon_img">
-                      <img src="assets/imgs/img1.png" class="fl icon_img">
-                      <img src="assets/imgs/img1.png" class="fl icon_img">
-                      <img src="assets/imgs/img1.png" class="fl icon_img">
-                      <img src="assets/imgs/img1.png" class="fl icon_img">
-                  </div>
-                </ion-item>
-              </div>
-    </ion-content>
+        </ion-item>
+    </div>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="正在加载"></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

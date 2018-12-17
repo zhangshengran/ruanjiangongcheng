@@ -3,11 +3,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { MydataPage } from '../mydata/mydata';
 import { MycoursePage } from '../mycourse/mycourse';
-import { MyprovePage } from '../myprove/myprove';
 import { MytalkPage } from '../mytalk/mytalk';
 import { MysettingPage } from '../mysetting/mysetting';
 import 'rxjs/add/operator/toPromise';
-import { MydataforstudentPage } from '../mydataforstudent/mydataforstudent';
 import { MyimgPage } from '../myimg/myimg';
 import { StudataPage } from '../studata/studata';
 import { TeadataPage } from '../teadata/teadata';
@@ -29,9 +27,6 @@ export class MyPage {
   head: string;
   pea_name: string;
   constructor(public http: Http,public navCtrl: NavController, public navParams: NavParams) {
-    //this.id = this.navParams.get('id');
-    this.head=window.localStorage.getItem('head'); //头像
-    this.pea_name=window.localStorage.getItem('pea_name');//名字
   }
   godata(id){
     if(id == 1){
@@ -57,8 +52,8 @@ export class MyPage {
   goimg(){
     this.navCtrl.push(MyimgPage);
   }
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MyPage');
-  }
-
+  ionViewWillEnter() {  //一进来时，就会调用,变量就会及时更新
+    this.pea_name=window.localStorage.getItem('pea_name');  //名称
+    this.head=window.localStorage.getItem('head'); //头像的路径
+}
 }

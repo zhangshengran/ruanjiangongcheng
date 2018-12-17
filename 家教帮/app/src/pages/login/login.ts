@@ -103,6 +103,7 @@ presentAlert(data) {
           window.localStorage.setItem('pea_sex',res["information"].stu_sex);
           window.localStorage.setItem('pea_age',res["information"].stu_age);
           window.localStorage.setItem('head',res["information"].head_src);
+          window.localStorage.setItem('pea_phone',res["information"].stu_phone);
           console.log('tokenID',window.localStorage.getItem('tokenID'));
           this.navCtrl.push(TabsPage);
         }else{

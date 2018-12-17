@@ -11,7 +11,8 @@ import { MyjobPage} from '../myjob/myjob';
 import { LearningPage} from '../learning/learning';
 import { HotCoursePage } from '../hotcourse/hot-course';
 import 'rxjs/add/operator/toPromise';
-
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { SearchPage } from '../search/search';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -22,11 +23,22 @@ export class HomePage {
   @ViewChild(Slides) slides: Slides;
   head: string;
   pea_name: string;
-  constructor(public navCtrl: NavController) {
-    this.head=window.localStorage.getItem('head');
-    this.pea_name=window.localStorage.getItem('pea_name');
+  stu_id;
+  constructor(public navCtrl: NavController,public http:HttpClient) {
   }
-
+  arr1 = [];
+  getcircle(){  //所有人发的帖子是第一条
+    this.http.get('http://www.zhuoran.fun:3000/getAllNotes').subscribe(res=>{
+      //console.log(res);
+      this.arr1 = res[0];//将传来的第一个数据传到这儿
+      console.log(this.arr1);
+    },err=>{
+      console.log("ERROR:",err);
+    })
+  }
+  goSearch(){   //搜索框
+    this.navCtrl.push(SearchPage);
+  }
   go(){
     this.navCtrl.push(LocationPage);
   }
@@ -54,8 +66,13 @@ export class HomePage {
   ionViewWillEnter(){
     this.slides.startAutoplay();
     this.slides.autoplayDisableOnInteraction = false;
+    this.head=window.localStorage.getItem('head');
+    this.pea_name=window.localStorage.getItem('pea_name');
+    this.stu_id =window.localStorage.getItem('tokenID');
+    this.getcircle();
   }
   ionViewWillLeave(){
     this.slides.stopAutoplay();
   }
+
 }

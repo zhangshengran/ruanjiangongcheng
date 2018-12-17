@@ -1,0 +1,30 @@
+page-search {
+    ion-header{
+        .search{
+         float:left;
+             width: 8%; 
+             height:45px;
+             text-align: center;
+             line-height:45px;
+        }
+    }
+    ion-content{
+     background-color: rgb(245,245,245) !important;
+     ion-item{
+         div{
+             float:left;
+         }
+         .left{
+             width:80%;
+         }
+         .right{
+             margin-top:5%;
+             text-align:center;
+             width:10%;
+             margin-left:10%;
+          
+         }
+     }
+    }
+ }
+ 

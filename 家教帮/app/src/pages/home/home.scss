@@ -8,6 +8,7 @@ page-home {
                 float:left;
                 width:90%;
             }
+            /*
               .div2{
                   float:left;
             width: 8%; 
@@ -16,7 +17,7 @@ page-home {
             line-height:45px;
             color:gainsboro;
             @font-face {
-                font-family: 'iconfont';  /* project id 943033 */
+                font-family: 'iconfont';
                 src: url('//at.alicdn.com/t/font_943033_t9hzppgzi8.eot');
                 src: url('//at.alicdn.com/t/font_943033_t9hzppgzi8.eot?#iefix') format('embedded-opentype'),
                 url('//at.alicdn.com/t/font_943033_t9hzppgzi8.woff') format('woff'),
@@ -32,11 +33,11 @@ page-home {
                 -moz-osx-font-smoothing:grayscale;
               }
         }
+        */
     }          
     };
     ion-content{
         background-color: #fafafa !important;
-        // background-color: rgb(245,245,245)	 !important;
         .fl{
             float: left;
         }
@@ -47,16 +48,12 @@ page-home {
             width: 25%;
             margin: 5px 10px 0 0;
         }
-        .studySpace{
-            // border-bottom: 1px solid #333;
-        }
         .cards{
             height:70px;
             line-height:70px;
             width: 100%;
             display: inline-flex;
             justify-content: space-around;
-            // background-color: skyblue !important;
         }
         .myslides{
             height:180px;
@@ -121,25 +118,16 @@ page-home {
         .div5{
             width: 100%px;
         }
-        // .span2{
-        //     color: #FF7F50;
-        //     font-size: 14px;
-        //     margin-top: 3px;
-        // }
-        // .span3{
-        //     color: #f8f8f8;
-        //     font-size: 14px;
-        //     margin-top: 3px;
-        // }
-        // .span4{
-        //     color: #8B4513;
-        //     font-size: 14px;
-        //     margin-top: 3px;
-        // }
         .button{
             width: 25%;
             height: 25px;
             background-color: #fafafa;
+            color:black;
+        }
+        .text{
+            margin-bottom:3%;
+            text-overflow:ellipsis;
+            white-space:nowrap;  
             color:black;
         }
     }

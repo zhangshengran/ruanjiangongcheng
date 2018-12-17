@@ -40,8 +40,9 @@ export class DingdanPage {
     });
     alert.present();
   }
-
+arr;
   affirm(){
+    var that=this;
     console.log("教师id："+this.tea_id);
     console.log("学生id："+this.stu_id);
     console.log("上课时间："+this.class_time);
@@ -65,7 +66,13 @@ export class DingdanPage {
         console.log(res);
         this.presentAlert(res['message']);
         if(res['status']==0){
-          this.navCtrl.push(AffirmPage);
+          this.navCtrl.push(AffirmPage,{
+
+            class_time:that.class_time,
+            order_address:that.order_address,
+            order_time:that.order_time,
+            tea_content:that.tea_content
+          });
         }
       },error =>{
         this.presentAlert('服务器连接错误');

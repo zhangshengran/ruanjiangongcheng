@@ -93,5 +93,12 @@
         <variable name="PHOTO_LIBRARY_USAGE_DESCRIPTION" value="需要访问您的相册" />
     </plugin>
     <plugin name="cordova-plugin-x-toast" spec="^2.7.2" />
+    <allow-navigation href="http://10.7.90.173:8101" />
+    <allow-navigation href="http://192.168.121.1:8101" />
+    <allow-navigation href="http://192.168.137.1:8101" />
+    <plugin name="cordova-plugin-photo-library" spec="^2.2.0">
+        <variable name="PHOTO_LIBRARY_USAGE_DESCRIPTION" value="To choose photos" />
+    </plugin>
+    <plugin name="com-badrit-base64" spec="^0.2.0" />
     <engine name="android" spec="7.0.0" />
 </widget>

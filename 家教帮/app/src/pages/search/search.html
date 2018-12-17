@@ -1,0 +1,43 @@
+<!--
+  Generated template for the SearchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header text-center color="setnav">
+
+    <ion-searchbar
+  [(ngModel)]="myInput" placeholder="请输入你想搜索的课程">
+  
+</ion-searchbar>
+<span>取消</span>
+    
+ 
+</ion-header> -->
+<ion-header>
+  <ion-navbar color="setnav">
+      <ion-searchbar  style="width:80%; float:left;" placeholder="请输入查找的科目" mode="ios"  [(ngModel)]="text"
+      ></ion-searchbar>
+      <div class="search">
+        <span  style="width:48px; float:left; color:white;"(click)="search()">搜索</span>
+      </div>
+     
+  </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card  *ngFor="let item of arr,let idx=index;">
+        <ion-item >
+          <ion-avatar item-start>
+            <img src="assets/imgs/img3-1.png"><!-- 获取每一个老师的头像没有实现 -->
+          </ion-avatar>
+          <div class="left">
+              <h2>教师姓名：{{item?.tea_name}}</h2>
+              <p>教授课程：{{item?.stu_grade+item?.stu_courses}}</p>
+          </div>
+          <div class="right">
+              <i class="iconfont icon-xiangyou fr"  (click)="isClick(idx)"></i>
+          </div> 
+        </ion-item>   
+</ion-card>    
+
+</ion-content>

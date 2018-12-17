@@ -46,8 +46,9 @@ import { ImagePicker } from '@ionic-native/image-picker';//图像选择器
 import { FileTransfer, FileUploadOptions, FileTransferObject }from'@ionic-native/file-transfer';//允许上载和下载文件
 import { File } from '@ionic-native/file'; //允许对驻留在设备上的文件进行读/写访问
 import { Toast } from '@ionic-native/toast';
-
-
+import { MylearningPage } from '../pages/mylearning/mylearning';
+import { Base64 } from '@ionic-native/base64'; 
+import { SearchPage } from '../pages/search/search';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,9 @@ import { Toast } from '@ionic-native/toast';
     StartPage,
     MyimgPage,
     TeadataPage,
-    StudataPage
+    StudataPage,
+    MylearningPage,
+    SearchPage
   ],
   imports: [
     BrowserModule,
@@ -132,7 +135,9 @@ import { Toast } from '@ionic-native/toast';
     StartPage,
     MyimgPage,
     TeadataPage,
-    StudataPage
+    StudataPage,
+    MylearningPage,
+    SearchPage
   ],
   providers: [
     StatusBar,
@@ -140,6 +145,7 @@ import { Toast } from '@ionic-native/toast';
     SplashScreen,
     ImagePicker,
     File,
+    Base64,
    FileTransferObject,
    Toast,
    FileTransfer,

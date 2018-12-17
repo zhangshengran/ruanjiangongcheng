@@ -7,7 +7,8 @@ page-myimg {
         background:none!important;
     }
     ion-content{
-        background-image:url(../../assets/imgs/loginbg1.jpg);
+        background-image:url(../../assets/imgs/mybg1.jpg);
+        background-size:cover;
         ion-scroll{
             width:100%;
             height:100%;
@@ -75,11 +76,14 @@ page-myimg {
                     }
                 }
                 .img{
+                    margin-top:4%;
                     margin-left:6%;
-                    float:left;
                     width:100%;
                     img{
+                        float:left;
                         width:20%;
+                        margin-right:2%;
+                        height:60px;
                     }
                 }
             }

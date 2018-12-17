@@ -5,14 +5,22 @@ page-teacher {
     }
     ion-content{
         background-color: rgb(245,245,245) !important;
-        div{
-            float: left;
+        ion-item{
+            div{
+                float:left;
+            }
+            .left{
+                width:80%;
+            }
+            .right{
+                margin-top:5%;
+                text-align:center;
+                width:10%;
+                margin-left:10%;
+             
+            }
+
         }
-        .item{
-            width: 100%;
-            display: inline-flex;
-            justify-content: space-around;
-            /*background-color: #d3d3d3;*/
-        }
+  
     }
 }

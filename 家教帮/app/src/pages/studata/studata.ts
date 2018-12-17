@@ -25,7 +25,7 @@ export class StudataPage {
   stu_name=window.localStorage.getItem('pea_name');
   stu_age=window.localStorage.getItem('pea_age');
   stu_sex=window.localStorage.getItem('pea_sex');;
-  stu_grade=this.navParams.data.tea_content.stu_grade;
+  stu_grade=this.navParams.data.stu_content.stu_grade;
   // stu_phone;
   private encodeHttpParams(params: any): any {
     if (!params) return null;
