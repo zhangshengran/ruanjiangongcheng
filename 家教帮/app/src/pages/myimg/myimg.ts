@@ -9,6 +9,7 @@ import { Toast } from '@ionic-native/toast';//此插件允许您在iOS，Android
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { AlertController } from 'ionic-angular';
 import { MylearningPage } from '../mylearning/mylearning';
+import { LearningPage } from '../learning/learning';
 /**
  * Generated class for the MyimgPage page.
  *
@@ -63,6 +64,9 @@ export class MyimgPage {
         console.log("error:",error)
        });
     }
+  }
+  study(){
+    this.navCtrl.push(LearningPage);
   }
 
   arr1=[];
