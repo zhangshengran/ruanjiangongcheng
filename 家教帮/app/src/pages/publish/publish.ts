@@ -84,18 +84,16 @@ private openImgPicker() {
   for (var i=0; i
   < results.length; i++) {
   this.temp = results[i];
+  let safeUrl=results[i].toURL();
+  /*
   that.base64.encodeFile(results[i]).then((base64File: string) => {
     //that.presentAlert(base64File);
     let safeUrl='data:image/jpg;base64,'+base64File;
     //that.presentAlert(safeUrl);
-   // let safeUrl = that.sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,'+base64File);
+   // let safeUrl = that.sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,'+base64File);*/
    that.data = "<img src=" +safeUrl+" width=\"60px\" height=\"60px\">";
-   }, (err) => {
-     console.log(err);
-   });
-   
- }
-  }, (err)=> {
+  }
+}, (err)=> {
   this.toast.showShortCenter('ERROR:'+ err);//错误：无法从手机相册中选择图片！
   });
   }

@@ -5,43 +5,23 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-<ion-navbar  color="setnav">
-  <ion-title>
-    上课提醒
-  </ion-title>
-
-</ion-navbar>
-</ion-header>
-
-<ion-content>
-    <div>
+  <ion-navbar  color="setnav">
+    <ion-title>
+      上课提醒
+    </ion-title>
+  
+  </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+    <ul  *ngFor="let item of arr;">
+      <li>
         <ion-item>
-        <ion-avatar item-start> 
-          <img src="assets/imgs/img1.png">
-        </ion-avatar>
-          <p>教师：李其林<p> <p>距离开课：1天13小时</p>
-          <p>课程：高一数学</p>
-          <p>地址：xxxxxxxxxxxx</p>
-        </ion-item>
-      </div>
-      <div>
-          <ion-item>
-          <ion-avatar item-start> 
-            <img src="assets/imgs/img1.png">
-          </ion-avatar>
-            <p>教师：李其林<p> <p>距离开课：1天13小时</p>
-            <p>课程：高一数学</p>
-            <p>地址：xxxxxxxxxxxx</p>
-          </ion-item>
-        </div>
-        <div>
-            <ion-item>
-            <ion-avatar item-start> 
-              <img src="assets/imgs/img1.png">
-            </ion-avatar>
-              <p>教师：李其林<p> <p>距离开课：1天13小时</p>
-              <p>课程：高一数学</p>
-              <p>地址：xxxxxxxxxxxx</p>
-            </ion-item>
-          </div>
-</ion-content>
+                <p>姓名:{{item?.stu_name}}{{item?.tea_name}}</p>
+                <p>授课科目:{{item?.order_course}}</p> 
+                <p>授课时间：{{item?.class_time}}</p>
+                <p>授课地点：{{item?.order_address}}</p> 
+        </ion-item> 
+    </ul>
+  </ion-content>
+  

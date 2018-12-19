@@ -22,9 +22,9 @@ export class StudataPage {
   }
   stu_content=this.navParams.data.stu_content;
   stu_id;
-  stu_name=window.localStorage.getItem('pea_name');
-  stu_age=window.localStorage.getItem('pea_age');
-  stu_sex=window.localStorage.getItem('pea_sex');;
+  stu_name=this.navParams.data.stu_content.stu_name;
+  stu_age=this.navParams.data.stu_content.stu_age;
+  stu_sex=this.navParams.data.stu_content.stu_sex;
   stu_grade=this.navParams.data.stu_content.stu_grade;
   // stu_phone;
   private encodeHttpParams(params: any): any {

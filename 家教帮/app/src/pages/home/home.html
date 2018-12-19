@@ -31,12 +31,12 @@
   <ion-card> 
     <div class="cards">
       <div>
-        <ion-item >
+        <ion-item style="padding:0;">
           <ion-avatar item-start>
             <img src="{{head}}">
           </ion-avatar>
           <h2>{{pea_name}}</h2>
-          <p>距离最近开课时间还有xxx</p>
+          <p>上课提醒</p>
         </ion-item>
       </div>
     <div>
@@ -47,20 +47,21 @@
   </div>
   
 </ion-card>
-  <div class="div4">
-      <button (click)="go2()">
-        <i class="iconfont  icon-wendang-copy-copy "></i><br><br>
-        <span style="font-size: 14px;">我的课件</span>
-      </button>
-      <button (click)="go3()">
-        <i class="iconfont icon-tuijian"></i><br><br>
-        <span >老师推荐</span>
-      </button>
-      <button (click)="go4()">
-          <i class="iconfont icon-zuoye1"></i><br><br>
-          <span>我的作业</span>
-      </button>
-  </div>
+
+  <ion-item class="span1">
+    <span  (click)="go3()">--教师推荐--</span>
+  </ion-item>
+  <div class="head2">
+      <div class="head"style="width:100%;">
+          <div class="tuijian" style="text-align:center;width:15%;height:80px;float:left;margin-left:4%;padding-top:2%;"  *ngFor="let item of arr;let idx=index;" (click)='detail(idx)'>
+              <img style="width:40px;height:40px;border-radius: 50%;"src="{{item?.head_src}}"/>
+              <div style="font-size:12px;margin-top:5%;">{{item?.tea_name}}</div>
+            </div>
+      </div>   
+  </div> 
+  
+
+  
   <br>
   <hr>
   <div>
@@ -83,7 +84,7 @@
         </button>
         <button class="button" ion-button round  (click)="isClick(5)">化学
         </button>
-        <button class="button"  ion-button round  (click)="isClick(6)">更多
+        <button class="button"  ion-button round  (click)="isClick(1)">更多
         </button>
       </ion-item>
     </div>
@@ -108,7 +109,7 @@
         </div>
       </ion-item>
       <ion-item no-lines  (click)="go5()">
-        <div style="text-align: right; "><span style="font-size:12px; color:#00adb5">查看更多>></span></div>
+        <div class="bottom" style="text-align:center; "><span style="font-size:14px; color:#00adb5">点我查看更多</span></div>
       </ion-item>
     </div>
 </ion-content>

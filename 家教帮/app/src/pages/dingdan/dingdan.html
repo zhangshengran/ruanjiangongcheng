@@ -17,7 +17,7 @@
 
 <ion-content>
 <div class="top">
-  <div class="img"><img src="../../assets/imgs/mine2.png"/></div>   <!--头像-->
+  <div class="img"><img  style="height:60px;width:60px;border-radius: 50%;margin-top:5%;"src={{tea_content?.head_src}}/></div>   <!--头像-->
   <div class="jianjie">   <!--简介-->
       <p>
         <span>{{tea_content?.tea_name}}</span>  
@@ -28,8 +28,11 @@
           <span>授课科目：{{tea_content?.stu_courses}}</span>
       </p>
       <p>
-          <span>现读于：{{tea_content?.tea_school}}&nbsp;&nbsp;{{tea_content?.tea_major}}专业</span> 
-      </p>
+        <span>学校：{{tea_content?.tea_school}}</span> 
+    </p>
+    <p>
+      <span>专业：{{tea_content?.tea_major}}</span>
+  </p>
   </div>
   <button ion-button  (click)="gotalk()">联系教师</button>
 </div>

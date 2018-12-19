@@ -100,5 +100,6 @@
         <variable name="PHOTO_LIBRARY_USAGE_DESCRIPTION" value="To choose photos" />
     </plugin>
     <plugin name="com-badrit-base64" spec="^0.2.0" />
+    <plugin name="cordova-plugin-filepath" spec="https://github.com/compuhelmac/cordova-plugin-filepath.git" />
     <engine name="android" spec="7.0.0" />
 </widget>

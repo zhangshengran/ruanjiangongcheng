@@ -4,36 +4,11 @@ page-home {
             background-color: #fafafa !important;
         }
         ion-navbar{
+            text-align:center;
             ion-searchbar{
                 float:left;
                 width:100%;
             }
-            /*
-              .div2{
-                  float:left;
-            width: 8%; 
-            height:45px;
-            text-align: center;
-            line-height:45px;
-            color:gainsboro;
-            @font-face {
-                font-family: 'iconfont';
-                src: url('//at.alicdn.com/t/font_943033_t9hzppgzi8.eot');
-                src: url('//at.alicdn.com/t/font_943033_t9hzppgzi8.eot?#iefix') format('embedded-opentype'),
-                url('//at.alicdn.com/t/font_943033_t9hzppgzi8.woff') format('woff'),
-                url('//at.alicdn.com/t/font_943033_t9hzppgzi8.ttf') format('truetype'),
-                url('//at.alicdn.com/t/font_943033_t9hzppgzi8.svg#iconfont') format('svg');
-              }
-              .iconfont {
-                font-family:"iconfont" !important;
-                font-size:25px;
-                font-style:normal;
-                -webkit-text-stroke-width: 0.1px;
-                -webkit-font-smoothing:antialiased;
-                -moz-osx-font-smoothing:grayscale;
-              }
-        }
-        */
     }          
     };
     ion-content{
@@ -78,35 +53,7 @@ page-home {
                 height: 50px;
             }
         }
-        .div4{
-            width: 100%;
-            height: 60px;
-            margin-top: 20px;
-            display:flex;
-            justify-content: space-around;
-            button{
-                width: 33%;
-                height: 80px;
-                text-align: center;
-                color:#00adb5;
-                background-color:white !important;
-                @font-face {
-                    font-family: 'iconfont';  /* project id 943033 */
-                    src: url('//at.alicdn.com/t/font_943033_t9hzppgzi8.eot');
-                    src: url('//at.alicdn.com/t/font_943033_t9hzppgzi8.eot?#iefix') format('embedded-opentype'),
-                    url('//at.alicdn.com/t/font_943033_t9hzppgzi8.woff') format('woff'),
-                    url('//at.alicdn.com/t/font_943033_t9hzppgzi8.ttf') format('truetype'),
-                    url('//at.alicdn.com/t/font_943033_t9hzppgzi8.svg#iconfont') format('svg');
-                  }
-                  .iconfont {
-                    font-family:"iconfont" !important;
-                    font-size:40px;
-                    font-style:normal;
-                    -webkit-font-smoothing:antialiased;
-                    -moz-osx-font-smoothing:grayscale;
-                  }
-            }
-        }
+       
         .span1{
             // width:100%;
             text-align: center;
@@ -118,17 +65,20 @@ page-home {
         .div5{
             width: 100%px;
         }
+       
+           
         .button{
             width: 25%;
             height: 25px;
             background-color: #fafafa;
             color:black;
         }
-        .text{
-            margin-bottom:3%;
-            text-overflow:ellipsis;
-            white-space:nowrap;  
-            color:black;
+        .bottom{
+            height:30px;
+            line-height:30px;
+            width:50%;
+            margin:0 25%;
+            background-image: linear-gradient(to right,rgba(213,213,213,0.1) 0%,rgba(213,213,213,0.3) 15%,rgba(213,213,213,0.5) 50%,rgba(213,213,213,0.3) 85%,rgba(213,213,213,0.1) 100%);
         }
     }
 }   

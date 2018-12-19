@@ -7,8 +7,7 @@ import { MytalkPage } from '../mytalk/mytalk';
 import { MysettingPage } from '../mysetting/mysetting';
 import 'rxjs/add/operator/toPromise';
 import { MyimgPage } from '../myimg/myimg';
-import { StudataPage } from '../studata/studata';
-import { TeadataPage } from '../teadata/teadata';
+import { MydownloadPage } from '../mydownload/mydownload';
 
 /**
  * Generated class for the MyPage page.
@@ -28,12 +27,8 @@ export class MyPage {
   pea_name: string;
   constructor(public http: Http,public navCtrl: NavController, public navParams: NavParams) {
   }
-  godata(id){
-    if(id == 1){
-      this.navCtrl.push(StudataPage);
-    }else if(id == 0){
-      this.navCtrl.push(TeadataPage);
-    }
+  godata(){
+    this.navCtrl.push(MydownloadPage);
   };
     
   gocourse(){

@@ -49,6 +49,13 @@ import { Toast } from '@ionic-native/toast';
 import { MylearningPage } from '../pages/mylearning/mylearning';
 import { Base64 } from '@ionic-native/base64'; 
 import { SearchPage } from '../pages/search/search';
+import { FilePath } from '@ionic-native/file-path';   //找文件路径
+import { NewsnextPage } from '../pages/newsnext/newsnext';
+import { LearingcirPage } from '../pages/learingcir/learingcir';
+import { NewsPage } from '../pages/news/news';
+import { DataPage } from '../pages/data/data';
+import { VideoPage } from '../pages/video/video';
+import { MydownloadPage } from '../pages/mydownload/mydownload';
 
 @NgModule({
   declarations: [
@@ -87,7 +94,13 @@ import { SearchPage } from '../pages/search/search';
     TeadataPage,
     StudataPage,
     MylearningPage,
-    SearchPage
+    SearchPage,
+    NewsnextPage,
+    LearingcirPage,
+    NewsPage,
+    DataPage,
+    VideoPage,
+    MydownloadPage
   ],
   imports: [
     BrowserModule,
@@ -137,7 +150,13 @@ import { SearchPage } from '../pages/search/search';
     TeadataPage,
     StudataPage,
     MylearningPage,
-    SearchPage
+    SearchPage,
+    NewsnextPage,
+    LearingcirPage,
+    NewsPage,
+    DataPage,
+    VideoPage,
+    MydownloadPage
   ],
   providers: [
     StatusBar,
@@ -147,6 +166,7 @@ import { SearchPage } from '../pages/search/search';
     File,
     Base64,
    FileTransferObject,
+   FilePath,
    Toast,
    FileTransfer,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

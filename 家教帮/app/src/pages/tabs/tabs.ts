@@ -4,7 +4,7 @@ import { HomePage } from '../home/home';
 import { ModalController } from 'ionic-angular';
 import { MyPage } from '../my/my';
 
-import { OpenlessonPage } from '../openlesson/openlesson';
+import { LearingcirPage } from '../learingcir/learingcir';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -12,7 +12,7 @@ import { OpenlessonPage } from '../openlesson/openlesson';
 export class TabsPage {
 
   tab1Root = HomePage;
-  tab2Root = OpenlessonPage;
+  tab2Root = LearingcirPage;
   tab3Root = MessagePage;
   tab4Root = MyPage;
   // tab5Root = 'CPage';

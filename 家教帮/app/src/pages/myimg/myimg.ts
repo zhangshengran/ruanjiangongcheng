@@ -10,6 +10,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { AlertController } from 'ionic-angular';
 import { MylearningPage } from '../mylearning/mylearning';
 import { LearningPage } from '../learning/learning';
+import { FilePath } from '@ionic-native/file-path';  //找文件路径
 /**
  * Generated class for the MyimgPage page.
  *
@@ -25,7 +26,7 @@ import { LearningPage } from '../learning/learning';
 export class MyimgPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private file: File,private transfer: FileTransfer,private imagePicker: ImagePicker,private fileTransfer:FileTransferObject,
-    public actionSheetCtrl:ActionSheetController,private toast: Toast,private http:HttpClient,public alertCtrl: AlertController) {
+    public actionSheetCtrl:ActionSheetController,private toast: Toast,private http:HttpClient,public alertCtrl: AlertController,private filePath: FilePath) {
     this.fileTransfer= this.transfer.create();
 
   }
@@ -68,6 +69,7 @@ export class MyimgPage {
   study(){
     this.navCtrl.push(LearningPage);
   }
+
 
   arr1=[];
   ionViewWillEnter() {  //一进来时，就会调用,变量就会及时更新
@@ -188,9 +190,6 @@ private uploadImg(path:string) {
        headers: {
        'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'//不加入 发生错误！！
     },
-    // params: {stu_id:555}, 需要额外上传的参数
-    //success: (data)=> { that.presentAlert('哈哈'+data);},//图片上传成功后的回调
-    //error: (err)=> {that.presentAlert('失败'+err);},//图片上传失败后的回调
      
     };
     this.fileTransfer.upload(path,'http://www.zhuoran.fun:3000/upload_head',options) //将文件发送到服务器
@@ -206,5 +205,31 @@ private uploadImg(path:string) {
           that.presentAlert(err); 
     });
   }
+  /*
+  download() {
+    this.presentAlert('haha');
+    this.fileTransfer.download('http://tutor-learn.oss-cn-beijing.aliyuncs.com/%E8%B5%84%E6%96%99/%E9%AB%98%E8%80%83%E4%B8%93%E5%8C%BA/2016%E5%B9%B4%E9%AB%98%E8%80%83%E7%9C%9F%E9%A2%98%E2%80%94%E2%80%94%E8%AF%AD%E6%96%87%EF%BC%88%E5%85%A8%E5%9B%BD%E2%85%A0%E5%8D%B7%EF%BC%89%20Word%E7%89%88%E5%90%AB%E7%AD%94%E6%A1%88%281%29.doc',this.file.externalApplicationStorageDirectory  + 'yes.docx').then((entry) => {
+      this.presentAlert('download complete: ' + entry.toURL());
+    }, (error) => {
+      this.presentAlert('错误'+error.toString());
+    });
+    
+  }
+  file0;
+  file0name;
+  chakan(){
+    this.file.listDir(this.file.dataDirectory,"").then((res)=>{//查找本地此文件夹下的所有文件
+      this.file0=JSON.parse(JSON.stringify(res));//返回文件名、绝对路径等  JSON.stringify先转化成字符串再JSON.parse解析成对象
+      for(let j in this.file0){
+        if(this.file0[j]["isFile"]==true){ //判断为文件
+        this.file0name=this.file0[j]["name"];
+        this.presentAlert(this.file0name);
+        }
+      }
+    }
+    ,(err)=>{ this.presentAlert(err);})
+  }
+  */
+  
 }
 
