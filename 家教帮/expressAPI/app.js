@@ -13,7 +13,7 @@ var order = require('./models/order');
 var forget = require('./models/forget'); 
 var storage = require('./models/storage');
 var community = require('./models/community');
-
+var learn = require('./models/learn');
 
 
 var session = require('express-session');
@@ -57,14 +57,14 @@ app.post('/register_tea',teacher.register_tea);
 app.get('/select_tea',teacher.select_tea);
 app.post('/updata_tea',teacher.completed); 
 app.get('/showdata_tea',teacher.showdata);
+app.get('/search',teacher.search);
 // 学生接口
 app.post('/register_stu',student.register_stu);
 app.get('/verify',student.verify);  
 app.post('/login',student.select_stu);
 app.post('/updata_stu',student.completed);
 app.get('/showdata_stu',student.showdata);
-// 视频接口
-app.get('/select_video',video.select_video);  
+
 //忘记密码-----------------------------------------------------------------
 app.get('/findVerify',forget.findVerify);
 app.post('/forget',forget.forget);
@@ -77,18 +77,17 @@ app.get('/select_order_tea',order.select_order_tea)
 // ---------------------------------------------------------------------------
 // 文件上传
 // app.post('/upload_test', upload.any(),storage.upload_test);
-app.post('/upload_head', upload.any(),storage.upload_head);//用户头像更新
-// 学习圈
+app.post('/upload_head', upload.any(),student.upload_head);//用户头像更新
+// 学习圈模块
+app.get('/video',learn.getvideos);
+app.get('/news',learn.getNews);
+app.get('/learnFile',learn.file_download);
+
+// 社区
 // 写帖子
 app.post('/writeNote',upload.any(),community.writeNote);
-
-
-
 // 获得所有帖子
 app.get('/getAllNotes',community.getAllNotes);
-
-
-
 // 得到自己发的所有帖子
 app.get('/getOwnNotes',community.getOwnNotes);
 // -------------------------------------------

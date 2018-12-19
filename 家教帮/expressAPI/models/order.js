@@ -33,7 +33,6 @@ exports.order_set = function (req, res) {
 // 学生要查询的订单
 exports.select_order_stu = function(req,res){
     var stu_id = req.query.stu_id;
-    console.log(stu_id);
     con.query('select tea_name,tea_sex,stu_grade,stu_courses,tea_school,tea_major,tea_grade, order_id,class_time,order_time,order_address,order_course from teachers,order2 where teachers.tea_id = order2.tea_id and stu_id =?',[stu_id], (err, result) => {
         if(err){
            
@@ -43,8 +42,7 @@ exports.select_order_stu = function(req,res){
                 message: '数据库读入错误'
                
             })
-        }else{
-            console.log(result)
+        }else{ 
             res.json(result);
         }
     })
@@ -66,8 +64,9 @@ exports.select_order_tea = function(req,res){
                
             })
         }else{
-            console.log(result)
+           
             res.json(result);
         }
     })
 }
+
