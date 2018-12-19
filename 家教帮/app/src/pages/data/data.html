@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="setnav">
+    <ion-title>资料云</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ul class="navList">
+    <li [class.first]="isActive==0" (click)="isClick(0)"><span>中考试题</span></li>
+    <li [class.first]="isActive==1" (click)="isClick(1)"><span>高考试题</span></li>
+  </ul>
+  <div [ngSwitch]="isActive">
+    <!--控制下方内容切换-->
+    <div *ngSwitchCase="0" class="content1">
+      <!--中考试题-->
+          <ion-card *ngFor="let item1 of arr1;let idx=index;">
+            <ion-item start>
+              <div>
+                <h2>{{item1.file_name}}</h2>
+              </div>
+            </ion-item>
+            <ion-item end (click)="downloadzhong(idx)">
+                <ion-icon  md="md-download"></ion-icon>
+            </ion-item>
+          </ion-card>
+        
+    </div>
+    <div *ngSwitchCase="1" class="content1">
+      <!--高考试题-->
+          <ion-card *ngFor="let item2 of arr2;let idx=index;">
+            <ion-item start>
+              <div>
+                <h2>{{item2.file_name}}</h2>
+              </div>
+            </ion-item>
+            <ion-item end (click)="downloadgao(idx)">
+                <ion-icon  md="md-download"></ion-icon>
+            </ion-item>
+          </ion-card>
+    </div>
+  </div>
+</ion-content>

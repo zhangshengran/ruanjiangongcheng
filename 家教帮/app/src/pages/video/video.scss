@@ -1,0 +1,33 @@
+page-video {
+    ion-title{
+        text-align:center; 
+        padding-right:48px; 
+    }
+    ion-content{
+        background-color: #eee!important;
+        ion-card{
+            background-color: #eee!important;
+            height: 330px;
+        }
+        .p1{
+                margin:5px 0 10px 20px;
+                color:black;
+                font-size: 110%;
+            }
+        .txt{
+            height: 40px;
+            padding:0 5%;
+            
+            .p2{
+                height:20px;
+                margin:8px 0 20px 0;
+                .span-left{
+                    float:left;
+                }
+                .span-right{
+                    float:right;
+                }
+            }
+        }
+    }
+}

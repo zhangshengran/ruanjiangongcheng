@@ -1,0 +1,39 @@
+<ion-content>
+  <div class="header">
+    <p>学习圈</p>
+  </div>
+  <div class="e">
+    <ion-card (click)="gonews()"> 
+        <div class="a">
+            <p>
+            <ion-icon class="e-1" md="md-albums"></ion-icon>
+            </p>
+            <p class="e-2">新闻区</p>
+        </div>
+    </ion-card>
+    <ion-card (click)="govideos()">
+        <div class="a">
+            <p>
+                <ion-icon class="e-1" name="book"></ion-icon>
+              </p>
+              <p class="e-2">视频区</p>
+        </div>
+    </ion-card>
+    <ion-card (click)="godata()">
+        <div class="a">
+            <p>
+                <ion-icon class="e-1" md="md-bookmark"></ion-icon>
+            </p>
+            <p class="e-2">资料云</p>
+        </div>
+    </ion-card>
+    <ion-card (click)="gomore()">
+        <div class="a">
+            <p>
+                <ion-icon class="e-1" ios="ios-clipboard" md="md-clipboard"></ion-icon>
+            </p>
+            <p class="e-2">更多</p>
+        </div>
+    </ion-card>
+</div>
+</ion-content>

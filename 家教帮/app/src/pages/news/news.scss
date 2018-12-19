@@ -1,0 +1,34 @@
+page-news {
+    ion-title{
+        text-align:center; 
+        padding-right:48px; 
+    }
+    ion-content{
+        background-color: rgb(245,245,245) !important;
+        ion-card{
+            height: 20%;
+        }
+        div{
+            float:left;
+        }
+        .right{
+            margin-left: 5%;
+            margin-top: 2%;
+            width:59%;
+            h2{
+                font-family: "黑体";
+                font-weight: 500;
+                font-size: 150%;
+            }
+        }
+        .left{
+             img{
+                 margin: 5% 0 0 5%;
+                 width: 90%;
+                 height: 90%;
+             }
+            width: 34%;
+            height: 100%;
+        }
+    }
+}
