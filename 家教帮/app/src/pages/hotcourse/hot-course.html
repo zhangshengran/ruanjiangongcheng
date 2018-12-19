@@ -22,7 +22,7 @@
       </ul>
       <div [ngSwitch]="isActive" class="right">   
         <div *ngSwitchCase="0">
-          <ul (click)='detail()'>
+          <ul>
             <li class="lis" *ngFor="let item0 of arr9;let idx=index;"  (click)='detail(idx)'>
               <img src="{{item0?.head_src}}"/>  
               <div class="middle">

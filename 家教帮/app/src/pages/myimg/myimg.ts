@@ -67,7 +67,7 @@ export class MyimgPage {
     }
   }
   study(){
-    this.navCtrl.push(LearningPage);
+    this.navCtrl.push(MylearningPage);
   }
 
 
@@ -205,31 +205,6 @@ private uploadImg(path:string) {
           that.presentAlert(err); 
     });
   }
-  /*
-  download() {
-    this.presentAlert('haha');
-    this.fileTransfer.download('http://tutor-learn.oss-cn-beijing.aliyuncs.com/%E8%B5%84%E6%96%99/%E9%AB%98%E8%80%83%E4%B8%93%E5%8C%BA/2016%E5%B9%B4%E9%AB%98%E8%80%83%E7%9C%9F%E9%A2%98%E2%80%94%E2%80%94%E8%AF%AD%E6%96%87%EF%BC%88%E5%85%A8%E5%9B%BD%E2%85%A0%E5%8D%B7%EF%BC%89%20Word%E7%89%88%E5%90%AB%E7%AD%94%E6%A1%88%281%29.doc',this.file.externalApplicationStorageDirectory  + 'yes.docx').then((entry) => {
-      this.presentAlert('download complete: ' + entry.toURL());
-    }, (error) => {
-      this.presentAlert('错误'+error.toString());
-    });
-    
-  }
-  file0;
-  file0name;
-  chakan(){
-    this.file.listDir(this.file.dataDirectory,"").then((res)=>{//查找本地此文件夹下的所有文件
-      this.file0=JSON.parse(JSON.stringify(res));//返回文件名、绝对路径等  JSON.stringify先转化成字符串再JSON.parse解析成对象
-      for(let j in this.file0){
-        if(this.file0[j]["isFile"]==true){ //判断为文件
-        this.file0name=this.file0[j]["name"];
-        this.presentAlert(this.file0name);
-        }
-      }
-    }
-    ,(err)=>{ this.presentAlert(err);})
-  }
-  */
   
 }
 
