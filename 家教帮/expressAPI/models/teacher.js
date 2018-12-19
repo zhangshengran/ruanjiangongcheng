@@ -2,7 +2,7 @@ var con = require('./db').con;
 
 // 成为老师
 exports.register_tea = function (req, res) {
-    console.log(req.body);
+    console.log(req.body)
     var tea_name = req.body.tea_name;
     var tea_age = req.body.tea_age;
     var tea_sex = req.body.tea_sex;
@@ -95,7 +95,6 @@ exports.completed = function (req, res) {
     var tea_major = req.body.tea_major;
     var tea_grade = req.body.tea_grade;
     var remark = req.body.remark;
-    console.log(req.body)
     dbstr = 'UPDATE teachers'+
     ' set tea_name = ?,tea_age = ?,tea_sex= ?,tea_email = ?,stu_grade = ?,stu_courses = ?,tea_school=?,tea_major=?,tea_grade =?,remark=?'+
     ' WHERE tea_id = ?'
@@ -131,3 +130,26 @@ exports.showdata = function(req,res){
         }
     })
 }
+
+exports.search = function(req,res){
+
+    var search_txt = req.query.search_txt;
+  
+            var sql = 'select  teachers.*, students.head_src from teachers,students where teachers.tea_id=students.is_tea_ID and teachers.stu_grade like '+con.escape("%"+search_txt+"%") + 'or  teachers.tea_name like '+con.escape("%"+search_txt+"%")+' or teachers.stu_courses like '+con.escape("%"+search_txt+"%")+ 'group by teachers.tea_id'
+            con.query(sql,[search_txt,search_txt,search_txt],function(err,result){
+    if (err) {
+      res.send({
+        status: 1,
+        info:   'error',
+        message:'系统错误'
+      });
+  
+    }else{
+
+      res.json(result);
+    }
+  });
+  };
+
+
+ 

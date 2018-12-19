@@ -64,6 +64,7 @@ API
                     info    : 'OK',
                     tokenID:(用户tokenID,唯一标识)
                     tea_token:(若已经为老师则此值为老师id,若未注册老师，此值为null)
+                     information 用户的所有资料
                     message:'密码匹配正确'
                 }
               
@@ -73,9 +74,71 @@ API
                     info    : 'error',
                     message:'密码匹配错误'
             }    
-            );      
+            );  
+更新学生资料    
+接口：/updata_stu
+        请求：POST
+        调用形式：/updata_stu
+        参数：
+         stu_id  查找学生用
+         stu_name
+         stu_age 
+         stu_sex 
+         stu_grade 
+          成功返回值：
+                {
+                    status:0,
+                    message:'修改成功'
+                }
+              
+            }
+        错误返回值:{
+                   status:1,
+                   message:errorMessage
+            }    
+            );
+
+获取学生资料
+接口：/showdata_stu
+        请求：get
+        调用形式：/showdata_stu?stu_id=?
+        参数：
+            stu_id
+          成功返回值：
+                {
+                     array[object]
+                }
+              
+            }
+        错误返回值:{
+                   status:1,
+                   message:errorMessage
+            }    
+            );
+头像上传
+接口：/upload_head
+        请求：post
+        
+        参数：
+            stu_id 用户id
+            file文件
+
+          成功返回值：
+                {
+                    status:0,
+                    headurl:url,
+                    info:'ok',
+                    message:'成功'
+                }
+              
+            }
+        错误返回值:{
+                   status:1,
+                   message:errorMessage
+            }    
+            );
 -------------------------老师 ----------------------------------------------------------------------
-成为老师：
+注册老师：
         接口：/register_tea
         请求：POST
         参数：tea_name  教师姓名
@@ -89,6 +152,7 @@ API
              tea_grade   老师所在年级
              userID      老师身份证号码
              remark      备注信息
+             stu_token   学生ID
         调用形式：/register_tea
         成功返回值：
                 {
@@ -119,7 +183,65 @@ API
               
             }
 
+老师更新资料
+接口：/updata_tea
+ 请求：post
+ 参数
+     tea_id  查找老师用
+     tea_name 
+     tea_age 
+     tea_sex 
+     tea_email 
+     stu_grade 
+     stu_courses 
+     tea_school 
+     tea_major
+     tea_grade 
+     remark =
+失败
+                 {
+                status: 1,
+                info: 'error',
+                message: '数据库错误，未能更新资料'
+                 }
+成功            status: 0,
+                info: 'or',
+                message: '更新成功'
 
+获取老师资料
+接口：/showdata_tea
+        请求：get
+        调用形式：/showdata_tea?tea_id=?
+        参数：
+            tea_id
+          成功返回值：
+                {
+                     array[object]
+                }
+              
+            }
+        错误返回值:{
+                   status:1,
+                   message:errorMessage
+            }    
+            );
+
+
+            搜索老师
+接口：/search
+        请求：get
+        参数：
+           search_txt
+          成功返回值：
+                {
+                     array[object]
+                }  
+            }
+        错误返回值:{
+                   status:1,
+                   message:errorMessage
+            }    
+            );
 
 -------------------------老师 ----------------------------------------------------------------------.
 
@@ -148,6 +270,7 @@ API
             class_time 上课时间  string
             order_address 上课地址  string
              order_time  订单时间
+             order_course 预约上课科目
          成功返回值：
                 {
                 status: 0,
@@ -197,3 +320,152 @@ API
                     info: 'error2',
                     message: '错误'
             }
+
+
+找回密码发送验证码
+接口：/findVerify
+        请求：get
+        调用形式：findVerify？stu_phone = ?
+        参数：
+            stu_phone 用户手机号 int
+          成功返回值：
+                {
+                    status:0,
+                    stu_phone,//用户收到的验证码
+                    message:'请求成功'
+                }
+              
+            }
+        错误返回值:{
+                   status:1,
+                   message:errorMessage
+            }    
+            );
+
+
+更改密码
+接口：/forget
+        请求：POST
+        调用形式：/forget
+        参数：
+            stu_phone 用户手机号 int
+            stu_password 新密码 int
+          成功返回值：
+                {
+                    status:0,
+                    message:'修改成功'
+                }
+              
+            }
+        错误返回值:{
+                   status:1,
+                   message:errorMessage
+            }    
+            );
+社区学习圈板块222
+写贴
+/writeNote
+接口：/writeNote
+        请求：POST
+       
+        参数：
+           poster_id 学生id
+            content 发帖内容
+            img 图片
+          成功返回值：
+               status:0,
+                info:'ok',
+                message:'成功'
+              
+            }
+        错误返回值:{
+                    status:1,
+                    info:'error',
+                    message:'数据库错误'
+            }    
+            );
+
+
+得到所有帖子
+
+接口：/getAllNotes
+        请求：get
+       
+        参数：无
+          
+          成功返回值：
+              array[object]
+            }
+        错误返回值:{
+                    status:1,
+                    info:'error',
+                    message:'数据库错误'
+            }    
+            );
+得到自己的帖子
+
+接口：/getOwnNotes
+        请求：get
+       
+        参数：stu_id  
+          
+          成功返回值：
+              array[object]
+            }
+        错误返回值:{
+                    status:1,
+                    info:'error',
+                    message:'数据库错误'
+            }    
+            );
+
+
+-----------------------------学习圈0--------------------------------------
+学习视频
+接口：/video
+        请求：get
+       
+        参数：无
+          
+          成功返回值：
+              array[object]
+            }
+        错误返回值:{
+                    status:1,
+                    info:'error',
+                    message:'数据库错误'
+            }    
+            );
+
+新闻
+接口：/news
+        请求：get
+       
+        参数：无
+          
+          成功返回值：
+              array[object]
+            }
+        错误返回值:{
+                    status:1,
+                    info:'error',
+                    message:'数据库错误'
+            }    
+            );
+
+
+资料
+接口：/learnFile
+        请求：get
+       
+        参数：fileVerify   资料分类识别码
+          
+          成功返回值：
+              array[object]
+            }
+        错误返回值:{
+                    status:1,
+                    info:'error',
+                    message:'数据库错误'
+            }    
+            );
