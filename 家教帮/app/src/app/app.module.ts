@@ -56,6 +56,9 @@ import { NewsPage } from '../pages/news/news';
 import { DataPage } from '../pages/data/data';
 import { VideoPage } from '../pages/video/video';
 import { MydownloadPage } from '../pages/mydownload/mydownload';
+import { DatamorePage } from '../pages/datamore/datamore';
+import { DatagaoPage } from '../pages/datagao/datagao';
+import { DatayouPage } from '../pages/datayou/datayou';
 
 @NgModule({
   declarations: [
@@ -100,7 +103,10 @@ import { MydownloadPage } from '../pages/mydownload/mydownload';
     NewsPage,
     DataPage,
     VideoPage,
-    MydownloadPage
+    MydownloadPage,
+    DatamorePage,
+    DatagaoPage,
+    DatayouPage
   ],
   imports: [
     BrowserModule,
@@ -156,7 +162,10 @@ import { MydownloadPage } from '../pages/mydownload/mydownload';
     NewsPage,
     DataPage,
     VideoPage,
-    MydownloadPage
+    MydownloadPage,
+    DatamorePage,
+    DatagaoPage,
+    DatayouPage
   ],
   providers: [
     StatusBar,

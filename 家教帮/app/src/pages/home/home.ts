@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {ViewChild } from '@angular/core';
+import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
 import { LocationPage } from '../location/location';
 import { BeginclassPage} from '../beginclass/beginclass';
@@ -17,20 +17,39 @@ import { TeachersPage} from '../teachers/teachers';
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
+  constructor(public navCtrl: NavController,public http:HttpClient) {
+  }
   i;
   id;
   @ViewChild(Slides) slides: Slides;
   head: string;
   pea_name: string;
   stu_id;
-  constructor(public navCtrl: NavController,public http:HttpClient) {
-  }
   arr;
   arr1 = [];
-  getcircle(){  //所有人发的帖子是第一条
+  tea_id;
+  isActive;
+  ionViewWillEnter(){
+    this.pea_name=window.localStorage.getItem('pea_name');
+    this.stu_id =window.localStorage.getItem('tokenID');
+    this.tea_id =window.localStorage.getItem('teacherID');
+    if(this.tea_id=='null'||this.tea_id==null){
+      this.isActive=0;
+    }else{
+      this.isActive=1;
+    }
+    this.getcircle();
+    this.getteacher();
+   // this.slides.startAutoplay();
+}
+  ionViewDidLeave(){
+    //this.slides.stopAutoplay(); //离开时，轮播图停止播放
+  }
+  getcircle(){  //如果是老师，得到老师发的第一条
     this.http.get('http://www.zhuoran.fun:3000/getAllNotes').subscribe(res=>{
-      //console.log(res);
+      console.log(res);
       this.arr1 = res[0];//将传来的第一个数据传到这儿
       console.log(this.arr1);
     },err=>{
@@ -80,17 +99,7 @@ export class HomePage {
       ids:this.id
     });
   }
-  ionViewWillEnter(){
-    this.slides.startAutoplay();
-    this.slides.autoplayDisableOnInteraction = false;
-    this.head=window.localStorage.getItem('head');
-    this.pea_name=window.localStorage.getItem('pea_name');
-    this.stu_id =window.localStorage.getItem('tokenID');
-    this.getcircle();
-    this.getteacher();
-  }
-  ionViewWillLeave(){
-    this.slides.stopAutoplay();
-  }
+  row=['1111111111111','222211111111111'];
+ 
 
 }

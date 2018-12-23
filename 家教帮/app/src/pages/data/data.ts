@@ -4,6 +4,9 @@ import {HttpClient} from "@angular/common/http";
 import { FileTransfer, FileTransferObject}from'@ionic-native/file-transfer';//允许上载和下载文件
 import { LoadingController } from 'ionic-angular';
 import { File } from '@ionic-native/file'; //允许对驻留在设备上的文件进行读/写访问
+import { DatamorePage } from '../datamore/datamore';
+import { DatagaoPage } from '../datagao/datagao';
+import { DatayouPage } from '../datayou/datayou';
 /**
  * Generated class for the DataPage page.
  *
@@ -34,7 +37,7 @@ export class DataPage {
   getfilezhong(){
     this.http.get("http://www.zhuoran.fun:3000"+"/learnFile?fileVerify=0").subscribe(res=>{
     console.log(res);
-    for(var i = 0;i<=res['length']-1;i++){//判断发送过来的数据有多少个
+    for(var i = 0;i<=2;i++){//判断发送过来的数据有多少个
       this.arr1[i] = res[i];
     }
 
@@ -42,11 +45,19 @@ export class DataPage {
       console.log('error',err)
     })
   }
-
+  goZmore(){
+    this.navCtrl.push(DatamorePage);
+  }
+  goGmore(){
+    this.navCtrl.push(DatagaoPage);
+  }
+  goYmore(){
+    this.navCtrl.push(DatayouPage);
+  }
   getfilegao(){
     this.http.get("http://www.zhuoran.fun:3000"+"/learnFile?fileVerify=1").subscribe(res=>{
     console.log(res);
-    for(var i = 0;i<=res['length']-1;i++){//判断发送过来的数据有多少个
+    for(var i = 0;i<=2;i++){//判断发送过来的数据有多少个
       this.arr2[i] = res[i];
     }
 

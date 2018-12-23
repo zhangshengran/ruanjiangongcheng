@@ -28,7 +28,7 @@
                   <p>{{pea_name}}的学习圈 <ion-icon name="ios-arrow-forward-outline" (click)="study()"></ion-icon> </p>
               </div>
               
-              <div  *ngFor="let item of arr1;let i=index">  <!--显示前四张动态，如果没有，则不显示-->
+              <div  *ngFor="let item of arr1;let i=index" style="width:100%;">  <!--显示前四张动态，如果没有，则不显示-->
                     <div class="img" *ngIf="i<4">
                         <img  src="{{item}}"/>
                     </div>

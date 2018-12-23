@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar color="setnav">
+    <ion-title>资料云</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="top" >
+      <ion-searchbar (ionInput)="getItems($event)"  placeholder="请输入想查找的资料" mode="ios" class="search"></ion-searchbar>
+  </div>
+  <ion-card   class="zhong">
+    <span class="topic">中考专区</span>
+    <!-- <span>115</span> -->
+    <ion-icon class="icon1" ios="ios-more" md="md-more" (click)="goZmore()"></ion-icon>
+    <div class="middle1"></div>
+    <div  *ngFor="let item1 of arr1;let idx=index;"style="margin-top:20px;">
+      <span>{{item1.file_name}}</span>
+      <span style="float:right;">  <ion-icon ios="ios-download" md="md-download"(click)="downloadzhong(idx)"></ion-icon></span>
+    </div>
+  </ion-card>
+  <ion-card  class="zhong">
+      <span class="topic">高考专区</span>
+      <!-- <span>220</span> -->
+      <ion-icon class="icon1" ios="ios-more" md="md-more" (click)="goGmore()"></ion-icon>
+      <div class="middle2"></div>
+      <div  *ngFor="let item1 of arr2;let idx=index;"style="margin-top:20px;">
+        <span>{{item1.file_name}}</span>
+        <span style="float:right;">  <ion-icon ios="ios-download" md="md-download" (click)="downloadgao(idx)"></ion-icon></span>
+      </div>
+    </ion-card>
+    <ion-card  class="zhong">
+        <span  class="topic">优选专区</span>
+        <!-- <span>350</span> -->
+        <ion-icon class="icon1" ios="ios-more" md="md-more" (click)="goYmore()"></ion-icon>
+        <div class="middle3"></div>
+        <div  *ngFor="let item1 of arr2;let idx=index;"style="margin-top:20px;">
+          <span>{{item1.file_name}}</span>
+          <span style="float:right;">  <ion-icon ios="ios-download" md="md-download" (click)="downloadgao(idx)"></ion-icon></span>
+        </div>
+    </ion-card>
+</ion-content>

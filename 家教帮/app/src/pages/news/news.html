@@ -1,15 +1,42 @@
 <ion-header>
-  <ion-navbar color="setnav">
-    <ion-title>新闻头条</ion-title>
-  </ion-navbar>
-</ion-header>
-<ion-content>
-  <ion-card *ngFor="let item1 of arr;let idx=index;">
-    <div class="left">
-      <img src="{{item1.src}}" alt="">
-    </div>
-    <div class="right" (click)="gonews(idx)">
-      <h2>{{item1.header}}</h2>
-    </div>
-  </ion-card>
-</ion-content>
+    <ion-navbar color="setnav">
+      <ion-title>新闻头条</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content>
+    <ion-grid *ngFor="let item1 of arr;let idx=index;" (click)="gonews(idx)">
+      <ion-row>
+        <ion-col col-4>
+            <img  class="img"style="height:80px;"src="{{item1?.src}}"alt="">
+        </ion-col>
+        <ion-col col-8>
+          <ion-row style="height:30px; margin-top:5px; margin-left:7px;">
+              <span class="h2">{{item1?.header}}</span>
+          </ion-row>
+          <ion-row style="margin-top:20px;">
+            <ion-col col-5 style="height:20px;line-height: 20px;">
+                <span style="margin-left:15px;">浏览{{item1?.num}}次</span>
+            </ion-col>
+            <ion-col col-7  style="height:20px;line-height: 20px;">
+                <span style="float:right;margin-right:15px;">{{item1?.time}}</span>
+              </ion-col>
+          </ion-row>
+            
+            
+        </ion-col>
+      </ion-row>
+    </ion-grid> 
+    <!-- <div style=" margin-left:5%;margin-top:10px;width:90%;text-align:center;">
+      <span style="font-size:20px; border-bottom:2px solid green;">新闻推荐</span>
+    </div> 
+     <ion-card *ngFor="let item1 of arr;let idx=index;">
+      <img style="height:200px;"src="{{item1.src}}" alt="">
+      <h2 class="h2">{{item1.header}}</h2>
+      <p >{{item1.content}}</p>
+      <div class="bottom">
+        <span>浏览{{item1.num}}次</span>
+        <span style="margin-left:20%;">{{item1.time}}</span>
+        <button ion-button (click)="gonews(idx)">开始阅读</button>
+      </div>  
+    </ion-card> -->
+  </ion-content>

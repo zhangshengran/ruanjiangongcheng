@@ -25,6 +25,8 @@ export class MyPage {
   id=Number;
   head: string;
   pea_name: string;
+  tea_id ;
+  isActive;
   constructor(public http: Http,public navCtrl: NavController, public navParams: NavParams) {
   }
   godata(){
@@ -50,5 +52,11 @@ export class MyPage {
   ionViewWillEnter() {  //一进来时，就会调用,变量就会及时更新
     this.pea_name=window.localStorage.getItem('pea_name');  //名称
     this.head=window.localStorage.getItem('head'); //头像的路径
+    this.tea_id =window.localStorage.getItem('teacherID');
+    if(this.tea_id=='null'||this.tea_id==null){
+      this.isActive=0;
+    }else{
+      this.isActive=1;
+    }
 }
 }

@@ -4,30 +4,29 @@ page-video {
         padding-right:48px; 
     }
     ion-content{
-        background-color: #eee!important;
-        ion-card{
-            background-color: #eee!important;
-            height: 330px;
-        }
-        .p1{
-                margin:5px 0 10px 20px;
-                color:black;
-                font-size: 110%;
-            }
-        .txt{
-            height: 40px;
-            padding:0 5%;
-            
-            .p2{
-                height:20px;
-                margin:8px 0 20px 0;
-                .span-left{
-                    float:left;
-                }
-                .span-right{
-                    float:right;
-                }
-            }
+        .a{
+           width:43.1%;
+           margin-left:4.66%;
+           float:left;
+           margin-top:5%;
+           margin-bottom:5%;
+           video{
+               height:100px;
+               width:100%;
+               border-radius: 5px;
+           }
+           .title{
+               font-size:18px;
+               white-space:normal;
+               width:100%;
+               float:left;
+           }
+           .author{
+               float:left;
+               font-size:14px;
+               color:rgb(155,155,155);
+               width:100%;
+           }
         }
     }
 }
