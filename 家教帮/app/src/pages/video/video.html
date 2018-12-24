@@ -4,12 +4,15 @@
   </ion-navbar>
 </ion-header>
 <ion-content>
-<div *ngFor="let item1 of arr1;let idx=index;" class="a">
-    <video id="asd"controls="controls" (click)="control(idx)"  style=" object-fit: fill">
-        <source src="{{item1?.course_src}}" type="video/mp4"/>
-        Your browser does not support the video tag.
+  <div *ngFor="let item1 of arr1;let idx=index;" class="a">
+    <video id="asd" controls (click)="control(idx)" style=" object-fit: fill">
+      <source src="{{item1?.course_src}}" type="video/mp4" />
+      Your browser does not support the video tag.
     </video>
-    <span class="title">{{item1?.course_name}}</span>
-    <span class="author">发布者：{{item1?.course_author}}</span>
-</div>
+    <div class="comment">
+      <div class="title">{{item1?.course_name}}</div>
+      <div class="author">发布者：{{item1?.course_author}} 发布时间：{{item1?.course_time}}</div>
+    </div>
+
+  </div>
 </ion-content>
