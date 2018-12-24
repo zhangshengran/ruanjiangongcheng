@@ -12,16 +12,27 @@ page-data {
             }
         }
         .zhong{
-            margin-top:40px;
+            // margin-top:40px;
             // border:1px solid gray;
-            width:90%;
-            margin-left:5%;
+            // width:90%;
+            // margin-left:5%;
+            // margin: 5px 0px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
             .topic{
-                font-size:20px; border-bottom: 1px solid green;
+                font-size:20px;
+                position: relative;
+                top: 2px;
                 color:skyblue;
-              
+                // text-align: center;
+            // text-decoration: none;
             }
+           
             .icon1{
+                position:absolute;
+                right: 10px;
+                top: 4px;
                 font-size:30px;
                 color:skyblue;
                 float:right;
@@ -47,5 +58,15 @@ page-data {
             height:100px;
             margin-top:10px;
         }
+    }
+    .card-md{
+        // margin: 6px !important;
+        width: calc(100%-5px)!important;
+        width: calc(100% - 10px) !important;
+        margin: 8px 5px !important;
+        background: #f7f7f7 !important;
+    }
+    .ziliaodiv{
+        margin: 20px;
     }
 }

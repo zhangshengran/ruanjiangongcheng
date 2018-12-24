@@ -44,18 +44,18 @@
         <ion-icon name="md-arrow-dropright" class="a"></ion-icon>
   </div>
 
-  <ion-item class="span1" no-lines >
+  <ion-item class="span1 shangyuanjiao" no-lines >
     <span  (click)="go3()">--教师推荐--</span>
     <div class="line"></div>  
   </ion-item>
-  <ion-item>
-          <div class="tuijian" style="text-align:center;width:15%;height:80px;float:left;margin-left:4%;padding-top:2%;"  *ngFor="let item of arr;let idx=index;" (click)='detail(idx)'>
+  <ion-item class="xiayuanjiao">
+          <div  class="tuijian teachertuijian" style="text-align:center;width:15%;height:80px;float:left;margin-left:4%;padding-top:2%;"  *ngFor="let item of arr;let idx=index;" (click)='detail(idx)'>
               <img style="width:40px;height:40px;border-radius: 50%;"src="{{item?.head_src}}"/>
               <div style="font-size:12px;margin-top:5%;">{{item?.tea_name}}</div>
             </div>
           </ion-item> 
   <br>
-  <div>
+  <div class="xuekediv">
       <ion-item class="span1"no-lines>
         <span>--热门学科--</span>
         <div class="line"></div> 
