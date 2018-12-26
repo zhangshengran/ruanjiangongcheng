@@ -77,6 +77,18 @@
 <img src="imgs/orderdetail.png"/>
 	<span>搜索</span>
 <img src="imgs/search.png"/>
+	<span>社区</span>
+<img src="imgs/shequ.png"/>
+<h5>学习圈相关页面</h5>
+	<span>学习圈</span>
+<img src="imgs/learn.png"/>
+	<span>新闻</span>
+<img src="imgs/news.png"/>
+	<span>资料云</span>
+<img src="imgs/datamore.png"/>
+	<span>更多资料</span>
+<img src="imgs/data.png"/>
+
 	
 
 <h3>项目功能</h3>
