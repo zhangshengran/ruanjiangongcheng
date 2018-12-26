@@ -6,7 +6,7 @@
       <li>message:具体的消息信息</li>
     </ul>
 <body>
- <h4>获取验证码:</h4>    
+ <h4>获取验证码</h4>    
        <span>接口：/verify</span><br/>
        <span>请求：GET</span><br/>
        <span>参数：stu_phone   手机号</span><br/>
@@ -28,7 +28,7 @@
             );
 ----------------------------------------------------- 学生 ----------------------------------------------------------
 
-<h4>学生注册：</h4>
+<h4>学生注册</h4>
        <span>接口：/register_stu</span><br/>
        <span>请求：POST</span><br/>
        <span>参数：stu_phone  手机号<br/>
@@ -53,7 +53,7 @@
             );          
 
 
-  <h4>学生登陆：</h4>
+  <h4>学生登陆</h4>
        <span>接口：/login</span><br/>
        <span>请求：POST</span><br/>
        <span>参数：stu_phone  手机号<br/>
@@ -80,7 +80,7 @@
             ); 
 
 
-  <h4>更新学生资料:</h4>    
+  <h4>更新学生资料</h4>    
         <span>接口：/updata_stu</span><br/>
         <span>请求：POST</span><br/>
         <span>调用形式：/updata_stu</span><br/>
@@ -106,7 +106,7 @@
             );
 
 
-  <h4>获取学生资料:</h4>
+  <h4>获取学生资料</h4>
         <span>接口：/showdata_stu</span><br/>
         <span>请求：get</span><br/>
         <span>调用形式：/showdata_stu?stu_id=?</span><br/>
@@ -125,7 +125,7 @@
             );
 
 
-  <h4>头像上传:</h4>
+  <h4>头像上传</h4>
         <span>接口：/upload_head</span><br/>
         <span>请求：post</span><br/>
         <span>参数：stu_id 用户id<br/>
@@ -148,7 +148,7 @@
             );
 
 ----------------------------------------------------- 老师 ----------------------------------------------------------
-  <h4>注册老师：</h4>
+  <h4>注册老师</h4>
         <span>接口：/register_tea</span><br/>
         <span>请求：POST</span><br/>
         <span>参数：tea_name  教师姓名<br/>
@@ -165,7 +165,7 @@
              stu_token   学生ID<br/>
         </span><br/>
         <span>调用形式：/register_tea</span><br/>
-        
+
         成功返回值：
                 {
                     status:0,
@@ -183,11 +183,13 @@
             }    
             ); 
 
-查找老师
-  接口：/select_tea
-        请求：get
-        调用形式：/select_tea
-        参数：无调用参数
+
+  <h4>查找老师</h4>
+        <span>接口：/select_tea</span><br/>
+        <span>请求：get</span><br/>
+        <span>参数：无调用参数</span><br/>
+        <span>调用形式：/select_tea</span><br/>
+        
          成功返回值：
                 {
                 array[object]  //返回一个数组，每个老师的信息为数组中的一个对象
@@ -195,38 +197,44 @@
               
             }
 
-老师更新资料
-接口：/updata_tea
- 请求：post
- 参数
-     tea_id  查找老师用
-     tea_name 
-     tea_age 
-     tea_sex 
-     tea_email 
-     stu_grade 
-     stu_courses 
-     tea_school 
-     tea_major
-     tea_grade 
-     remark =
-失败
+  <h4>老师更新资料</h4>
+        <span>接口：/updata_tea</span><br/>
+        <span>请求：post</span><br/>
+        <span>参数: 
+                  tea_id  查找老师用<br/>
+                  tea_name <br/>
+                  tea_age <br/>
+                  tea_sex <br/>
+                  tea_email <br/>
+                  stu_grade <br/>
+                  stu_courses <br/>
+                  tea_school <br/>
+                  tea_major <br/>
+                  tea_grade <br/>
+                  remark = <br/>
+        </span><br/>
+
+        失败
                  {
                 status: 1,
                 info: 'error',
                 message: '数据库错误，未能更新资料'
                  }
-成功            status: 0,
+        成功            status: 0,
                 info: 'or',
                 message: '更新成功'
 
-获取老师资料
-接口：/showdata_tea
-        请求：get
-        调用形式：/showdata_tea?tea_id=?
-        参数：
+
+
+  <h4>获取老师资料</h4>
+        <span>接口：/showdata_tea</span><br/>
+        <span>请求：get</span><br/>
+        <span>参数：
             tea_id
-          成功返回值：
+        </span><br/>
+        <span>调用形式：/showdata_tea?tea_id=?</span><br/>
+
+        成功返回值：
                 {
                      array[object]
                 }
@@ -239,12 +247,14 @@
             );
 
 
-            搜索老师
-接口：/search
-        请求：get
-        参数：
+  <h4>搜索老师</h4>
+        <span>接口：/search</span><br/>
+        <span>请求：get</span><br/>
+        <span>参数：
            search_txt
-          成功返回值：
+        </span><br/>
+
+        成功返回值：
                 {
                      array[object]
                 }  
@@ -255,60 +265,67 @@
             }    
             );
 
--------------------------老师 ----------------------------------------------------------------------.
 
+----------------------------------------------------- 老师 ----------------------------------------------------------
 
--------------------------视频 ----------------------------------------------------------------------.
-获得视频
-  接口：/select_video
-        请求：get
-        调用形式：/select_video
-        参数：无调用参数
+----------------------------------------------------- 视频 ----------------------------------------------------------
+
+  <h4>获得视频</h4>
+        <span>接口：/select_video</span><br/>
+        <span>请求：get</span><br/>
+        <span>参数：无调用参数</span><br/>
+        <span>调用形式：/select_video</span><br/>
+        
          成功返回值：
                 {
                 array[object]  //返回一个数组，每个视频的信息为数组中的一个对象
                 }
               
             }
--------------------------视频 ----------------------------------------------------------------------.
--------------------------订单 ----------------------------------------------------------------------. 
-        创建订单
-        接口：/order_set
-        请求：POST
-        调用形式：/order_set
-        参数：
-            stu_id 学生ID int
-            tea_id 老师ID int 
-            class_time 上课时间  string
-            order_address 上课地址  string
-             order_time  订单时间
-             order_course 预约上课科目
-         成功返回值：
+
+----------------------------------------------------- 视频 -----------------------------------------------------------
+
+----------------------------------------------------- 订单 -----------------------------------------------------------
+  <h4>创建订单</h4>
+        <span>接口：/order_set</span><br/>
+        <span>请求：POST</span><br/>
+        <span>参数：
+            stu_id 学生ID int<br/>
+            tea_id 老师ID int <br/>
+            class_time 上课时间  string <br/>
+            order_address 上课地址  string <br/>
+             order_time  订单时间 <br/>
+             order_course 预约上课科目 <br/>
+        </span><br/>
+        <span>调用形式：/order_set</span><br/>
+
+        成功返回值：
                 {
                 status: 0,
                     info: 'OK',
                     message: '订单生成成功'
                 }
-            错误返回值：
+        错误返回值：
                 status: 1,
                     info: 'error2',
                     message: '数据库写入错误'
             }
 
 
-学生订单查询
+  <h4>学生订单查询</h4>
+        <span>接口：/select_order_stu</span><br/>
+        <span>请求：get</span><br/>
+        <span>参数：
+            stu_id 学生ID int <br/>
+        </span><br/>
+        <span>调用形式：/select_order_stu?stu_id=1</span<br/>
 
-        接口：/select_order_stu
-        请求：get
-        调用形式：/select_order_stu?stu_id=1
-        参数：
-            stu_id 学生ID int
-         成功返回值：
+        成功返回值：
                 {
                  array[object]  订单详情的数组，每个object为一个订单详细信息
                  
                 }
-            错误返回值：
+        错误返回值：
                 status: 1,
                     info: 'error2',
                     message: '错误'
@@ -316,31 +333,34 @@
 
 
 
-老师订单查询
-
-        接口：/select_order_tea
-        请求：get
-        调用形式：/select_order_tea?tea_id=1
-        参数：
+  <h4>老师订单查询</h4>
+        <span>接口：/select_order_tea</span><br/>
+        <span>请求：get</span><br/>
+        <span>参数：
             stu_id 老师ID int
-         成功返回值：
+        </span><br/>
+        <span>调用形式：/select_order_tea?tea_id=1</span><br/>
+        
+        成功返回值：
                 {
                  array[object]  订单详情的数组，每个object为一个订单详细信息
                 }
-            错误返回值：
+        错误返回值：
                 status: 1,
                     info: 'error2',
                     message: '错误'
             }
 
 
-找回密码发送验证码
-接口：/findVerify
-        请求：get
-        调用形式：findVerify？stu_phone = ?
-        参数：
+  <h4>找回密码发送验证码</h4>
+        <span>接口：/findVerify</span><br/>
+        <span>请求：get</span><br/> 
+        <span>参数：
             stu_phone 用户手机号 int
-          成功返回值：
+        </span><br/>
+        <span>调用形式：findVerify？stu_phone = ?</span><br/>
+
+        成功返回值：
                 {
                     status:0,
                     stu_phone,//用户收到的验证码
@@ -355,14 +375,16 @@
             );
 
 
-更改密码
-接口：/forget
-        请求：POST
-        调用形式：/forget
-        参数：
-            stu_phone 用户手机号 int
-            stu_password 新密码 int
-          成功返回值：
+  <h4>更改密码</h4>
+        <span>接口：/forget</span><br/>
+        <span>请求：POST</span><br/>
+        <span>参数：
+            stu_phone 用户手机号 int<br/>
+            stu_password 新密码 int<br/>
+        </span><br/>
+        <span>调用形式：/forget</span><br/>
+
+        成功返回值：
                 {
                     status:0,
                     message:'修改成功'
@@ -374,17 +396,20 @@
                    message:errorMessage
             }    
             );
-社区学习圈板块222
-写贴
-/writeNote
-接口：/writeNote
-        请求：POST
-       
-        参数：
-           poster_id 学生id
-            content 发帖内容
-            img 图片
-          成功返回值：
+
+
+  <h4>社区学习圈板块222</h4>
+      <h5>写贴</h5>
+        <span>/writeNote</span><br/>
+        <span>接口：/writeNote</span><br/>
+        <span>请求：POST</span><br/>
+        <span>参数：
+           poster_id 学生id<br/>
+            content 发帖内容<br/>
+            img 图片<br/>
+        </span><br/>
+
+        成功返回值：
                status:0,
                 info:'ok',
                 message:'成功'
@@ -398,30 +423,12 @@
             );
 
 
-得到所有帖子
-
-接口：/getAllNotes
-        请求：get
-       
-        参数：无
+  <h4>得到所有帖子</h4>
+        <span>接口：/getAllNotes</span><br/>
+        <span>请求：get</span><br/>
+        <span>参数：无</span><br/>
           
-          成功返回值：
-              array[object]
-            }
-        错误返回值:{
-                    status:1,
-                    info:'error',
-                    message:'数据库错误'
-            }    
-            );
-得到自己的帖子
-
-接口：/getOwnNotes
-        请求：get
-       
-        参数：stu_id  
-          
-          成功返回值：
+        成功返回值：
               array[object]
             }
         错误返回值:{
@@ -432,30 +439,12 @@
             );
 
 
------------------------------学习圈0--------------------------------------
-学习视频
-接口：/video
-        请求：get
-       
-        参数：无
+  <h4>得到自己的帖子</h4>
+        <span>接口：/getOwnNotes</span><br/>
+        <span>请求：get</span><br/>
+        <span>参数：stu_id</span><br/>
           
-          成功返回值：
-              array[object]
-            }
-        错误返回值:{
-                    status:1,
-                    info:'error',
-                    message:'数据库错误'
-            }    
-            );
-
-新闻
-接口：/news
-        请求：get
-       
-        参数：无
-          
-          成功返回值：
+        成功返回值：
               array[object]
             }
         错误返回值:{
@@ -466,13 +455,13 @@
             );
 
 
-资料
-接口：/learnFile
-        请求：get
-       
-        参数：fileVerify   资料分类识别码
+------------------------------------------------------ 学习圈0 ------------------------------------------------------
+  <h4>学习视频</h4>
+        <span>接口：/video</span><br/>
+        <span>请求：get</span><br/>
+        <span>参数：无</span><br/>
           
-          成功返回值：
+        成功返回值：
               array[object]
             }
         错误返回值:{
@@ -483,15 +472,12 @@
             );
 
 
-后端接口
--------------------------------back------------------------------------
-查找所有学生
-接口：/getStu
-        请求：get
-       
-        参数：无
+  <h4>新闻</h4>
+        <span>接口：/news</span><br/>
+        <span>请求：get</span><br/>
+        <span>参数：无</span><br/>
           
-          成功返回值：
+        成功返回值：
               array[object]
             }
         错误返回值:{
@@ -500,13 +486,49 @@
                     message:'数据库错误'
             }    
             );
-删除学生
-        接口：/deStu
-        请求：get
-       
-        参数：stu_id
+
+
+  <h4>资料</h4>
+        <span>接口：/learnFile</span><br/>
+        <span>请求：get</span><br/>
+        <span>参数：fileVerify   资料分类识别码</span><br/>
           
-          成功返回值：
+        成功返回值：
+              array[object]
+            }
+        错误返回值:{
+                    status:1,
+                    info:'error',
+                    message:'数据库错误'
+            }    
+            );
+
+
+  <h3>后端接口</h3>
+------------------------------------------------------- back ---------------------------------------------------------
+  <h4>查找所有学生</h4>
+        <span>接口：/getStu</span><br/>
+        <span>请求：get</span><br/>
+        <span>参数：无</span><br/>
+
+          
+        成功返回值：
+              array[object]
+            }
+        错误返回值:{
+                    status:1,
+                    info:'error',
+                    message:'数据库错误'
+            }    
+            );
+
+
+  <h4>删除学生</h4>
+        <span>接口：/deStu</span><br/>
+        <span>请求：get</span><br/>
+        <span>参数：stu_id</span><br/>
+          
+        成功返回值：
                status:0,
                 info:'ok',
                 message:'删除成功'
@@ -518,13 +540,13 @@
             }    
             );
 
-查看订单
-       接口：/showOrders
-        请求：get
-       
-        参数：无
+
+  <h4>查看订单</h4>
+        <span>接口：/showOrders</span><br/>
+        <span>请求：get</span><br/>
+        <span>参数：无</span><br/>
           
-          成功返回值：
+        成功返回值：
               array[object]
             }
         错误返回值:{
@@ -534,13 +556,13 @@
             }    
             );
 
-删除视频
-   接口：/deVideo
-        请求：get
-       
-        参数：id  视频id
+
+  <h4>删除视频</h4>
+        <span>接口：/deVideo</span><br/>
+        <span>请求：get</span><br/>
+        <span>参数：id  视频id</span><br/>
           
-          成功返回值：
+        成功返回值：
                status:0,
                 info:'ok',
                 message:'删除成功'
@@ -553,13 +575,12 @@
             );
 
             
-删除新闻
-   接口：/delNews
-        请求：get
-       
-        参数：id  新闻id
+  <h4>删除新闻</h4>
+        <span>接口：/delNews</span><br/>
+        <span>请求：get</span><br/>
+        <span>参数：id  新闻id</span><br/>
           
-          成功返回值：
+        成功返回值：
                status:0,
                 info:'ok',
                 message:'删除成功'
@@ -573,14 +594,15 @@
 
 
 
-发布视频
-  接口：/createVideo
-        请求：post
-        参数：course_name 视频名
-        course_time       发布时间
-        course_author     发布作者
-          
-          成功返回值：
+  <h4>发布视频</h4>
+        <span>接口：/createVideo</span><br/>
+        <span>请求：post</span><br/>
+        <span>参数：course_name 视频名
+                    course_time       发布时间<br/>
+                    course_author     发布作者<br/>
+        </span><br/>
+
+        成功返回值：
                status:0,
                 info:'ok',
                 message:'上传成功'
@@ -593,16 +615,17 @@
             );
 
 
-上传学习文件
-  接口：/upLearnFile
-        请求：post
-     参数：var file_name  文件名
-     upload_time    上传时间
-     upload_peo    上传人
-     fileVerify    文件识别码  0为初中1为高中2为推荐
-     srore   文件评分
-          
-          成功返回值：
+  <h4>上传学习文件</h4>
+        <span>接口：/upLearnFile</span><br/>
+        <span>请求：post</span><br/>
+        <span>参数：var file_name  文件名<br/>
+                    upload_time    上传时间<br/>
+                    upload_peo    上传人<br/>
+                    fileVerify    文件识别码  0为初中1为高中2为推荐<br/>
+                    srore   文件评分<br/>
+        </span>
+
+        成功返回值：
                status:0,
                 info:'ok',
                 message:'上传成功'
@@ -614,13 +637,13 @@
             }    
             );
 
-删除学习资料
- 接口：/delLearnFile
-        请求：get
-       
-        参数：id  文件id
+
+  <h4>删除学习资料</h4>
+        <span>接口：/delLearnFile</span><br/>
+        <span>请求：get</span><br/>
+        <span>参数：id  文件id</span><br/>
           
-          成功返回值：
+        成功返回值：
                status:0,
                 info:'ok',
                 message:'删除成功'
@@ -632,13 +655,13 @@
             }    
             );
 
-删帖子
- 接口：/delposter
-        请求：get
-       
-        参数：co_id
+
+  <h4>删帖子</h4>
+        <span>接口：/delposter</span><br/>
+        <span>请求：get</span><br/>
+        <span>参数：co_id</span><br/>
           
-          成功返回值：
+        成功返回值：
                status:0,
                 info:'ok',
                 message:'删除成功'
@@ -649,14 +672,17 @@
                     message:'数据库错误'
             }    
             );           
-新闻发布
-接口：/writeNew
-        请求：post
-       
-        参数：header
-             content
-             time
-          成功返回值：
+
+
+  <h4>新闻发布</h4>
+        <span>接口：/writeNew</span><br/>
+        <span>请求：post</span><br/>
+        <span>参数：header<br/>
+             content<br/>
+             time<br/>
+        </span><br/>
+
+        成功返回值：
                status:0,
                 info:'ok',
                 message:'发布成功'
