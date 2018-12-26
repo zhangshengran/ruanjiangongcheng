@@ -78,16 +78,27 @@
 	<span>搜索</span>
 <img src="imgs/search.png"/>
 	<span>社区</span>
-<img src="imgs/shequ.png"/>
+<img src="imgs/shequ.jpg"/>
 <h5>学习圈相关页面</h5>
 	<span>学习圈</span>
-<img src="imgs/learn.png"/>
+<img src="imgs/learn.jpg"/>
 	<span>新闻</span>
-<img src="imgs/news.png"/>
+<img src="imgs/news.jpg"/>
 	<span>资料云</span>
 <img src="imgs/datamore.png"/>
 	<span>更多资料</span>
 <img src="imgs/data.png"/>
+<h5>我的相关页面</h5>
+	<span>我的</span>
+<img src="imgs/my.png"/>
+	<span>我的资料</span>
+<img src="imgs/mine.jpg"/>
+	<span>更换头像</span>
+<img src="imgs/changehead.png"/>
+	<span>修改资料</span>
+<img src="imgs/teadata.png"/>
+	<span>我的家教</span>
+<img src="imgs/mycourse.png"/>
 
 	
 
