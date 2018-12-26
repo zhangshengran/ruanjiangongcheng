@@ -6,12 +6,12 @@
       <li>message:具体的消息信息</li>
     </ul>
 	    
-	<h4>获取验证码:</h4>
-        <p>接口：/verify</p>
-        <p>请求：GET</p>
-        <p>参数：stu_phone   手机号</p>
-        <p>调用形式：/verify?stu_phone=15690580872</p>
-        <p>成功返回值：</p>
+	获取验证码:
+       接口：/verify
+       请求：GET
+       参数：stu_phone   手机号
+       调用形式：/verify?stu_phone=15690580872
+       成功返回值：
                 {
                     status:0,
                     stu_phone,//用户收到的验证码
@@ -19,22 +19,22 @@
                 }
               
             }
-        <p>错误返回值:</p>
+       错误返回值:
             {
                    status:1,
                    message:errorMessage
             }    
             );
-    <h3>学生</h3>
-    <h4>学生注册：</h4>
-        <p>接口：/register_stu</p>
-        <p>请求：POST</p>
-        <p>参数：stu_phone  手机号
+    学生
+    学生注册：
+       接口：/register_stu
+       请求：POST
+       参数：stu_phone  手机号
                  stu_password  密码
-        </p>
-        <p>调用形式：/register_stu</p>
         
-        <p>成功返回值：</p>
+       调用形式：/register_stu
+        
+       成功返回值：
                 {
                     status:0,
                     info    : 'OK',
@@ -42,7 +42,7 @@
                 }
               
             }
-        <p>错误返回值:</p>
+       错误返回值:
                 {
                    status  : 1,
                 info    : 'error',
@@ -51,14 +51,14 @@
             );          
 
 
-      <h4>学生登陆：</h4>
-        <p>接口：/login</p>
-        <p>请求：POST</p>
-        <p>参数：stu_phone  手机号
+      学生登陆：
+       接口：/login
+       请求：POST
+       参数：stu_phone  手机号
                  stu_password  密码
-        </p>
-        <p>调用形式：/login</p>
-        <p>成功返回值：</p>
+        
+       调用形式：/login
+       成功返回值：
                 {
                     status:0,
                     info    : 'OK',
@@ -69,13 +69,13 @@
                 }
               
             }
-        <p>错误返回值:</p>{
+       错误返回值:{
                    status:1,
                     info    : 'error',
                     message:'密码匹配错误'
             }    
             );  
-      <h4>更新学生资料</h4>    
+      更新学生资料    
 接口：/updata_stu
         请求：POST
         调用形式：/updata_stu
