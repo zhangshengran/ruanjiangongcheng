@@ -18,7 +18,7 @@
 <ul>
 	<li>张胜然（项目经理，代码开发）
 		<ul>
-			<li><a>电子邮箱:1286693585@qq.com</a></li>
+			<li><a href="#">电子邮箱:1286693585@qq.com</a></li>
 			<li>github地址:https://github.com/zhangshengran</li>
 		</ul>
 	</li>
