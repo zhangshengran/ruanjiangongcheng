@@ -1,3 +1,6 @@
+<div>
+	<img src="imgs/logo.png"/>
+</div>
 <h1>2016级项目实训成果展示</h1>
 <h2>《家教帮》- HTML5与移动互联网开发</h2>
 <h3>小组：SWP</h3>
