@@ -60,8 +60,12 @@
 	</li>
 </ul>
 <h3>运行效果</h3>
-	<span>老师首页</span>	
+	<span>老师首页:</span>	
 <img src="imgs/teahome.jpg"/>
+	<span>学生首页：</span>
+<img src="imgs/stuhome.png"/>
+	<span>上课提醒</span>
+<img src=""imgs/affairm.png"/>
 	
 
 <h3>项目功能</h3>
