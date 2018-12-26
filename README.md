@@ -62,11 +62,10 @@
 <h3>运行效果</h3>
 	<h5>首页相关页面</h5>		
 	<span>学生首页：</span>
-		<img src="imgs/stuhome.png"/>
+<img src="imgs/stuhome.png"/>
 	<span>老师首页:</span>	
-	<img src="imgs/teahome.jpg"/>
-	
-<span>上课提醒</span>
+<img src="imgs/teahome.jpg"/>
+	<span>上课提醒</span>
 <img src="imgs/affairm.png"/>
 	<span>教师推荐</span>
 <img src="imgs/teacher.png"/>
