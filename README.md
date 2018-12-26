@@ -18,7 +18,7 @@
 <ul>
 	<li>张胜然（项目经理，代码开发）
 		<ul>
-			<li><a>电子邮箱:2537158536@qq.com</a></li>
+			<li><a>电子邮箱:1286693585@qq.com</a></li>
 			<li>github地址:https://github.com/zhangshengran</li>
 		</ul>
 	</li>
@@ -30,7 +30,7 @@
 	</li>
 	<li>郭艳霞（前端开发）
 		<ul>
-			<li>电子邮箱:491045545@qq.com</li>
+			<li>电子邮箱:2537158536@qq.com</li>
 			<li>github地址:https://github.com/guoyanxia</li>
 		</ul>
 	</li>
