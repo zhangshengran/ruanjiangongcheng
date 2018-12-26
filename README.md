@@ -60,12 +60,23 @@
 	</li>
 </ul>
 <h3>运行效果</h3>
+	<h5>首页相关页面</h5>		
 	<span>老师首页:</span>	
 <img src="imgs/teahome.jpg"/>
 	<span>学生首页：</span>
 <img src="imgs/stuhome.png"/>
 	<span>上课提醒</span>
-<img src=""imgs/affairm.png"/>
+<img src="imgs/affairm.png"/>
+	<span>教师推荐</span>
+<img src="imgs/teacher.png"/>
+	<span>热门课程</span>
+<img src="imgs/course.png"/>
+	<span>教师简介</span>
+<img src="imgs/teacherdetail.png"/>
+	<span>订单</span>
+<img src="imgs/orderdetail.png"/>
+	<span>搜索</span>
+<img src="imgs/search.png"/>
 	
 
 <h3>项目功能</h3>
