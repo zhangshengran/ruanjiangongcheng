@@ -1,4 +1,10 @@
-var con = require('./db').con;
+// var con = require('./db').con;
+
+var con = require('../config/config').con;
+
+
+
+
 // 创建订单
 exports.order_set = function (req, res) {
     var stu_id = req.body.stu_id;
@@ -33,7 +39,7 @@ exports.order_set = function (req, res) {
 // 学生要查询的订单
 exports.select_order_stu = function(req,res){
     var stu_id = req.query.stu_id;
-    con.query('select tea_name,tea_sex,stu_grade,stu_courses,tea_school,tea_major,tea_grade, order_id,class_time,order_time,order_address,order_course from teachers,order2 where teachers.tea_id = order2.tea_id and stu_id =?',[stu_id], (err, result) => {
+    con.query('select students.stu_phone, teachers.tea_name,teachers.tea_sex,teachers.stu_grade,teachers.stu_courses,teachers.tea_school,teachers.tea_major,teachers.tea_grade, order_id,class_time,order_time,order_address,order_course from teachers,order2,students where teachers.tea_id = order2.tea_id and order2.stu_id=students.stu_id and students.stu_id =?',[stu_id], (err, result) => {
         if(err){
            
             res.send({

@@ -1,4 +1,9 @@
-var con = require('./db').con;
+// var con = require('./db').con;
+
+
+
+var con = require('../config/config').con;
+
 
 exports.select_video = function (req, res) {
     con.query('select * from video', (err, result) => {

@@ -1,4 +1,8 @@
-var con = require('./db').con;
+// var con = require('./db').con;
+
+
+var con = require('../config/config').con;
+
 
 // 成为老师
 exports.register_tea = function (req, res) {
@@ -14,9 +18,10 @@ exports.register_tea = function (req, res) {
     var tea_grade = req.body.tea_grade;
     var userID = req.body.userID;
     var remark = req.body.remark;
+    var tea_money = req.body.tea_money;
     var stu_token = req.body.stu_token;
-    con.query('insert into teachers(tea_name,tea_age,tea_sex,tea_email,stu_grade,stu_courses,tea_school,tea_major,tea_grade,userID,remark) values(?,?,?,?,?,?,?,?,?,?,?)',
-        [tea_name, tea_age, tea_sex, tea_email, stu_grade, stu_courses, tea_school, tea_major, tea_grade, userID, remark], (err, result) => {
+    con.query('insert into teachers(tea_name,tea_age,tea_sex,tea_email,stu_grade,stu_courses,tea_school,tea_major,tea_grade,userID,remark,tea_money) values(?,?,?,?,?,?,?,?,?,?,?,?)',
+        [tea_name, tea_age, tea_sex, tea_email, stu_grade, stu_courses, tea_school, tea_major, tea_grade, userID, remark,tea_money], (err, result) => {
             if (err) {
                 res.send({
                     status: 1,
@@ -95,10 +100,11 @@ exports.completed = function (req, res) {
     var tea_major = req.body.tea_major;
     var tea_grade = req.body.tea_grade;
     var remark = req.body.remark;
+    var tea_money = req.body.tea_money;
     dbstr = 'UPDATE teachers'+
-    ' set tea_name = ?,tea_age = ?,tea_sex= ?,tea_email = ?,stu_grade = ?,stu_courses = ?,tea_school=?,tea_major=?,tea_grade =?,remark=?'+
+    ' set tea_name = ?,tea_age = ?,tea_sex= ?,tea_email = ?,stu_grade = ?,stu_courses = ?,tea_school=?,tea_major=?,tea_grade =?,remark=?,tea_money=?'+
     ' WHERE tea_id = ?'
-    con.query(dbstr, [tea_name, tea_age, tea_sex, tea_email, stu_grade,stu_courses,tea_school,tea_major,tea_grade,remark,tea_id], (err, result) => {
+    con.query(dbstr, [tea_name, tea_age, tea_sex, tea_email, stu_grade,stu_courses,tea_school,tea_major,tea_grade,remark,tea_money,tea_id], (err, result) => {
         if (err) {
             
             res.send({

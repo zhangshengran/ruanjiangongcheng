@@ -1,7 +1,12 @@
 var request = require('request');
 var querystring = require('querystring');
 
-var con = require('./db').con;
+// var con = require('./db').con;
+
+var con = require('../config/config').con;
+
+
+
 
 // 找回密码发送验证码接口
 exports.findVerify = function (req, res) {
@@ -101,3 +106,40 @@ exports.forget = function (req, res) {
   })
 }
 
+exports.postadvise = function(req,res){
+  var adv_user = req.body.adv_user;
+  var adv_content = req.body.adv_content;
+  var adv_time = req.body.adv_time;
+ 
+  
+  con.query(' insert into advice(adv_user,adv_content,adv_time)values(?,?,?)',[adv_user,adv_content,adv_time],(err)=>{
+    if(err){
+      res.send({
+        status: 1,
+        info: 'err',
+        message: '数据库错误'
+      })
+    }else{
+      res.send({
+        status: 0,
+        info: 'ok',
+        message: '建议提交成功'
+      })
+    }
+  })
+}
+
+exports.getadvise = function(req,res){
+  var adv_user = req.query.adv_user;
+  con.query('select * from advice where adv_user=?',[adv_user],(err,result)=>{
+    if(err){
+      res.send({
+        status: 1,
+        info: 'err',
+        message: '数据库错误'
+      })
+    }else{
+      res.json(result);
+    }
+  })
+}

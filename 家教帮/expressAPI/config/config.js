@@ -1,11 +1,20 @@
+
+
 let OSS = require('ali-oss');
-var fs = require('fs');
-var con = require('./db').con;
+const mysql = require('mysql'),
+con = mysql.createConnection({
+    host: '39.105.111.123',
+    user: 'root',
+    password: 'xingyun2016',
+    database: 'tutor'
+});
+exports.con = con;
+
 
 let client = new OSS({
   region: 'oss-cn-beijing',
   accessKeyId: 'LTAILzRjytI5AIO8',
-  accessKeySecret: 'VtwJkolPmWi0k3RvxKqtG5v1wMSBWm', 
+  accessKeySecret: 'VtwJkolPmWi0k3RvxKqtG5v1wMSBWm',
   bucket: 'tutor666',
 });
 
@@ -16,25 +25,13 @@ exports.aliyunPUT_head = async function put(path, filename, temfile) {
     let result = await client.put(path + filename, temfile);
     var url = result.url;//文件读取地址
    return new Promise((resolved)=>{
-     resolved(url); 
+     resolved(url);
    })
   } catch (err) {
     console.log(err);
   }
 }
 
-// 学习圈
-// exports.aliyunPUT_head = async function put(path, filename, temfile) {
-//   try {
-//     let result = await client.put(path + filename, temfile);
-//     var url = result.url;//文件读取地址
-//    return new Promise((resolved)=>{
-//      resolved(url);
-//    })
-//   } catch (err) {
-//     console.log(err);
-//   }
-// }
 
 
 
@@ -61,6 +58,7 @@ exports.aliyunPUT_community = async function put(path, filename, temfile) {
 }
 
 
+
 let client3 = new OSS({
   region: 'oss-cn-beijing',
   accessKeyId: 'LTAILzRjytI5AIO8',
@@ -72,7 +70,7 @@ let client3 = new OSS({
 
 exports.aliyunPUT_learn = async function put(path, filename, temfile) {
   try {
-    let result = await client2.put(path + filename, temfile);
+    let result = await client3.put(path + filename, temfile);
     var url = result.url;//文件读取地址
    return new Promise((resolved)=>{
      resolved(url);

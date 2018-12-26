@@ -1,7 +1,13 @@
 var request = require('request');
 var querystring = require('querystring');
+let OSS = require('ali-oss');
+var fs = require('fs');
+// var con = require('./db').con;
+// var aliyun = require('./aliyun');
 
-var con = require('./db').con;
+
+var aliyun = require('../config/config');
+var con = require('../config/config').con;
 
 // 验证码接口
 exports.verify = function (req, res) {
@@ -201,10 +207,7 @@ exports.showdata = function (req, res) {
 }
 
 
-let OSS = require('ali-oss');
-var fs = require('fs');
-var con = require('./db').con;
-var aliyun = require('./aliyun');
+
 
 
 exports.upload_head = async function (req, res, next) {

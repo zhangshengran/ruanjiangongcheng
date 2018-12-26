@@ -1,5 +1,8 @@
-var con = require('./db').con;
+// var con = require('./db').con;
 
+
+
+var con = require('../config/config').con;
 
 exports.file_download = function(req,res){
    var fileVerify = req.query.fileVerify;

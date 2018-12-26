@@ -1,5 +1,10 @@
-var con = require('./db').con;
-var aliyun = require('./aliyun');
+// var con = require('./db').con;
+// var aliyun = require('./aliyun');
+
+
+var aliyun = require('../config/config');
+var con = require('../config/config').con;
+
 var fs = require('fs');
 exports.writeNote = async function (req, res, next) { 
 
