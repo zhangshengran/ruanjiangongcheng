@@ -26,10 +26,12 @@
                    message:errorMessage
             }    
             );
+----------------------------------------------------- 学生 ----------------------------------------------------------
+
 <h4>学生注册：</h4>
        <span>接口：/register_stu</span><br/>
        <span>请求：POST</span><br/>
-       <span>参数：stu_phone  手机号
+       <span>参数：stu_phone  手机号<br/>
                    stu_password  密码
         </span><br/>
        <span>调用形式：/register_stu</span><br/>
@@ -54,7 +56,7 @@
   <h4>学生登陆：</h4>
        <span>接口：/login</span><br/>
        <span>请求：POST</span><br/>
-       <span>参数：stu_phone  手机号
+       <span>参数：stu_phone  手机号<br/>
                  stu_password  密码
        </span><br/>
        <span>调用形式：/login</span><br/>
@@ -103,13 +105,14 @@
             }    
             );
 
-获取学生资料
-接口：/showdata_stu
-        请求：get
-        调用形式：/showdata_stu?stu_id=?
-        参数：
-            stu_id
-          成功返回值：
+
+  <h4>获取学生资料:</h4>
+        <span>接口：/showdata_stu</span><br/>
+        <span>请求：get</span><br/>
+        <span>调用形式：/showdata_stu?stu_id=?</span><br/>
+        <span>参数：stu_id</span><br/>
+            
+        成功返回值：
                 {
                      array[object]
                 }
@@ -120,15 +123,16 @@
                    message:errorMessage
             }    
             );
-头像上传
-接口：/upload_head
-        请求：post
-        
-        参数：
-            stu_id 用户id
-            file文件
 
-          成功返回值：
+
+  <h4>头像上传:</h4>
+        <span>接口：/upload_head</span><br/>
+        <span>请求：post</span><br/>
+        <span>参数：stu_id 用户id<br/>
+                    file文件<br/>
+        </span><br/>
+            
+        成功返回值：
                 {
                     status:0,
                     headurl:url,
@@ -142,23 +146,26 @@
                    message:errorMessage
             }    
             );
--------------------------老师 ----------------------------------------------------------------------
-注册老师：
-        接口：/register_tea
-        请求：POST
-        参数：tea_name  教师姓名
-             tea_age  教师年龄
-             tea_sex  教师性别
-             tea_email  教师邮箱
-             stu_grade   可教的学生年级
-             stu_courses  可教的学生科目
-             tea_school    老师所在学校
-             tea_major     老师专业
-             tea_grade   老师所在年级
-             userID      老师身份证号码
-             remark      备注信息
-             stu_token   学生ID
-        调用形式：/register_tea
+
+----------------------------------------------------- 老师 ----------------------------------------------------------
+  <h4>注册老师：</h4>
+        <span>接口：/register_tea</span><br/>
+        <span>请求：POST</span><br/>
+        <span>参数：tea_name  教师姓名<br/>
+             tea_age  教师年龄<br/>
+             tea_sex  教师性别<br/>
+             tea_email  教师邮箱<br/>
+             stu_grade   可教的学生年级<br/>
+             stu_courses  可教的学生科目<br/>
+             tea_school    老师所在学校<br/>
+             tea_major     老师专业<br/>
+             tea_grade   老师所在年级<br/>
+             userID      老师身份证号码<br/>
+             remark      备注信息<br/>
+             stu_token   学生ID<br/>
+        </span><br/>
+        <span>调用形式：/register_tea</span><br/>
+        
         成功返回值：
                 {
                     status:0,
