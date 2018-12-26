@@ -76,7 +76,7 @@
             }    
             );  
       更新学生资料    
-接口：/updata_stu
+      接口：/updata_stu
         请求：POST
         调用形式：/updata_stu
         参数：
@@ -655,5 +655,3 @@
                     message:'数据库错误'
             }    
             );       
-</body>
-</html>
