@@ -76,7 +76,7 @@
                     message:'密码匹配错误'
             }    
             );  
-      更新学生资料    
+      <h4>更新学生资料:</h4>    
       接口：/updata_stu
         请求：POST
         调用形式：/updata_stu
