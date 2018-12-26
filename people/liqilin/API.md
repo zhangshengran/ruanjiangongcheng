@@ -83,14 +83,14 @@
         <span>请求：POST</span><br/>
         <span>调用形式：/updata_stu</span><br/>
         <span>参数：
-         stu_id  查找学生用
-         stu_name
-         stu_age 
-         stu_sex 
+         stu_id  查找学生用<br/>
+         stu_name<br/>
+         stu_age <br/>
+         stu_sex <br/>
          stu_grade
         </span><br/>
-        
-          成功返回值：
+
+        成功返回值：
                 {
                     status:0,
                     message:'修改成功'
