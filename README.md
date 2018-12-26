@@ -30,7 +30,7 @@
 	</li>
 	<li>郭艳霞（前端开发）
 		<ul>
-			<li>电子邮箱:2537158536@qq.com</li>
+			<li>电子邮箱:491045545@qq.com</li>
 			<li>github地址:https://github.com/guoyanxia</li>
 		</ul>
 	</li>
