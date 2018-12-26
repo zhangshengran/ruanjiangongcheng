@@ -5,8 +5,9 @@
       <li>status：  0表示成功，1表示失败</li>
       <li>message:具体的消息信息</li>
     </ul>
-	    
-	获取验证码:
+<body>
+ <h4>获取验证码:</h4>    
+	
        接口：/verify
        请求：GET
        参数：stu_phone   手机号
@@ -25,7 +26,7 @@
                    message:errorMessage
             }    
             );
-    <h3>学生</h3>
+    学生
     学生注册：
        接口：/register_stu
        请求：POST
@@ -654,4 +655,5 @@
                     info:'error',
                     message:'数据库错误'
             }    
-            );       
+            ); 
+</body>
