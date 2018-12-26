@@ -7,8 +7,8 @@
     </ul>
 <body>
  <h4>获取验证码:</h4>    
-       接口：/verify
-       请求：GET
+       <span>接口：/verify</span><br/>
+       <span>请求：GET</span><br/>
        参数：stu_phone   手机号
        调用形式：/verify?stu_phone=15690580872
        成功返回值：
