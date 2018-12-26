@@ -29,10 +29,10 @@
 <h4>学生注册：</h4>
        <span>接口：/register_stu</span><br/>
        <span>请求：POST</span><br/>
-       <span>参数：stu_phone  手机号
+       <span>参数：stu_phone  手机号&nbsp
                    stu_password  密码
         </span><br/>
-       <span>调用形式：/register_stu?stu_phone=1560580872</span><br/>
+       <span>调用形式：/register_stu</span><br/>
         
        成功返回值：
                 {
@@ -51,13 +51,14 @@
             );          
 
 
-      <h4>学生登陆：</h4>
-       接口：/login
-       请求：POST
-       参数：stu_phone  手机号
-                 stu_password  密码
+  <h4>学生登陆：</h4>
+       <span>接口：/login</span><br/>
+       <span>请求：POST</span><br/>
+       <span>参数：stu_phone  手机号
+                 &nbspstu_password  密码
+       </span><br/>
         
-       调用形式：/login
+       <span>调用形式：/login</span><br/>
        成功返回值：
                 {
                     status:0,
