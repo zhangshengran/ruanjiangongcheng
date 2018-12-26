@@ -26,8 +26,8 @@
                    message:errorMessage
             }    
             );
-    学生
-    学生注册：
+    <h4>学生</h4>
+    <h4>学生注册：</h4>
        接口：/register_stu
        请求：POST
        参数：stu_phone  手机号
