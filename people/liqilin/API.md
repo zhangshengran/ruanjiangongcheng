@@ -58,7 +58,7 @@
                  stu_password  密码
        </span><br/>
        <span>调用形式：/login</span><br/>
-       
+
        成功返回值：
                 {
                     status:0,
@@ -75,17 +75,21 @@
                     info    : 'error',
                     message:'密码匹配错误'
             }    
-            );  
-      <h4>更新学生资料:</h4>    
-      接口：/updata_stu
-        请求：POST
-        调用形式：/updata_stu
-        参数：
+            ); 
+
+
+  <h4>更新学生资料:</h4>    
+        <span>接口：/updata_stu</span><br/>
+        <span>请求：POST</span><br/>
+        <span>调用形式：/updata_stu</span><br/>
+        <span>参数：
          stu_id  查找学生用
          stu_name
          stu_age 
          stu_sex 
-         stu_grade 
+         stu_grade
+        </span><br/>
+        
           成功返回值：
                 {
                     status:0,
