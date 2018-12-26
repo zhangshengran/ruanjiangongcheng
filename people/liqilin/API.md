@@ -29,7 +29,7 @@
 <h4>学生注册：</h4>
        <span>接口：/register_stu</span><br/>
        <span>请求：POST</span><br/>
-       <span>参数：stu_phone  手机号&nbsp
+       <span>参数：stu_phone  手机号
                    stu_password  密码
         </span><br/>
        <span>调用形式：/register_stu</span><br/>
@@ -55,9 +55,8 @@
        <span>接口：/login</span><br/>
        <span>请求：POST</span><br/>
        <span>参数：stu_phone  手机号
-                 &nbspstu_password  密码
+                 stu_password  密码
        </span><br/>
-        
        <span>调用形式：/login</span><br/>
        成功返回值：
                 {
