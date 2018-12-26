@@ -64,9 +64,9 @@
 	<span>学生首页：</span>
 		<img src="imgs/stuhome.png"/>
 	<span>老师首页:</span>	
-<img src="imgs/teahome.jpg"/>
+	<img src="imgs/teahome.jpg"/>
 	
-	<span>上课提醒</span>
+<span>上课提醒</span>
 <img src="imgs/affairm.png"/>
 	<span>教师推荐</span>
 <img src="imgs/teacher.png"/>
