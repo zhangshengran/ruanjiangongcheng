@@ -25,7 +25,7 @@
                    message:errorMessage
             }    
             );
-    学生
+    <h3>学生</h3>
     学生注册：
        接口：/register_stu
        请求：POST
