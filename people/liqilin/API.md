@@ -12,7 +12,7 @@
        <span>参数：stu_phone   手机号</span><br/>
        <span>调用形式：/verify?stu_phone=15690580872</span><br/>
        
-       <p>成功返回值：
+       成功返回值：
                 {
                     status:0,
                     stu_phone,//用户收到的验证码
@@ -26,7 +26,6 @@
                    message:errorMessage
             }    
             );
-        </p>
 <h4>学生注册：</h4>
        接口：/register_stu
        请求：POST
