@@ -99,6 +99,17 @@
 <img src="imgs/teadata.png"/>
 	<span>我的家教</span>
 <img src="imgs/mycourse.png"/>
+	<span>成为老师</span>
+<img src="imgs/beteacher.png"/>
+	<span>意见反馈</span>
+<img src="imgs/advice.png"/>
+<h5>设置相关</h5>
+	<span>登录</span>
+<img src="imgs/login.png"/
+     	<span>注册</span>
+<img src="imgs/register.png"/>
+	<span>忘记密码</span>
+<img src="imgs/forget.png"/
 
 	
 
