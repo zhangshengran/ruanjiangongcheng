@@ -39,8 +39,12 @@ export class LearningPage {
       console.log("ERROR:",err);
     })
   }
+  head;
+  pea_name;
   ionViewWillEnter() {
     this.getpublic();
+    this.head=window.localStorage.getItem('head');
+    this.pea_name=window.localStorage.getItem('pea_name');
   }
   temp=0;
   doInfinite(infiniteScroll) {

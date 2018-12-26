@@ -1,43 +1,117 @@
 page-home {
     ion-header{
-        .toolbar .searchbar-ios{
-            background-color: #fafafa !important;
-        }
-        ion-navbar{
-            ion-searchbar{
-                float:left;
-                width:100%;
-            }
-            /*
-              .div2{
-                  float:left;
-            width: 8%; 
-            height:45px;
-            text-align: center;
-            line-height:45px;
-            color:gainsboro;
-            @font-face {
-                font-family: 'iconfont';
-                src: url('//at.alicdn.com/t/font_943033_t9hzppgzi8.eot');
-                src: url('//at.alicdn.com/t/font_943033_t9hzppgzi8.eot?#iefix') format('embedded-opentype'),
-                url('//at.alicdn.com/t/font_943033_t9hzppgzi8.woff') format('woff'),
-                url('//at.alicdn.com/t/font_943033_t9hzppgzi8.ttf') format('truetype'),
-                url('//at.alicdn.com/t/font_943033_t9hzppgzi8.svg#iconfont') format('svg');
-              }
-              .iconfont {
-                font-family:"iconfont" !important;
-                font-size:25px;
-                font-style:normal;
-                -webkit-text-stroke-width: 0.1px;
-                -webkit-font-smoothing:antialiased;
-                -moz-osx-font-smoothing:grayscale;
-              }
-        }
-        */
-    }          
-    };
+        height: 42px!important;
+        .toolbar-md{
+            min-height:42px!important;
+            padding:0!important;
+         }
+         .searchbar-ios{
+            width:95%;
+            margin:0 2%;
+            padding:0;
+         }
+         .searchbar-ios .searchbar-input {
+             height:30px!important;
+             width:100%;
+             color:rgb(152,152,152);
+         }     
+         .toolbar .searchbar-ios .searchbar-input {
+            background:	white;
+         } 
+         .toolbar-background-md {
+             background:rgb(242,242,242);
+         }
+         .searchbar-ios.searchbar-left-aligned .searchbar-search-icon{
+            margin-left: 22%;
+         }
+         .searchbar-ios.searchbar-left-aligned .searchbar-input {
+             text-align:center;
+             border-radius:15px;
+         }
+    }
+    .header-md::after{
+        height:0px!important;
+    }
     ion-content{
-        background-color: #fafafa !important;
+      .c{
+          width:100%;
+          height:210px;
+         position:relative;
+        .myslides{
+            position: absolute;
+            top:30px;
+            height:80%;
+            .swiper-pagination-bullet-active{  //轮播图下面
+                background:#00adb5!important;
+            }
+            .swiper-pagination-bullet{
+                 background:white;
+                pointer-events:auto;
+                width:16px;
+                height:4px;
+                border-radius:10%;
+                display:inline-block;
+            }
+         }
+         .b{
+             height:20%;
+            position: absolute;
+            top:0;
+            width:100%;
+            height:30px;
+            background-color:white;
+            color:#00adb5;
+            .swiper-pagination-bullet{
+                display:none;
+            }
+            ion-icon{
+                color:#00adb5;
+                font-size:16px;
+                margin-right:3%;
+            }
+            span{
+                font-size:14px;
+
+            }
+        }
+
+    }
+    .courses{
+        width:100%;
+        padding:0;
+        .label-md{
+            margin-right:0;
+        }
+     .course{
+        width:12%;
+        padding-bottom:12%; //使宽度和高度一致
+        height: 0;
+        border-radius:50%;
+        margin:0 6.5%;
+        margin-bottom:8%;
+        float:left;
+        ion-icon{
+            margin-top:20%;
+            float:left;
+            width:100%;
+            font-size:25px;
+            color:white;
+            text-align: center;
+            .ion-md-add-circle:before {
+                font-size:35px!important;
+            }
+        }
+        span{
+            margin-top:25%;
+            float:left;
+            width:100%;
+            text-align:center;
+            color:gray;
+         font-family:'楷体';
+        }
+     }
+    }
+        background-color: #eeeeee !important;
         .fl{
             float: left;
         }
@@ -48,12 +122,29 @@ page-home {
             width: 25%;
             margin: 5px 10px 0 0;
         }
-        .cards{
-            height:70px;
-            line-height:70px;
-            width: 100%;
-            display: inline-flex;
-            justify-content: space-around;
+        .alert{
+            position: relative;
+            top: -5px;
+            height:50px;
+            line-height:50px;
+            width:86%;
+            margin:2% 7%;
+            border-radius:30px; 
+            background:		white;
+            ion-icon{
+                font-size:20px;
+                color:	#45b7b7;
+                margin-left:10%;
+            }
+            .a{
+                margin-left:45%;
+            }
+            span{
+                margin-left:1%;
+                font-family: "楷体";
+                font-size:20px;
+                color:	#45b7b7;
+            }
         }
         .myslides{
             height:180px;
@@ -62,7 +153,7 @@ page-home {
                height:180px;
                width: 100%;
                img{
-                 opacity:0.5;
+                 opacity:0.9;
                  height:180px;
                  width: 100%;
                }
@@ -78,57 +169,50 @@ page-home {
                 height: 50px;
             }
         }
-        .div4{
-            width: 100%;
-            height: 60px;
-            margin-top: 20px;
-            display:flex;
-            justify-content: space-around;
-            button{
-                width: 33%;
-                height: 80px;
-                text-align: center;
-                color:#00adb5;
-                background-color:white !important;
-                @font-face {
-                    font-family: 'iconfont';  /* project id 943033 */
-                    src: url('//at.alicdn.com/t/font_943033_t9hzppgzi8.eot');
-                    src: url('//at.alicdn.com/t/font_943033_t9hzppgzi8.eot?#iefix') format('embedded-opentype'),
-                    url('//at.alicdn.com/t/font_943033_t9hzppgzi8.woff') format('woff'),
-                    url('//at.alicdn.com/t/font_943033_t9hzppgzi8.ttf') format('truetype'),
-                    url('//at.alicdn.com/t/font_943033_t9hzppgzi8.svg#iconfont') format('svg');
-                  }
-                  .iconfont {
-                    font-family:"iconfont" !important;
-                    font-size:40px;
-                    font-style:normal;
-                    -webkit-font-smoothing:antialiased;
-                    -moz-osx-font-smoothing:grayscale;
-                  }
-            }
-        }
+       
         .span1{
-            // width:100%;
             text-align: center;
-            // border:1px solid red;
             color: #00adb5;
             font-size: 20px;
-            // margin-left: 5%;	
+            position:relative;
+            width:100%;
+            padding:0;
+            
         }
         .div5{
             width: 100%px;
         }
+       
+           
         .button{
-            width: 25%;
+            width: 31%;
             height: 25px;
             background-color: #fafafa;
             color:black;
         }
-        .text{
-            margin-bottom:3%;
-            text-overflow:ellipsis;
-            white-space:nowrap;  
-            color:black;
+        .bottom{
+            height:30px;
+            line-height:30px;
+            width:50%; 
+            margin:0 25%;
+            background-image: linear-gradient(to right,rgba(213,213,213,0.1) 0%,rgba(213,213,213,0.3) 15%,rgba(213,213,213,0.5) 50%,rgba(213,213,213,0.3) 85%,rgba(213,213,213,0.1) 100%);
         }
+        .line{
+            background-image: linear-gradient(to right,rgba(0,173,181,0) 0%,rgba(0,173,181,0.3) 15%,rgba(0,173,181,1) 50%,rgba(0,173,181,0.3) 85%,rgba(0,173,181,0) 100%);
+            width:100%;height:2px;
+            position:absolute;
+            bottom:1px;
+           }
     }
+
+   .xiayuanjiao{
+    border-radius: 0px 0px 15px 15px;
+   }
+   .shangyuanjiao{
+    border-radius: 15px 15px 0px 0px;
+   }
+   .xuekediv{
+    position: relative;
+    top: -10px;
+   }
 }   

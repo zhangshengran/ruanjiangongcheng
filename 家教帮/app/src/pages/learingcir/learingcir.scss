@@ -1,0 +1,46 @@
+page-learingcir {
+    ion-content{
+        background-image: url("../assets/imgs/learingcir1.jpg"); 
+        background-repeat: no-repeat;
+        background-size:100% 100% ;
+        background-position: center;
+        .header{
+            width: 100%;
+            text-align: center;
+            p{
+                margin-top: 25%;
+                font-size: 250%;
+                color: #666;
+                font-family: "华文新魏";
+            }
+        }
+        .e{
+            justify-content: center;
+            width: 100%;
+            opacity: 0.7;
+            float: left;
+            margin-left:10%; 
+            ion-card{
+                width: 34%;
+                float: left;
+                margin-top: 6%;
+                border-radius: 20px;
+            }
+            .a{
+                width: 100%;
+                height: 100px;
+                background-color: #fff;
+                float: left;
+                text-align: center;
+                font-size: 10px;
+                font-weight: 500;
+                margin: 1% 0 0 1%;
+                font-family: "黑体";
+            }
+        }
+        .e-1{
+            margin-top: 20px;
+            font-size: 30px;
+        }
+    }
+}

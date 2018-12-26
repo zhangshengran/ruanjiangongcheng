@@ -1,0 +1,25 @@
+
+<ion-header>
+    <ion-navbar color="setnav">
+        <ion-title>详情</ion-title>
+      </ion-navbar>
+  </ion-header>
+  <ion-content>
+    <div *ngFor="let item1 of arr;let idx=index;" style="width:100%;">
+        <div class="back">
+          <!-- <div> -->
+            <span>{{item1?.header}}</span>
+          <!-- </div> -->
+          <!-- <div style="height:100px;">
+              <span class="head">{{item1?.header}}</span>
+          </div>
+           -->
+          <!-- <div style="margin-top:50px;height:50px;line-height: 50px;"> -->
+            <!-- <span class="span2">浏览{{item1?.num}}次</span> -->
+            <!-- <span style="color:gray;margin-left:20px;">{{item1?.time}}</span> -->
+           <!-- </div> -->
+        </div>
+        <pre>{{item1.content}}</pre>
+    </div>
+  </ion-content>
+  

@@ -77,13 +77,15 @@ page-myimg {
                 }
                 .img{
                     margin-top:4%;
-                    margin-left:6%;
-                    width:100%;
+                    margin-left:4%;
+                    width:20%;
+                    height:50px;
+                    float:left;
+                    overflow:hidden;
                     img{
-                        float:left;
-                        width:20%;
+                        display:block;
+                        width:100%;
                         margin-right:2%;
-                        height:60px;
                     }
                 }
             }

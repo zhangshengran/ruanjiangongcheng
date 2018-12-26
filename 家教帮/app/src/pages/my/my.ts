@@ -7,8 +7,7 @@ import { MytalkPage } from '../mytalk/mytalk';
 import { MysettingPage } from '../mysetting/mysetting';
 import 'rxjs/add/operator/toPromise';
 import { MyimgPage } from '../myimg/myimg';
-import { StudataPage } from '../studata/studata';
-import { TeadataPage } from '../teadata/teadata';
+import { MydownloadPage } from '../mydownload/mydownload';
 
 /**
  * Generated class for the MyPage page.
@@ -26,14 +25,12 @@ export class MyPage {
   id=Number;
   head: string;
   pea_name: string;
+  tea_id ;
+  isActive;
   constructor(public http: Http,public navCtrl: NavController, public navParams: NavParams) {
   }
-  godata(id){
-    if(id == 1){
-      this.navCtrl.push(StudataPage);
-    }else if(id == 0){
-      this.navCtrl.push(TeadataPage);
-    }
+  godata(){
+    this.navCtrl.push(MydownloadPage);
   };
     
   gocourse(){
@@ -55,5 +52,11 @@ export class MyPage {
   ionViewWillEnter() {  //一进来时，就会调用,变量就会及时更新
     this.pea_name=window.localStorage.getItem('pea_name');  //名称
     this.head=window.localStorage.getItem('head'); //头像的路径
+    this.tea_id =window.localStorage.getItem('teacherID');
+    if(this.tea_id=='null'||this.tea_id==null){
+      this.isActive=0;
+    }else{
+      this.isActive=1;
+    }
 }
 }

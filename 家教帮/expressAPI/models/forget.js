@@ -5,7 +5,6 @@ var con = require('./db').con;
 
 // 找回密码发送验证码接口
 exports.findVerify = function (req, res) {
-  console.log(req.query);
   var stu_phone = req.query.stu_phone;//获得请求的手机号
 
   con.query('select * from students where stu_phone=?', [stu_phone], (err, result) => {
@@ -28,7 +27,7 @@ exports.findVerify = function (req, res) {
 
         var tpl_value = Math.round(Math.random() * 10 * 10 * 10 * 10 * 10)//获得随机5位验证码
 
-        console.log(stu_phone)
+     
 
         var queryData = querystring.stringify({
           "mobile": stu_phone,  // 接受短信的用户手机号码
@@ -41,9 +40,9 @@ exports.findVerify = function (req, res) {
 
         request(queryUrl, function (error, response, body) {
           if (!error && response.statusCode == 200) {
-            // console.log(body) // 打印接口返回内容      
+            
             var jsonObj = JSON.parse(body); // 解析接口返回的JSON内容 
-            console.log(jsonObj);
+          
             if (jsonObj.error_code !== 0) {
               res.send({
                 status: 1,
@@ -74,8 +73,7 @@ exports.findVerify = function (req, res) {
 
 
 exports.forget = function (req, res) {
-  // console.log(req);
-  console.log(req.body);
+
 
   var stu_phone = req.body.stu_phone;
   var stu_password = req.body.stu_password;
@@ -102,3 +100,4 @@ exports.forget = function (req, res) {
 
   })
 }
+

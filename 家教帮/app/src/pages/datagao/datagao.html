@@ -1,0 +1,30 @@
+
+<ion-header>
+
+    <ion-navbar color="setnav">
+      <ion-title>更多资料</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+    <div class="detail"  *ngFor="let item of arr;let idx=index;">
+      <div class="left">
+        <img src="../../assets/imgs/doc.png"/>
+      </div>
+      <div class="middle">
+        <span style="color:black;font-size:16px;">{{item?.file_name}}</span>
+        <span>上传时间{{item?.upload_time}}</span>
+        <span>下载{{item?.up_num}}次</span>
+        <span>贡献者：{{item?.upload_peo}}</span>
+      </div>
+      <div class="right">
+        <span style=" font-size:18px;">评分：{{item?.srore}}</span>
+        <span style="margin-top:20px; font-size:30px;">  <ion-icon ios="ios-cloud-download-outline" md="ios-cloud-download-outline"(click)="downloadgao(idx)"></ion-icon></span>
+      </div>
+  
+    </div>
+  
+  </ion-content>
+  

@@ -48,6 +48,8 @@
     </div>
 </ion-content> -->
 <ion-content>
+    <div [ngSwitch]="isActive">   <!--学生模块-->
+        <div *ngSwitchCase="0">
         <div class="myhead" >
             <div class="myhead1">
                 <img src="{{head}}" alt="头像" width="60px" height="60px" (click)="goimg()">
@@ -57,12 +59,12 @@
             </div>
         </div>
         <div class="e">
-            <ion-card (click)="godata(1)"> 
+            <ion-card (click)="godata()"> 
                 <div class="a">
                     <p>
                     <ion-icon class="e-1" md="md-albums"></ion-icon>
                     </p>
-                    <p class="e-2">个人资料</p>
+                    <p class="e-2">我的下载</p>
                 </div>
             </ion-card>
             <ion-card (click)="gocourse()">
@@ -70,7 +72,7 @@
                     <p>
                         <ion-icon class="e-1" name="book"></ion-icon>
                       </p>
-                      <p class="e-2">我的课程</p>
+                      <p class="e-2">我的家教</p>
                 </div>
             </ion-card>
             <ion-card (click)="goprove()">
@@ -78,7 +80,7 @@
                     <p>
                         <ion-icon class="e-1" md="md-bookmark"></ion-icon>
                     </p>
-                    <p class="e-2">我想当老师</p>
+                    <p class="e-2">成为老师</p>
                 </div>
             </ion-card>
             <ion-card (click)="gotalk()">
@@ -86,7 +88,7 @@
                     <p>
                         <ion-icon class="e-1" ios="ios-clipboard" md="md-clipboard"></ion-icon>
                     </p>
-                    <p class="e-2">评价管理</p>
+                    <p class="e-2">意见反馈</p>
                 </div>
             </ion-card>
         </div>
@@ -100,5 +102,58 @@
                 </div>
             </ion-card>
         </div>
+    </div>
+    <div *ngSwitchCase="1">  <!--老师模块-->
+        <div class="myhead" >
+                <div class="myhead1">
+                    <img src="{{head}}" alt="头像" width="60px" height="60px" (click)="goimg()">
+                </div>
+                <div class="myhead2">
+                    {{pea_name}}
+                </div>
+        </div>
+        <div class="setting" (click)="godata()">
+                <ion-card class="setting1" >
+                        <div class="e-2">
+                            <span>我的下载</span>
+                        </div>
+                        <div class="e-3">
+                            <ion-icon class="setting2" name="ios-arrow-forward-outline"></ion-icon>
+                        </div>
+                    </ion-card>
+        </div> 
+        <div class="setting" (click)="gocourse()">
+                <ion-card class="setting1" >
+                    <div class="e-2">
+                        <span>我的家教</span>
+                    </div>
+                    <div class="e-3">
+                        <ion-icon class="setting2" name="ios-arrow-forward-outline"></ion-icon>
+                    </div>
+                </ion-card>
+        </div>
+        <div class="setting" (click)="gotalk()">
+                <ion-card class="setting1" >
+                        <div class="e-2">
+                            <span>意见反馈</span>
+                        </div>
+                        <div class="e-3">
+                            <ion-icon class="setting2" name="ios-arrow-forward-outline"></ion-icon>
+                        </div>
+                    </ion-card>
+        </div>
+        <div class="setting" (click)="gosetting()">
+                <ion-card class="setting1" >
+                        <div class="e-2">
+                            <span>设置</span>
+                        </div>
+                        <div class="e-3">
+                            <ion-icon class="setting2" name="ios-arrow-forward-outline"></ion-icon>
+                        </div>
+                    </ion-card>
+        </div>
+          
+    </div>
+</div>
 </ion-content>
   

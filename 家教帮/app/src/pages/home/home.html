@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="assets/font/iconfont.css">
+
 <ion-header>
   <ion-navbar>
       <ion-searchbar (ionInput)="getItems($event)"  placeholder="请输入想查找的课程" mode="ios" 
@@ -11,87 +11,96 @@
   </ion-navbar>
 </ion-header>
 <ion-content>
-  <ion-slides  class="myslides" autoplay="600" speed="800" loop="true" pager (ionSlideAutoplayStop)="autoplay">
+  <div [ngSwitch]="isActive">   <!--学生模块-->
+    <div *ngSwitchCase="0">
+  <div class="c">
+  <ion-slides  class="myslides" autoplay="600" speed="800" loop="true" pager >
     <ion-slide>
-      <img src="assets/imgs/1.jpg" />
+      <img src="assets/imgs/home1.jpg" />
     </ion-slide>
     <ion-slide>
-      <img src="assets/imgs/2.jpg" />
+      <img src="assets/imgs/home2.jpg" />
     </ion-slide>
     <ion-slide>
-      <img src="assets/imgs/3.jpg" />
+      <img src="assets/imgs/home3.jpg" />
     </ion-slide>
     <ion-slide>
-      <img src="assets/imgs/4.jpg" />
+      <img src="assets/imgs/home4.jpg" />
     </ion-slide>
     <ion-slide>
-      <img src="assets/imgs/5.jpg" />
+      <img src="assets/imgs/home5.jpg" />
     </ion-slide>
   </ion-slides>
-  <ion-card> 
-    <div class="cards">
-      <div>
-        <ion-item >
-          <ion-avatar item-start>
-            <img src="{{head}}">
-          </ion-avatar>
-          <h2>{{pea_name}}</h2>
-          <p>距离最近开课时间还有xxx</p>
-        </ion-item>
-      </div>
-    <div>
-        <ion-item style="padding-top:8px; ">
-          <ion-icon name="arrow-dropright" style="text-align: center;font-size: 30px;" (click)="go1()"></ion-icon>
-        </ion-item> 
-    </div>
+  <ion-slides class="b" autoplay="2000" speed="2000" loop="true" pager >
+      <ion-slide *ngFor="let item of row;let idx=index;">
+          <ion-icon name="md-volume-up"></ion-icon><span>通知：{{item}}</span>
+      </ion-slide>
+       
+    </ion-slides>
   </div>
-  
-</ion-card>
-  <div class="div4">
-      <button (click)="go2()">
-        <i class="iconfont  icon-wendang-copy-copy "></i><br><br>
-        <span style="font-size: 14px;">我的课件</span>
-      </button>
-      <button (click)="go3()">
-        <i class="iconfont icon-tuijian"></i><br><br>
-        <span >老师推荐</span>
-      </button>
-      <button (click)="go4()">
-          <i class="iconfont icon-zuoye1"></i><br><br>
-          <span>我的作业</span>
-      </button>
+  <div class="alert" (click)="go1()">
+        <ion-icon name="md-alarm"></ion-icon>
+        <span> 上课提醒 </span>
+        <ion-icon name="md-arrow-dropright" class="a"></ion-icon>
   </div>
+
+  <ion-item class="span1 shangyuanjiao" no-lines >
+    <span  (click)="go3()">--教师推荐--</span>
+    <div class="line"></div>  
+  </ion-item>
+  <ion-item class="xiayuanjiao">
+          <div  class="tuijian teachertuijian" style="text-align:center;width:15%;height:80px;float:left;margin-left:4%;padding-top:2%;"  *ngFor="let item of arr;let idx=index;" (click)='detail(idx)'>
+              <img style="width:40px;height:40px;border-radius: 50%;"src="{{item?.head_src}}"/>
+              <div style="font-size:12px;margin-top:5%;">{{item?.tea_name}}</div>
+            </div>
+          </ion-item> 
   <br>
-  <hr>
-  <div>
-    <div>
-      <ion-item class="span1">
+  <div class="xuekediv">
+      <ion-item class="span1"no-lines>
         <span>--热门学科--</span>
+        <div class="line"></div> 
       </ion-item>
-      <ion-item  no-lines style="text-align: center;"> 
-        <button class="button" ion-button round  (click)="isClick(1)">语文
-        </button>
-        <button class="button" ion-button round  (click)="isClick(2)">数学
-        </button>
-        <button class="button" ion-button round  (click)="isClick(3)">英语
-        </button>
+      <ion-item  no-lines class="courses" style="padding-top:5%;"> 
+        <div class="course" (click)="isClick(1)" style="background:rgba(255,178,53,0.9);">
+          <ion-icon name="md-school" ></ion-icon>
+          <span>语文</span>
+        </div>
+        <div class="course" (click)="isClick(2)"style="background:rgba(101,162,251,0.9);">
+            <ion-icon name="md-book" ></ion-icon>
+            <span>数学</span>
+          </div>
+        <div class="course" (click)="isClick(3)" style="background:rgba(151,211,55,0.9);">
+            <ion-icon name="md-calendar" ></ion-icon>
+            <span>英语</span>
+        </div>
+        <div class="course" (click)="isClick(4)"style="background:rgba(219,112,147,0.9);">
+            <ion-icon name="md-card" ></ion-icon>
+            <span>物理</span>
+        </div>
       </ion-item>
-    </div>
-    <div>
-      <ion-item  no-lines style="text-align: center;">
-        <button class="button" ion-button round  (click)="isClick(4)">物理
-        </button>
-        <button class="button" ion-button round  (click)="isClick(5)">化学
-        </button>
-        <button class="button"  ion-button round  (click)="isClick(6)">更多
-        </button>
-      </ion-item>
-    </div>
+      <ion-item  no-lines class="courses"> 
+          <div class="course" (click)="isClick(5)" style="background:rgba(247,218,20,0.9);">
+            <ion-icon name="md-checkbox" ></ion-icon>
+            <span>化学</span>
+          </div>
+          <div class="course" (click)="isClick(6)" style="background:rgba(128,0,128,0.9);">
+              <ion-icon name="md-create" ></ion-icon>
+              <span>生物</span>
+            </div>
+          <div class="course" (click)="isClick(7)"style="background:rgba(218,165,32,0.9);">
+              <ion-icon name="md-alarm" ></ion-icon>
+              <span>历史</span>
+          </div>
+          <div class="course" (click)="isClick(1)" style="background:rgba(151,211,55,0.9);">
+              <ion-icon name="md-add" ></ion-icon>
+              <span>更多</span>
+          </div>
+        </ion-item>
   </div>
-  <p></p>
-  <div>
-    <ion-item class="span1">
-      <span>--学习圈--</span>
+     <div>
+    <ion-item class="span1" no-lines>
+      <span>--社区--</span>
+      <div class="line"></div> 
     </ion-item>
       <ion-item no-lines>
         <ion-avatar item-start>
@@ -108,7 +117,66 @@
         </div>
       </ion-item>
       <ion-item no-lines  (click)="go5()">
-        <div style="text-align: right; "><span style="font-size:12px; color:#00adb5">查看更多>></span></div>
+        <div class="bottom" style="text-align:center; "><span style="font-size:14px; color:#00adb5">点我查看更多</span></div>
       </ion-item>
     </div>
+    </div>
+    <div *ngSwitchCase="1">  <!--老师模块-->
+      <div class="c">
+      <ion-slides  class="myslides" autoplay="600" speed="800" loop="true" pager>
+        <ion-slide>
+          <img src="assets/imgs/home1.jpg" />
+        </ion-slide>
+        <ion-slide>
+          <img src="assets/imgs/home2.jpg" />
+        </ion-slide>
+        <ion-slide>
+          <img src="assets/imgs/home3.jpg" />
+        </ion-slide>
+        <ion-slide>
+          <img src="assets/imgs/home4.jpg" />
+        </ion-slide>
+        <ion-slide>
+          <img src="assets/imgs/home5.jpg" />
+        </ion-slide>
+      </ion-slides>
+      <ion-slides class="b" autoplay="2000" speed="2000" loop="true" pager>
+          <ion-slide *ngFor="let item of row;let idx=index;">
+              <ion-icon name="md-volume-up"></ion-icon><span>通知：{{item}}</span>
+          </ion-slide>
+           
+        </ion-slides>
+      </div>
+      <div class="alert" (click)="go1()">
+          <ion-icon name="md-alarm"></ion-icon>
+          <span> 上课提醒 </span>
+          <ion-icon name="md-arrow-dropright" class="a"></ion-icon>
+    </div>
+  
+      <br>
+      <div>
+        <ion-item class="span1" no-lines>
+          <span>--社区--</span>
+          <div class="line"></div> 
+        </ion-item>
+          <ion-item no-lines>
+            <ion-avatar item-start>
+              <img src="{{arr1?.head_src}}">
+            </ion-avatar>
+            <h2>{{arr1?.stu_name}}</h2>
+          </ion-item>
+          <ion-item no-lines>
+            <p class="text">{{arr1?.content}}</p>
+            <ion-avatar item-start>
+            </ion-avatar>
+            <div class="lear">
+              <img src="{{arr1?.img_src1}}" class="fl icon_img" style="width:80%;">
+            </div>
+          </ion-item>
+          <ion-item no-lines  (click)="go5()">
+            <div class="bottom" style="text-align:center; "><span style="font-size:14px; color:#00adb5">点我查看更多</span></div>
+          </ion-item>
+      </div>
+    </div>
+  </div>
 </ion-content>

@@ -25,9 +25,9 @@ export class TeadataPage {
   }
   tea_content;
   tea_id;
-  tea_name=window.localStorage.getItem('pea_name');
-  tea_age=window.localStorage.getItem('pea_age');
-  tea_sex=window.localStorage.getItem('pea_sex');
+  tea_name=this.navParams.data.tea_content.tea_name;
+  tea_age=this.navParams.data.tea_content.tea_age;
+  tea_sex=this.navParams.data.tea_content.tea_sex;
   tea_grade=this.navParams.data.tea_content.tea_grade;
   tea_email=this.navParams.data.tea_content.tea_email;
   stu_grade=this.navParams.data.tea_content.stu_grade;

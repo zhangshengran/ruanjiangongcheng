@@ -1,0 +1,77 @@
+page-news {
+    ion-title{
+        text-align:center; 
+        padding-right:48px; 
+    }
+    ion-content{
+        background-color: rgb(245,245,245) !important;
+        ion-grid{
+            border-bottom:1px dashed green;
+        }
+       .img{
+           border-radius: 10px;
+           height:60px;
+        //    border:1px solid red;
+       }
+        span{
+            color:gray;
+            font-size:11px;
+        }
+        .h2{
+            font-size:16px;
+            color:black;
+        }
+        // .button{
+        //     float:right;
+        //     height:20px;
+        //     margin-top:5px;
+        //     background-color: white;
+        //     border:1px solid gray;
+        // }
+        // ion-card{
+        //     width:90%;
+        //     margin-left:5%;
+        //     // margin-top:30px!important;
+        //     img{
+        //         width:100%;
+        //     }
+        //     h2{
+        //         font-weight: bold!important;
+        //         font-size:20px!important;
+        //         margin-top:20px!important;
+        //         height:30px;
+        //         overflow: hidden;
+        //         text-overflow: ellipsis;
+        //         white-space: nowrap;
+        //         text-align: center;
+        //     }
+        //     div{
+        //         button{
+        //             background-color: #40e0d0;
+        //             height:20px;
+        //         }
+        //     }
+        //     .bottom{
+        //         margin-top:20px;
+        //         // border:1px solid red;
+        //         height:56px;
+        //         line-height:56px;
+        //         button{
+        //             float:right;
+        //             height:40px !important;
+        //         }
+        //     }
+        // }
+        // p{
+        //     width:100%;
+        //     height:60px;
+        //     text-indent:2em;
+        //     word-break: break-all;
+        //     text-overflow: ellipsis;
+        //     display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+        //     -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+        //     -webkit-line-clamp: 3; /** 显示的行数 **/
+        //     overflow: hidden;  /** 隐藏超出的内容 **/
+        // }
+    }
+}

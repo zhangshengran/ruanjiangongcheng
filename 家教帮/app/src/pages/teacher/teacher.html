@@ -7,7 +7,7 @@
     <ion-card  *ngFor="let item of arr,let idx=index;">
               <ion-item >
                 <ion-avatar item-start>
-                  <img src="assets/imgs/img3-1.png">
+                    <img src={{item?.head_src}}>
                 </ion-avatar>
                 <div class="left">
                     <h2>教师姓名：{{item?.tea_name}}</h2>

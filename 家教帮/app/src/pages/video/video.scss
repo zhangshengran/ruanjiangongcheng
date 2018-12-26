@@ -1,0 +1,48 @@
+page-video {
+    ion-title{
+        text-align:center; 
+        padding-right:48px; 
+    }
+    ion-content{
+        .a{
+           width:100%;
+        //    margin-left:4.66%;
+           float:left;
+        //    margin-bottom:5%;
+         
+           video{
+              
+               width:100%;
+               border-radius: 5px 5px 0 0;
+           }
+          
+           .comment{
+               position: relative;
+               top: -3px;
+            // background-color: #4a4a48;
+            border-radius:  0 0 5px 5px;
+        }
+           .title{
+               font-size:18px;
+               white-space:normal;
+               width:100%;
+               margin-left: 25px;
+               padding: 4px;
+               color: white;
+           }
+           .author{
+            text-align: right;
+            margin-top: 3px;
+            margin-right: 25px;
+            padding: 8px;
+               font-size:14px;
+               color:rgb(155,155,155);
+               width:100%;
+           }
+        }
+    }
+    .content-md{
+        background-color: #2b2b28 !important;
+    }
+}
+

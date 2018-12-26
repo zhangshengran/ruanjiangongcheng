@@ -6,118 +6,120 @@
 -->
 <ion-header>
 
-  <ion-navbar color="setnav">
-      <ion-title>
-          热门课程
-      </ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content>
-    <ul class="navList">
-        <li *ngFor="let item of arr;let idx=index;" (click)="isClick(idx)" [class.first]="isActive==idx"><button ion-button clear>{{this.item}}</button></li>
-    </ul>
-    <div [ngSwitch]="isActive" class="right">   <!--控制下方内容切换-->
-      <div *ngSwitchCase="0">
-        <ul>
-          <li class="lis" *ngFor="let item0 of arr0;let idx=index;">
-            <img src="../../assets/imgs/mine2.png"/>  <!--{{item0?.img}}-->
-            <div class="middle">
-                <p class="p1">教师：{{item0?.name}}</p>
-                <p>擅长于：{{item0?.message}}</p>
-            </div>
-         </li>
-         </ul>
-      </div>
-      <div *ngSwitchCase="1">
+    <ion-navbar color="setnav">
+        <ion-title>
+            热门课程
+        </ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content>
+        
+       <ul class="navList">
+          <li *ngFor="let item of arr;let idx=index;" (click)="isClick(idx)" [class.first]="isActive==idx"><button ion-button clear>{{this.item}}</button></li>
+      </ul>
+      <div [ngSwitch]="isActive" class="right">   
+        <div *ngSwitchCase="0">
           <ul>
-              <li class="lis" *ngFor="let item1 of arr1;let idx=index;">
-                <img src="../../assets/imgs/mine2.png"/> 
-                <div class="middle">
-                    <p class="p1">教师：{{item1?.name}}</p>
-                    <p>擅长于：{{item1?.message}}</p>
-                </div>
-             </li>
-             </ul>
-      </div>
-      <div *ngSwitchCase="2">
-          <ul>
-              <li class="lis" *ngFor="let item2 of arr2;let idx=index;">
-                <img src="../../assets/imgs/mine2.png"/> 
-                <div class="middle">
-                    <p class="p1">教师：{{item2?.name}}</p>
-                    <p>擅长于：{{item2?.message}}</p>
-                </div>
-             </li>
-             </ul>
-      </div>
-      <div *ngSwitchCase="3">
-          <ul>
-              <li class="lis" *ngFor="let item3 of arr3;let idx=index;">
-                <img src="../../assets/imgs/mine2.png"/> 
-                <div class="middle">
-                    <p class="p1">教师：{{item3?.name}}</p>
-                    <p>擅长于：{{item3?.message}}</p>
-                </div>
-             </li>
+            <li class="lis" *ngFor="let item0 of arr9;let idx=index;"  (click)='detail(idx)'>
+              <img src="{{item0?.head_src}}"/>  
+              <div class="middle">
+                <p>教师姓名：{{item0?.tea_name}}</p>
+                <p>教授课程：{{item0?.stu_grade+item0?.stu_courses}}</p>
+              </div>
+           </li>
+           </ul>
+        </div>
+        <div *ngSwitchCase="1">
+            <ul>
+                <li class="lis" *ngFor="let item1 of arr9;let idx=index;"  (click)='detail(idx)'>
+                  <img src="{{item1?.head_src}}"/> 
+                  <div class="middle">
+                    <p>教师姓名：{{item1?.tea_name}}</p>
+                    <p>教授课程：{{item1?.stu_grade+item1?.stu_courses}}</p>
+                  </div>
+               </li>
+               </ul>
+        </div>
+        <div *ngSwitchCase="2">
+            <ul>
+                <li class="lis" *ngFor="let item2 of arr9;let idx=index;"  (click)='detail(idx)'>
+                  <img src="{{item2?.head_src}}"/> 
+                  <div class="middle">
+                    <p>教师姓名：{{item2.tea_name}}</p>
+                    <p>教授课程：{{item2?.stu_grade+item2?.stu_courses}}</p>
+                  </div>
+               </li>
+               </ul>
+        </div>
+        <div *ngSwitchCase="3">
+            <ul>
+                <li class="lis" *ngFor="let item3 of arr9;let idx=index;"  (click)='detail(idx)'>
+                  <img src="{{item3?.head_src}}"/> 
+                  <div class="middle">
+                    <p>教师姓名：{{item3?.tea_name}}</p>
+                    <p>教授课程：{{item3?.stu_grade+item3.stu_courses}}</p>
+                  </div>
+               </li>
+              </ul>
+        </div>
+        <div *ngSwitchCase="4">
+            <ul>
+                <li class="lis" *ngFor="let item4 of arr9;let idx=index;"  (click)='detail(idx)'>
+                  <img src="{{item4?.head_src}}"/> 
+                  <div class="middle">
+                    <p>教师姓名：{{item4?.tea_name}}</p>
+                    <p>教授课程：{{item4?.stu_grade+item4?.stu_courses}}</p>
+                  </div>
+               </li>
+              </ul>
+        </div>
+        <div *ngSwitchCase="5">
+            <ul>
+                <li class="lis" *ngFor="let item5 of arr9;let idx=index;"  (click)='detail(idx)'>
+                  <img src="{{item5?.head_src}}"/> 
+                  <div class="middle">
+                    <p>教师姓名：{{item5?.tea_name}}</p>
+                    <p>教授课程：{{item5?.stu_grade+item5?.stu_courses}}</p>
+                  </div>
+               </li>
+              </ul>
+        </div>
+        <div *ngSwitchCase="6">
+            <ul>
+                <li class="lis" *ngFor="let item6 of arr9;let idx=index;"  (click)='detail(idx)'>
+                  <img src="{{item6?.head_src}}"/> 
+                  <div class="middle">
+                    <p>教师姓名：{{item6?.tea_name}}</p>
+                    <p>教授课程：{{item6?.stu_grade+item6?.stu_courses}}</p>
+                  </div>
+               </li>
             </ul>
-      </div>
-      <div *ngSwitchCase="4">
+       </div>
+       <div *ngSwitchCase="7">
           <ul>
-              <li class="lis" *ngFor="let item4 of arr4;let idx=index;">
-                <img src="../../assets/imgs/mine2.png"/> 
+              <li class="lis" *ngFor="let item7 of arr9;let idx=index;"  (click)='detail(idx)'>
+                <img src="{{item7?.head_src}}"/> 
                 <div class="middle">
-                    <p class="p1">教师：{{item4?.name}}</p>
-                    <p>擅长于：{{item4?.message}}</p>
-                </div>
-             </li>
-            </ul>
-      </div>
-      <div *ngSwitchCase="5">
-          <ul>
-              <li class="lis" *ngFor="let item5 of arr5;let idx=index;">
-                <img src="../../assets/imgs/mine2.png"/> 
-                <div class="middle">
-                    <p class="p1">教师：{{item5?.name}}</p>
-                    <p>擅长于：{{item5?.message}}</p>
-                </div>
-             </li>
-            </ul>
-      </div>
-      <div *ngSwitchCase="6">
-          <ul>
-              <li class="lis" *ngFor="let item6 of arr6;let idx=index;">
-                <img src="../../assets/imgs/mine2.png"/> 
-                <div class="middle">
-                    <p class="p1">教师：{{item6?.name}}</p>
-                    <p>擅长于：{{item6?.message}}</p>
+                    <p>教师姓名：{{item7?.tea_name}}</p>
+                    <p>教授课程：{{item7?.stu_grade+item7?.stu_courses}}</p>
                 </div>
              </li>
           </ul>
-     </div>
-     <div *ngSwitchCase="7">
-        <ul>
-            <li class="lis" *ngFor="let item7 of arr7;let idx=index;">
-              <img src="../../assets/imgs/mine2.png"/> 
-              <div class="middle">
-                  <p class="p1">教师：{{item7?.name}}</p>
-                  <p>擅长于：{{item7?.message}}</p>
-              </div>
-           </li>
-        </ul>
-    </div>
-    <div *ngSwitchCase="8">
-        <ul>
-            <li class="lis" *ngFor="let item8 of arr8;let idx=index;">
-              <img src="../../assets/imgs/mine2.png"/> 
-              <div class="middle">
-                  <p class="p1">教师：{{item8?.name}}</p>
-                  <p>擅长于：{{item8?.message}}</p>
-              </div>
-           </li>
-        </ul>
-    </div>
-  </div>
-</ion-content>
+      </div>
+      <div *ngSwitchCase="8">
+          <ul>
+              <li class="lis" *ngFor="let item8 of arr9;let idx=index;"  (click)='detail(idx)'>
+                <img src="{{item8?.head_src}}"/> 
+                <div class="middle">
+                    <p>教师姓名：{{item8?.tea_name}}</p>
+                    <p>教授课程：{{item8?.stu_grade+item8?.stu_courses}}</p>
+                </div>
+             </li>
+          </ul>
+      </div>
+    </div> 
+  </ion-content>
+  

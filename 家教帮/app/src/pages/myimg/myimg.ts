@@ -10,6 +10,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { AlertController } from 'ionic-angular';
 import { MylearningPage } from '../mylearning/mylearning';
 import { LearningPage } from '../learning/learning';
+import { FilePath } from '@ionic-native/file-path';  //找文件路径
 /**
  * Generated class for the MyimgPage page.
  *
@@ -25,7 +26,7 @@ import { LearningPage } from '../learning/learning';
 export class MyimgPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private file: File,private transfer: FileTransfer,private imagePicker: ImagePicker,private fileTransfer:FileTransferObject,
-    public actionSheetCtrl:ActionSheetController,private toast: Toast,private http:HttpClient,public alertCtrl: AlertController) {
+    public actionSheetCtrl:ActionSheetController,private toast: Toast,private http:HttpClient,public alertCtrl: AlertController,private filePath: FilePath) {
     this.fileTransfer= this.transfer.create();
 
   }
@@ -66,8 +67,9 @@ export class MyimgPage {
     }
   }
   study(){
-    this.navCtrl.push(LearningPage);
+    this.navCtrl.push(MylearningPage);
   }
+
 
   arr1=[];
   ionViewWillEnter() {  //一进来时，就会调用,变量就会及时更新
@@ -188,9 +190,6 @@ private uploadImg(path:string) {
        headers: {
        'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'//不加入 发生错误！！
     },
-    // params: {stu_id:555}, 需要额外上传的参数
-    //success: (data)=> { that.presentAlert('哈哈'+data);},//图片上传成功后的回调
-    //error: (err)=> {that.presentAlert('失败'+err);},//图片上传失败后的回调
      
     };
     this.fileTransfer.upload(path,'http://www.zhuoran.fun:3000/upload_head',options) //将文件发送到服务器
@@ -206,5 +205,6 @@ private uploadImg(path:string) {
           that.presentAlert(err); 
     });
   }
+  
 }
 

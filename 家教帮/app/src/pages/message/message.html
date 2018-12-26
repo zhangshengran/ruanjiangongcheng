@@ -15,7 +15,7 @@
 
 <ion-content >
     <ul class="navList">
-        <li *ngFor="let item of arr;let idx=index;" (click)="isClick(idx)"> <!--点击哪个li，就会跳转到哪个页面-->
+        <li *ngFor="let item of arr;let idx=index;" (click)="isClick(idx)" class="licss"> <!--点击哪个li，就会跳转到哪个页面-->
             <img src="../../assets/imgs/mine2.png"/>   <!--头像-->
             <div class="middle">
                 <p class="p1">张三{{item?.name}}</p>

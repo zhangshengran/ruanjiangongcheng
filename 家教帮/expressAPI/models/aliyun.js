@@ -23,6 +23,20 @@ exports.aliyunPUT_head = async function put(path, filename, temfile) {
   }
 }
 
+// 学习圈
+// exports.aliyunPUT_head = async function put(path, filename, temfile) {
+//   try {
+//     let result = await client.put(path + filename, temfile);
+//     var url = result.url;//文件读取地址
+//    return new Promise((resolved)=>{
+//      resolved(url);
+//    })
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
+
+
 
 
 let client2 = new OSS({

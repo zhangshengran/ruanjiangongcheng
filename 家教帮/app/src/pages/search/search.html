@@ -19,7 +19,8 @@
       <ion-searchbar  style="width:80%; float:left;" placeholder="请输入查找的科目" mode="ios"  [(ngModel)]="text"
       ></ion-searchbar>
       <div class="search">
-        <span  style="width:48px; float:left; color:white;"(click)="search()">搜索</span>
+        
+        <span class="sea" (click)="search()">搜索</span>
       </div>
      
   </ion-navbar>
@@ -28,7 +29,7 @@
     <ion-card  *ngFor="let item of arr,let idx=index;">
         <ion-item >
           <ion-avatar item-start>
-            <img src="assets/imgs/img3-1.png"><!-- 获取每一个老师的头像没有实现 -->
+            <img src={{item?.head_src}}><!-- 获取每一个老师的头像没有实现 -->
           </ion-avatar>
           <div class="left">
               <h2>教师姓名：{{item?.tea_name}}</h2>

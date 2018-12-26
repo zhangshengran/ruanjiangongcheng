@@ -6,6 +6,7 @@ page-mytalk {
         }
     }
     ion-content{
+        /*
         background-color: rgb(250,250,250)!important;
         ul{
             padding: 0;
@@ -23,6 +24,23 @@ page-mytalk {
                     }
                 }
             }
+        }
+        */
+        textarea{
+            width:80%;
+            margin:5% 10%;
+            height:100px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        button{
+                padding:0;
+                float:right;
+                margin-right:5%!important;
+                width:15%!important;
+                height: 2.5rem!important;
+                color:white!important;
+                background-color: #00adb5!important;
         }
     }
 }

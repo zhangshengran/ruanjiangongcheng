@@ -5,7 +5,7 @@ var con = require('./db').con;
 
 // 验证码接口
 exports.verify = function (req, res) {
-    console.log(req.query);
+    
     var stu_phone = req.query.stu_phone;//获得请求的手机号
 
 
@@ -28,7 +28,7 @@ exports.verify = function (req, res) {
 
                 var tpl_value = Math.round(Math.random() * 10 * 10 * 10 * 10 * 10)//获得随机5位验证码
 
-                console.log(stu_phone)
+                
             
                 var queryData = querystring.stringify({
                     "mobile": stu_phone,  // 接受短信的用户手机号码
@@ -43,7 +43,7 @@ exports.verify = function (req, res) {
                     if (!error && response.statusCode == 200) {
                         // console.log(body) // 打印接口返回内容      
                         var jsonObj = JSON.parse(body); // 解析接口返回的JSON内容 
-                        console.log(jsonObj);
+                       
                         if (jsonObj.error_code !== 0) {
                             res.send({
                                 status: 1,
@@ -71,14 +71,10 @@ exports.verify = function (req, res) {
 
 // 学生注册接口
 exports.register_stu = function (req, res) {
-    // console.log(req);
-    console.log(req.body);
 
-    // console.log(req.headers);
 
     var stu_phone = req.body.stu_phone;
     var stu_password = req.body.stu_password;
-    console.log("获得的账号" + stu_phone, "获得的密码" + stu_password);
     con.query('insert into students(stu_phone,stu_password) values(?,?)',
         [stu_phone, stu_password], (err, result) => {
             if (err) {
@@ -124,13 +120,12 @@ exports.select_stu = function (req, res) {
                 })
             }
             else {
-                console.log('数据库查到的ID' + result[0].stu_id);
-                console.log('数据库查到的密码' + result[0].stu_password);
+            
                 var tokenID = result[0].stu_id;
                 var tea_token = result[0].is_tea_ID;
                 if (result[0].stu_password == stu_password) {
                     con.query('select * from students where stu_phone=?', [stu_phone], (err, result) => {
-                        console.log(result);
+                    
                         res.send({
                             status: 0,
                             info: 'OK',
@@ -165,7 +160,7 @@ exports.completed = function (req, res) {
     var stu_age = req.body.stu_age;
     var stu_sex = req.body.stu_sex;
     var stu_grade = req.body.stu_grade;
-    console.log(req.body)
+
     dbstr = 'UPDATE students' +
         ' set stu_name = ?,stu_age = ?,stu_sex = ?,stu_grade = ?' +
         ' WHERE stu_id = ?'
@@ -191,7 +186,7 @@ exports.showdata = function (req, res) {
 
     var stu_id = req.query.stu_id;
 
-    console.log(stu_id)
+  
     con.query('select * from students where stu_id = ?', [stu_id], (err, result) => {
         if (err) {
             res.send({
@@ -203,4 +198,54 @@ exports.showdata = function (req, res) {
             res.json(result);
         }
     })
+}
+
+
+let OSS = require('ali-oss');
+var fs = require('fs');
+var con = require('./db').con;
+var aliyun = require('./aliyun');
+
+
+exports.upload_head = async function (req, res, next) {
+  var message = req.files[0];
+  var stu_id = message.fieldname;
+
+  if (!message) {
+    res.send({
+      status: 1,
+      info: 'error',
+      message: 'error,未收到消息'
+    })
+  } else {
+    if (!stu_id) {
+      res.send({
+        status: 1,
+        info: 'error',
+        message: '请输入学生ID'
+      })
+    }else{
+    var filetype = message.mimetype.split('/')[1];//获取传上来的文件类型
+    var timestamp=new Date().getTime();
+    var file = timestamp + '.' + filetype; //自定义文件名
+    var des_file = "./upload_tmp/" +timestamp+ file;
+    await fs.rename(message.path, des_file)
+    var url = await aliyun.aliyunPUT_head('head/', file, des_file);
+      await con.query( 'UPDATE students SET head_src = ? WHERE stu_id = ?',[url,stu_id],(err,result)=>{
+        if(err){
+          res.send({
+            status:1,
+            info:'error',
+            message:'数据库错误'
+          })
+        }
+      });
+        res.send({
+          status:0,
+          headurl:url,
+          info:'ok',
+          message:'上传成功'
+        })
+    }
+  }
 }
