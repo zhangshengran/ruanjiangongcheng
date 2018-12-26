@@ -1,7 +1,7 @@
 <h1>2016级项目实训成果展示</h1>
 <h2>《家教帮》- HTML5与移动互联网开发</h2>
 <h3>小组：SWP</h3>
-<p>github地址：https://github.com/liqilin1996/ruanjiangongcheng/tree/master/%E5%AE%B6%E6%95%99%E5%B8%AE</p>
+<p>github地址：https://github.com/liqilin1996/ruanjiangongcheng</p>
 <h3>1.1项目简介</h3>
 <body>
     <p>现如今，很多大学生都从事家教兼职的工作，我们的项目是专注服务于当代大学生的app，所
