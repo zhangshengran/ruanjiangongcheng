@@ -1,4 +1,4 @@
-﻿<h2>家教帮项目</h2>
+﻿<h2>《家教帮》-HTML5与移动互联网开发</h2>
 <h3>小组：SWP</h3>
 <p>github地址：https://github.com/liqilin1996/ruanjiangongcheng/tree/master/%E5%AE%B6%E6%95%99%E5%B8%AE</p>
 <h4>1.1项目简介</h4>
