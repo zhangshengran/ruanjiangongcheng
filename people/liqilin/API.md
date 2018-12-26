@@ -7,7 +7,6 @@
     </ul>
 <body>
  <h4>获取验证码:</h4>    
-	 <p>
        接口：/verify
        请求：GET
        参数：stu_phone   手机号
@@ -26,7 +25,6 @@
                    message:errorMessage
             }    
             );
-    </p>
 <h4>学生注册：</h4>
        接口：/register_stu
        请求：POST
@@ -52,7 +50,7 @@
             );          
 
 
-      学生登陆：
+      <h4>学生登陆：</h4>
        接口：/login
        请求：POST
        参数：stu_phone  手机号
