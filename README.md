@@ -70,15 +70,14 @@
 	<span><img src="imgs/student.gif"/><img src="imgs/teacher.gif"/><img src="imgs/login.gif"/></span>
 <h3>页面展示</h3>
 	<h4>学生模块</h4>		
-	<span><img src="imgs/stuhome1.jpg"/><img src="imgs/stuhome2.jpg"/><img src="imgs/teacher.jpg"/></span>
-	<span><img src="imgs/search.jpg"/><img src="imgs/order.jpg"/><img src="imgs/orderdetail.jpg"/><img src="imgs/hotcourse.jpg"/><img src="imgs/mycourse.jpg"/><img src="imgs/affairm.jpg"/></span>
-	<span><img src="imgs/learn.jpg"/><img src="imgs/data.jpg"/><img src="imgs/download.jpg"/></span>
-	<span><img src="imgs/datamore.jpg"/><img src="imgs/news.jpg"/></span>
-	<span><img src="imgs/my.jpg"/><img src="imgs/mydata.jpg"/><img src="imgs/studata.jpg"/><img src="imgs/shequ.jpg"/><img src="imgs/advice.jpg"/><img src="imgs/set.jpg"/></span>
+	<span><img src="imgs/start.jpg"/><img src="imgs/stuhome1.jpg"/><img src="imgs/stuhome2.jpg"/></span>
+	<span><img src="imgs/teacher.jpg"/><img src="imgs/search.jpg"/><img src="imgs/hotcourse.jpg"/><img src="imgs/order.jpg"/><img src="imgs/orderdetail.jpg"/><img src="imgs/mycourse.jpg"/></span>
+	<span><img src="imgs/learn.jpg"/><img src="imgs/data.jpg"/><img src="imgs/news.jpg"/></span>
+	<span><img src="imgs/datamore.jpg"/><img src="imgs/download.jpg"/><img src="imgs/shequ.jpg"/></span>
+	<span><img src="imgs/my.jpg"/><img src="imgs/mydata.jpg"/><img src="imgs/studata.jpg"/></span>
 	<h4>老师模块</h4>	
-	<span><img src="teahome.jpg"/><img src="teaaffairm.jpg"/><img src="teacourse.jpg"/></span>
-	<span><img src="mytea.jpg"/><img src="mydatatea.jpg"/><img src="teadata.jpg"/></span>
-	<span></span>
-	<span></span>
+	<span><img src="imgs/teahome.jpg"/><img src="imgs/teaaffairm.jpg"/><img src="imgs/teacourse.jpg"/></span>
+	<span><img src="imgs/mytea.jpg"/><img src="imgs/mydatatea.jpg"/><img src="imgs/teadata.jpg"/></span>
+	
 
 </body>
