@@ -70,7 +70,7 @@
 	<span><img src="imgs/student.gif"/><img src="imgs/teacher.gif"/></span>
 <h3>页面展示</h3>
 	<h4>学生模块</h4>		
-	<span><img src="imgs/start.jpg"/><img src="imgs/stuhome1.jpg"/><img src="imgs/stuhome2.jpg"/></span>
+	<span><img src="imgs/start.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/stuhome1.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/stuhome2.jpg"/></span>
 	<span><img src="imgs/teacher.jpg"/><img src="imgs/search.jpg"/><img src="imgs/hotcourse.jpg"/><img src="imgs/order.jpg"/><img src="imgs/orderdetail.jpg"/><img src="imgs/mycourse.jpg"/></span>
 	<span><img src="imgs/learn.jpg"/><img src="imgs/data.jpg"/><img src="imgs/news.jpg"/></span>
 	<span><img src="imgs/datamore.jpg"/><img src="imgs/download.jpg"/><img src="imgs/beteacher.jpg"/></span>
