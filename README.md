@@ -71,7 +71,7 @@
 <h3>页面展示</h3>
 	<h4>学生模块</h4>		
 	<span><img src="imgs/stuhome1.jpg"/><img src="imgs/stuhome2.jpg"/><img src="imgs/shequ.jpg"/></span>
-	<span><img src="imgs/search.jpg"/><img src="imgs/order.jpg"/><img src="imgs/orderdetail.jpg"/><img src="imgs/mycourse.jpg"/><img src="imgs/affairm.jpg"/></span>
+	<span><img src="imgs/search.jpg"/><img src="imgs/order.jpg"/><img src="imgs/orderdetail.jpg"/><img src="imgs/hotcourse.jpg"/><img src="imgs/mycourse.jpg"/><img src="imgs/affairm.jpg"/></span>
 	<span><img src="imgs/learn.jpg"/><img src="imgs/data.jpg"/><img src="imgs/download.jpg"/></span>
 	<span><img src="imgs/datamore.jpg"/><img src="imgs/news.jpg"/></span>
 	<span><img src="imgs/mydata.jpg"/><img src="imgs/studata.jpg"/><img src="imgs/advice.jpg"/></span>
