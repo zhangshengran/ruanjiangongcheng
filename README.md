@@ -61,59 +61,26 @@
 </ul>
 <h3>功能实现</h3>
 <ol>
-	<li>在线找家教联系老师下订单</li>
-	<li>发布社区动态</li>
-	<li>学习圈资料共享</li>
-	<li>学习资料下载</li>
-	<li>在线视频学习</li>
-	<li>热门学科热门教师搜索</li>
+	<li>在线找家教联系老师下订单：学生点击教师推荐/搜索教师/热门课程——>点击联系教师/直接下单——>填写上课时间上课地点——>下单</li>
+	<li>发布社区动态:用户点击首页社区查看更多——>点击加号——>发表图片文字</li>
+	<li>学习圈资料共享:用户点击学习圈——>点击资料云——>下载资料</li>
+	<li>在线视频学习:用户点击学习圈——>点击视频观看视频</li>
 </ol>
-<h3>运行效果</h3>
-	<h5>首页相关页面</h5>		
-	<span>学生首页：</span>
-<img src="imgs/stuhome.png"/>
-	<span>老师首页:</span>	
-<img src="imgs/teahome.jpg"/>
-	<span>上课提醒</span>
-<img src="imgs/affairm.png"/>
-	<span>教师推荐</span>
-<img src="imgs/teacher.png"/>
-	<span>热门课程</span>
-<img src="imgs/course.png"/>
-	<span>教师简介</span>
-<img src="imgs/teacherdetail.png"/>
-	<span>订单</span>
-<img src="imgs/orderdetail.png"/>
-	<span>搜索</span>
-<img src="imgs/search.png"/>
-	<span>社区</span>
-<img src="imgs/shequ.jpg"/>
-<h5>学习圈相关页面</h5>
-	<span>学习圈</span>
-<img src="imgs/learn.jpg"/>
-	<span>新闻</span>
-<img src="imgs/news.jpg"/>
-	<span>资料云</span>
-<img src="imgs/datamore.png"/>
-	<span>更多资料</span>
-<img src="imgs/data.png"/>
-<h5>我的相关页面</h5>
-	<span>我的</span>
-<img src="imgs/my.png"/>
-	<span>我的资料</span>
-<img src="imgs/mine.jpg"/>
-	<span>更换头像</span>
-<img src="imgs/changehead.png"/>
-	<span>修改资料</span>
-<img src="imgs/teadata.png"/>
-	<span>我的家教</span>
-<img src="imgs/mycourse.png"/>
-	<span>成为老师</span>
-<img src="imgs/beteacher.png"/>
-	<span>意见反馈</span>
-<img src="imgs/advice.png"/>
-<h5>设置相关</h5>
-	<span>登录</span>
+<!-- <h3>功能流程</h3>
+	<<ul>
+	<li>学生登</li>
+	</ul> -->
+<h3>页面展示</h3>
+	<h4>学生模块</h4>		
+	<span><img src="imgs/stuhome.png"/><img src="imgs/affairm.png"/><img src="imgs/search.png"/></span>
+	<span><img src="imgs/teacher.png"/><img src="imgs/course.png"/></span>
+	<span><img src="imgs/teacher.png"/><img src="imgs/teacherdetail.png"/><img src="imgs/orderdetail.png"/><img src="imgs/mycourse.png"/></span>
+	<span><img src="imgs/shequ.jpg"/></span>
+	<span><img src="imgs/learn.jpg"/><img src="imgs/news.jpg"/><img src="imgs/datamore.png"/>
+<img src="imgs/data.png"/></span>
+	<span><img src="imgs/my.png"/><img src="imgs/mine.jpg"/><img src="imgs/teadata.png"/></span>
+	<span><img src="imgs/beteacher.png"/><img src="imgs/advice.png"/></span>
+<span>登录</span>
 <img src="imgs/login.png"/
      	<span>注册</span>
 <img src="imgs/register.png"/>
