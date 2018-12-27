@@ -72,11 +72,11 @@
 	</ul> -->
 <h3>页面展示</h3>
 	<h4>学生模块</h4>		
-	<span><img src="imgs/stuhome1.jpg"/><img src="imgs/stuhome2.jpg"/><img src="imgs/affairm.jpg"/></span>
+	<span><img src="imgs/stuhome1.jpg"/><img src="imgs/stuhome2.jpg"/><img src="imgs/shequ.jpg"/></span>
 	<span><img src="imgs/search.jpg"/><img src="imgs/order.jpg"/><img src="imgs/orderdetail.jpg"/></span>
 	<span><img src="imgs/learn.jpg"/><img src="imgs/data.jpg"/><img src="imgs/datamore.jpg"/></span>
-	<span><img src="imgs/news.jpg"/><img src="imgs/mydata.jpg"/><img src="imgs/mycourse.jpg"/></span>
-	<span><img src="imgs/download.jpg"/><img src="imgs/advice.jpg"/><img src="imgs/affairm.jpg"/></span>
+	<span><img src="imgs/download.jpg"/><img src="imgs/news.jpg"/><img src="imgs/mydata.jpg"/><img src="imgs/studata.jpg"/></span>
+	<span><img src="imgs/advice.jpg"/><img src="imgs/affairm.jpg"/></span>
 	
 
 </body>
