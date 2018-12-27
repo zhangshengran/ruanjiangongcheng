@@ -66,15 +66,15 @@
 	<li>学习圈资料共享:用户点击学习圈——>点击资料云——>下载资料</li>
 	<li>在线视频学习:用户点击学习圈——>点击视频观看视频</li>
 </ol>
-<h3>功能流程</h3>
-	<span><img src="imgs/student.gif"/><img src="imgs/teacher.gif"/></span>
+<h3>用户体验</h3>
+	<span><img src="imgs/student.gif"/></span>
 <h3>页面展示</h3>
 	<h4>学生模块</h4>		
 	<span><img src="imgs/stuhome1.jpg"/><img src="imgs/stuhome2.jpg"/><img src="imgs/shequ.jpg"/></span>
-	<span><img src="imgs/search.jpg"/><img src="imgs/order.jpg"/><img src="imgs/orderdetail.jpg"/><img src="imgs/affairm.jpg"/></span>
-	<span><img src="imgs/learn.jpg"/><img src="imgs/data.jpg"/><img src="imgs/datamore.jpg"/></span>
-	<span><img src="imgs/download.jpg"/><img src="imgs/news.jpg"/><img src="imgs/mydata.jpg"/><img src="imgs/studata.jpg"/></span>
-	<span><img src="imgs/advice.jpg"/></span>
+	<span><img src="imgs/search.jpg"/><img src="imgs/order.jpg"/><img src="imgs/orderdetail.jpg"/><img src="imgs/mycourse.jpg"/><img src="imgs/affairm.jpg"/></span>
+	<span><img src="imgs/learn.jpg"/><img src="imgs/data.jpg"/><img src="imgs/download.jpg"/></span>
+	<span><img src="imgs/datamore.jpg"/><img src="imgs/news.jpg"/></span>
+	<span><img src="imgs/mydata.jpg"/><img src="imgs/studata.jpg"/><img src="imgs/advice.jpg"/></span>
 	
 
 </body>
