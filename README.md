@@ -72,19 +72,7 @@
 	</ul> -->
 <h3>页面展示</h3>
 	<h4>学生模块</h4>		
-	<span><img src="imgs/stuhome.png"/><img src="imgs/affairm.png"/><img src="imgs/search.png"/></span>
-	<span><img src="imgs/teacher.png"/><img src="imgs/course.png"/></span>
-	<span><img src="imgs/teacher.png"/><img src="imgs/teacherdetail.png"/><img src="imgs/orderdetail.png"/><img src="imgs/mycourse.png"/></span>
-	<span><img src="imgs/shequ.jpg"/></span>
-	<span><img src="imgs/learn.jpg"/><img src="imgs/news.jpg"/><img src="imgs/datamore.png"/>
-<img src="imgs/data.png"/></span>
-	<span><img src="imgs/my.png"/><img src="imgs/mine.jpg"/><img src="imgs/teadata.png"/></span>
-	<span><img src="imgs/beteacher.png"/><img src="imgs/advice.png"/></span>
-<span>登录</span>
-<img src="imgs/login.png"/
-     	<span>注册</span>
-<img src="imgs/register.png"/>
-	<span>忘记密码</span>
-<img src="imgs/forget.png"/
+	<span><img src="imgs/stuhome1.jpg"/><img src="imgs/stuhome2.jpg"/><img src="imgs/affairm.jpg"/></span>
+	
 
 </body>
