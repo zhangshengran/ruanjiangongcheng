@@ -70,14 +70,14 @@
 	<span><img src="imgs/student.gif"/><img src="imgs/teacher.gif"/></span>
 <h3>页面展示</h3>
 	<h4>学生模块</h4>		
-	<span><img src="imgs/start.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/stuhome1.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/stuhome2.jpg"/></span>
-	<span><img src="imgs/teacher.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/search.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/hotcourse.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/order.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/orderdetail.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/mycourse.jpg"/></span>
-	<span><img src="imgs/learn.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/data.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/news.jpg"/></span>
-	<span><img src="imgs/datamore.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/download.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/beteacher.jpg"/></span>
-	<span><img src="imgs/my.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/mydata.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/studata.jpg"/></span>
+	<span><img src="imgs/start.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/stuhome1.jpg"/>&nbsp;&nbsp;&nbsp;<img 			src="imgs/stuhome2.jpg"/></span>
+	<span><img src="imgs/teacher.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/search.jpg"/>&nbsp;&nbsp;&nbsp;<img 			src="imgs/hotcourse.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/order.jpg"/>&nbsp;&nbsp;&nbsp;<img 					src="imgs/orderdetail.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/mycourse.jpg"/></span>
+	<span><img src="imgs/learn.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/data.jpg"/>&nbsp;&nbsp;&nbsp;<img 				src="imgs/news.jpg"/></span>
+	<span><img src="imgs/datamore.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/download.jpg"/>&nbsp;&nbsp;&nbsp;<img 			src="imgs/beteacher.jpg"/></span>
+	<span><img src="imgs/my.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/mydata.jpg"/>&nbsp;&nbsp;&nbsp;<img 				src="imgs/studata.jpg"/></span>
 	<h4>老师模块</h4>	
-	<span><img src="imgs/teahome.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/teaaffairm.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/teacourse.jpg"/></span>
-	<span><img src="imgs/mytea.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/mydatatea.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/teadata.jpg"/></span>
+	<span><img src="imgs/teahome.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/teaaffairm.jpg"/>&nbsp;&nbsp;&nbsp;<img 			src="imgs/teacourse.jpg"/></span>
+	<span><img src="imgs/mytea.jpg"/>&nbsp;&nbsp;&nbsp;<img src="imgs/mydatatea.jpg"/>&nbsp;&nbsp;&nbsp;<img 			src="imgs/teadata.jpg"/></span>
 	
 
 </body>
