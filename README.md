@@ -67,13 +67,14 @@
 	<li>在线视频学习:用户点击学习圈——>点击视频观看视频</li>
 </ol>
 <h3>用户体验</h3>
+	<span>学生老师登录</span>
 	<span><img src="imgs/student.gif"/><img src="imgs/teacher.gif"/><img src="imgs/login.gif"/></span>
 <h3>页面展示</h3>
 	<h4>学生模块</h4>		
 	<span><img src="imgs/start.jpg"/><img src="imgs/stuhome1.jpg"/><img src="imgs/stuhome2.jpg"/></span>
 	<span><img src="imgs/teacher.jpg"/><img src="imgs/search.jpg"/><img src="imgs/hotcourse.jpg"/><img src="imgs/order.jpg"/><img src="imgs/orderdetail.jpg"/><img src="imgs/mycourse.jpg"/></span>
 	<span><img src="imgs/learn.jpg"/><img src="imgs/data.jpg"/><img src="imgs/news.jpg"/></span>
-	<span><img src="imgs/datamore.jpg"/><img src="imgs/download.jpg"/><img src="imgs/shequ.jpg"/></span>
+	<span><img src="imgs/datamore.jpg"/><img src="imgs/download.jpg"/><img src="imgs/beteacher.jpg"/></span>
 	<span><img src="imgs/my.jpg"/><img src="imgs/mydata.jpg"/><img src="imgs/studata.jpg"/></span>
 	<h4>老师模块</h4>	
 	<span><img src="imgs/teahome.jpg"/><img src="imgs/teaaffairm.jpg"/><img src="imgs/teacourse.jpg"/></span>
