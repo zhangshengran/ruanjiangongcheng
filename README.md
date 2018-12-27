@@ -67,8 +67,7 @@
 	<li>在线视频学习:用户点击学习圈——>点击视频观看视频</li>
 </ol>
 <h3>用户体验</h3>
-	<span>学生老师登录</span>
-	<span><img src="imgs/student.gif"/><img src="imgs/teacher.gif"/><img src="imgs/login.gif"/></span>
+	<span><img src="imgs/student.gif"/><img src="imgs/teacher.gif"/></span>
 <h3>页面展示</h3>
 	<h4>学生模块</h4>		
 	<span><img src="imgs/start.jpg"/><img src="imgs/stuhome1.jpg"/><img src="imgs/stuhome2.jpg"/></span>
