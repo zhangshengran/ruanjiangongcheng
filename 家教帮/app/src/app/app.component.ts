@@ -49,7 +49,7 @@ export class MyApp {
     platform.ready().then(() => {
       splashScreen.hide(); //解决白屏
       statusBar.styleDefault();
-      this.statusBar.backgroundColorByHexString('#f7f7f7');  //状态栏的设置
+      this.statusBar.backgroundColorByHexString('#C0C0C0');  //状态栏的设置
       splashScreen.hide();
       
       this.platform.registerBackButtonAction(() => {

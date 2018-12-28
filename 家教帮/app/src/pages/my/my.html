@@ -1,55 +1,5 @@
 
-<!-- <ion-content>
-    <div class="mycon">
-        <div class="mycondata" (click)="godata(1)">
-            <span class="mycondata1">
-                个人资料
-            </span>
-            <span class="mycondata2">
-                    <ion-icon name="ios-arrow-forward" ></ion-icon>
-            </span>
-        </div>
-        <hr>
-        <div class="myconcourse" (click)="gocourse()">
-            <span class="myconcourse1">
-                我的课程
-            </span>
-            <span class="myconcourse2">
-                <ion-icon name="ios-arrow-forward" ></ion-icon>
-            </span>
-        </div>
-        <hr>
-        <div class="myconprove" (click)="goprove()">
-            <span class="myconprove1">
-                认证管理
-            </span>
-            <span class="myconprove2">
-                <ion-icon name="ios-arrow-forward" ></ion-icon>
-            </span>
-        </div>
-        <hr>
-        <div class="mycontalk" (click)="gotalk()">
-            <span class="mycontalk1">
-                评价管理
-            </span>
-            <span class="mycontalk2">
-                <ion-icon name="ios-arrow-forward" ></ion-icon>
-            </span>
-        </div>
-        <hr>
-        <div class="myconsetting" (click)="gosetting()">
-            <span class="myconsetting1">
-                设置
-            </span>
-            <span class="myconsetting2" >
-                <ion-icon name="ios-arrow-forward" ></ion-icon>
-            </span>
-        </div>
-    </div>
-</ion-content> -->
 <ion-content>
-    <div [ngSwitch]="isActive">   <!--学生模块-->
-        <div *ngSwitchCase="0">
         <div class="myhead" >
             <div class="myhead1">
                 <img src="{{head}}" alt="头像" width="60px" height="60px" (click)="goimg()">
@@ -75,6 +25,8 @@
                       <p class="e-2">我的家教</p>
                 </div>
             </ion-card>
+    <div [ngSwitch]="isActive">
+        <div *ngSwitchCase="0"><!--学生模块-->
             <ion-card (click)="goprove()">
                 <div class="a">
                     <p>
@@ -91,7 +43,27 @@
                     <p class="e-2">意见反馈</p>
                 </div>
             </ion-card>
-        </div>
+    </div>
+    <div *ngSwitchCase="1"><!--教师模块-->
+            <ion-card (click)="gotalk()">
+                <div class="a">
+                    <p>
+                        <ion-icon class="e-1" ios="ios-clipboard" md="md-clipboard"></ion-icon>
+                    </p>
+                    <p class="e-2">意见反馈</p>
+                </div>
+            </ion-card>
+        <ion-card (click)="goqidai()">
+            <div class="a">
+                <p>
+                    <ion-icon class="e-1" ios="ios-clipboard" md="md-clipboard"></ion-icon>
+                </p>
+                <p class="e-2">更多</p>
+            </div>
+        </ion-card>
+    </div>
+  </div>
+</div>
         <div class="setting" (click)="gosetting()">
             <ion-card >
                 <div class="setting1">
@@ -102,58 +74,5 @@
                 </div>
             </ion-card>
         </div>
-    </div>
-    <div *ngSwitchCase="1">  <!--老师模块-->
-        <div class="myhead" >
-                <div class="myhead1">
-                    <img src="{{head}}" alt="头像" width="60px" height="60px" (click)="goimg()">
-                </div>
-                <div class="myhead2">
-                    {{pea_name}}
-                </div>
-        </div>
-        <div class="setting" (click)="godata()">
-                <ion-card class="setting1" >
-                        <div class="e-2">
-                            <span>我的下载</span>
-                        </div>
-                        <div class="e-3">
-                            <ion-icon class="setting2" name="ios-arrow-forward-outline"></ion-icon>
-                        </div>
-                    </ion-card>
-        </div> 
-        <div class="setting" (click)="gocourse()">
-                <ion-card class="setting1" >
-                    <div class="e-2">
-                        <span>我的家教</span>
-                    </div>
-                    <div class="e-3">
-                        <ion-icon class="setting2" name="ios-arrow-forward-outline"></ion-icon>
-                    </div>
-                </ion-card>
-        </div>
-        <div class="setting" (click)="gotalk()">
-                <ion-card class="setting1" >
-                        <div class="e-2">
-                            <span>意见反馈</span>
-                        </div>
-                        <div class="e-3">
-                            <ion-icon class="setting2" name="ios-arrow-forward-outline"></ion-icon>
-                        </div>
-                    </ion-card>
-        </div>
-        <div class="setting" (click)="gosetting()">
-                <ion-card class="setting1" >
-                        <div class="e-2">
-                            <span>设置</span>
-                        </div>
-                        <div class="e-3">
-                            <ion-icon class="setting2" name="ios-arrow-forward-outline"></ion-icon>
-                        </div>
-                    </ion-card>
-        </div>
-          
-    </div>
-</div>
 </ion-content>
   

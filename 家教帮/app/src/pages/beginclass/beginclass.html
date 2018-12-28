@@ -14,14 +14,18 @@
   </ion-header>
   
   <ion-content>
-    <ul  *ngFor="let item of arr;">
-      <li>
-        <ion-item>
-                <p>姓名:{{item?.stu_name}}{{item?.tea_name}}</p>
-                <p>授课科目:{{item?.order_course}}</p> 
-                <p>授课时间：{{item?.class_time}}</p>
-                <p>授课地点：{{item?.order_address}}</p> 
-        </ion-item> 
+    <ul>
+      <li *ngFor="let item of arr;">
+        <img src="{{item?.imgcourse}}"/>
+        <div class="a">
+        <p class="p1">课&nbsp;{{item?.tea_name}}{{item?.stu_name}}</p>
+        <p class="p2">{{item?.order_course}}</p>
+        </div>
+        <div>
+            <p class="p3">{{item?.class_time}}</p>
+            <p class="p3" style="margin-top:5%;">{{item?.order_address}}</p>
+        </div>
+      </li>
     </ul>
   </ion-content>
   

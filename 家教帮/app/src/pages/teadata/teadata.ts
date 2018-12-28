@@ -33,6 +33,7 @@ export class TeadataPage {
   stu_grade=this.navParams.data.tea_content.stu_grade;
   stu_courses=this.navParams.data.tea_content.stu_courses;
   tea_major=this.navParams.data.tea_content.tea_major;
+  tea_money=this.navParams.data.tea_content.tea_money+'/h';
   tea_school=this.navParams.data.tea_content.tea_school;
   remark=this.navParams.data.tea_content.remark;
 
@@ -57,6 +58,7 @@ export class TeadataPage {
       stu_courses :this.stu_courses,
       tea_school :this.tea_school,
       tea_major:this.tea_major,
+      tea_money:this.tea_money,
       tea_grade:this.tea_grade, 
       remark:this.remark
    }
@@ -72,6 +74,7 @@ export class TeadataPage {
              window.localStorage.setItem('pea_major',this.tea_major)
              window.localStorage.setItem('stu_grade',this.stu_grade)
              window.localStorage.setItem('stu_courses',this.stu_courses)
+             window.localStorage.setItem('tea_money',this.tea_money);
              window.localStorage.setItem('remark',this.remark)
         },
        error=>{

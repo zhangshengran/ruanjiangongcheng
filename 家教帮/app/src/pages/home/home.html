@@ -11,29 +11,17 @@
   </ion-navbar>
 </ion-header>
 <ion-content>
-  <div [ngSwitch]="isActive">   <!--学生模块-->
-    <div *ngSwitchCase="0">
   <div class="c">
-  <ion-slides  class="myslides" autoplay="600" speed="800" loop="true" pager >
-    <ion-slide>
-      <img src="assets/imgs/home1.jpg" />
-    </ion-slide>
-    <ion-slide>
-      <img src="assets/imgs/home2.jpg" />
-    </ion-slide>
-    <ion-slide>
-      <img src="assets/imgs/home3.jpg" />
-    </ion-slide>
-    <ion-slide>
-      <img src="assets/imgs/home4.jpg" />
-    </ion-slide>
-    <ion-slide>
-      <img src="assets/imgs/home5.jpg" />
+
+    <ion-slides *ngIf="arr2.length > 1"  class="myslides" autoplay="600" speed="800" loop="true" pager>
+    <ion-slide *ngFor="let item of arr2,let i=index;">
+      <img src='{{arr2[i]?.lun_src}}' />
     </ion-slide>
   </ion-slides>
-  <ion-slides class="b" autoplay="2000" speed="2000" loop="true" pager >
-      <ion-slide *ngFor="let item of row;let idx=index;">
-          <ion-icon name="md-volume-up"></ion-icon><span>通知：{{item}}</span>
+
+  <ion-slides *ngIf="arr3.length > 1" class="b" autoplay="2000" speed="2000" loop="true" pager >
+      <ion-slide *ngFor="let item of arr3;let idx=index;">
+          <ion-icon name="md-volume-up"></ion-icon><span>通知：{{arr3[idx]?.tou_content}}</span>
       </ion-slide>
        
     </ion-slides>
@@ -43,13 +31,16 @@
         <span> 上课提醒 </span>
         <ion-icon name="md-arrow-dropright" class="a"></ion-icon>
   </div>
-
+<div [ngSwitch]="isActive">
+<div *ngSwitchCase="0">  <!--老师模块-->
+</div>
+<div *ngSwitchCase="1"><!--学生模块-->
   <ion-item class="span1 shangyuanjiao" no-lines >
     <span  (click)="go3()">--教师推荐--</span>
     <div class="line"></div>  
   </ion-item>
   <ion-item class="xiayuanjiao">
-          <div  class="tuijian teachertuijian" style="text-align:center;width:15%;height:80px;float:left;margin-left:4%;padding-top:2%;"  *ngFor="let item of arr;let idx=index;" (click)='detail(idx)'>
+          <div  class="tuijian teachertuijian" style="text-align:center;width:20%;height:80px;float:left;padding-top:2%;"  *ngFor="let item of arr;let idx=index;" (click)='detail(idx)'>
               <img style="width:40px;height:40px;border-radius: 50%;"src="{{item?.head_src}}"/>
               <div style="font-size:12px;margin-top:5%;">{{item?.tea_name}}</div>
             </div>
@@ -70,11 +61,11 @@
             <span>数学</span>
           </div>
         <div class="course" (click)="isClick(3)" style="background:rgba(151,211,55,0.9);">
-            <ion-icon name="md-calendar" ></ion-icon>
+            <ion-icon name="md-bookmark" ></ion-icon>
             <span>英语</span>
         </div>
         <div class="course" (click)="isClick(4)"style="background:rgba(219,112,147,0.9);">
-            <ion-icon name="md-card" ></ion-icon>
+            <ion-icon name="md-brush" ></ion-icon>
             <span>物理</span>
         </div>
       </ion-item>
@@ -96,8 +87,9 @@
               <span>更多</span>
           </div>
         </ion-item>
+    </div>
   </div>
-     <div>
+  </div>
     <ion-item class="span1" no-lines>
       <span>--社区--</span>
       <div class="line"></div> 
@@ -119,64 +111,4 @@
       <ion-item no-lines  (click)="go5()">
         <div class="bottom" style="text-align:center; "><span style="font-size:14px; color:#00adb5">点我查看更多</span></div>
       </ion-item>
-    </div>
-    </div>
-    <div *ngSwitchCase="1">  <!--老师模块-->
-      <div class="c">
-      <ion-slides  class="myslides" autoplay="600" speed="800" loop="true" pager>
-        <ion-slide>
-          <img src="assets/imgs/home1.jpg" />
-        </ion-slide>
-        <ion-slide>
-          <img src="assets/imgs/home2.jpg" />
-        </ion-slide>
-        <ion-slide>
-          <img src="assets/imgs/home3.jpg" />
-        </ion-slide>
-        <ion-slide>
-          <img src="assets/imgs/home4.jpg" />
-        </ion-slide>
-        <ion-slide>
-          <img src="assets/imgs/home5.jpg" />
-        </ion-slide>
-      </ion-slides>
-      <ion-slides class="b" autoplay="2000" speed="2000" loop="true" pager>
-          <ion-slide *ngFor="let item of row;let idx=index;">
-              <ion-icon name="md-volume-up"></ion-icon><span>通知：{{item}}</span>
-          </ion-slide>
-           
-        </ion-slides>
-      </div>
-      <div class="alert" (click)="go1()">
-          <ion-icon name="md-alarm"></ion-icon>
-          <span> 上课提醒 </span>
-          <ion-icon name="md-arrow-dropright" class="a"></ion-icon>
-    </div>
-  
-      <br>
-      <div>
-        <ion-item class="span1" no-lines>
-          <span>--社区--</span>
-          <div class="line"></div> 
-        </ion-item>
-          <ion-item no-lines>
-            <ion-avatar item-start>
-              <img src="{{arr1?.head_src}}">
-            </ion-avatar>
-            <h2>{{arr1?.stu_name}}</h2>
-          </ion-item>
-          <ion-item no-lines>
-            <p class="text">{{arr1?.content}}</p>
-            <ion-avatar item-start>
-            </ion-avatar>
-            <div class="lear">
-              <img src="{{arr1?.img_src1}}" class="fl icon_img" style="width:80%;">
-            </div>
-          </ion-item>
-          <ion-item no-lines  (click)="go5()">
-            <div class="bottom" style="text-align:center; "><span style="font-size:14px; color:#00adb5">点我查看更多</span></div>
-          </ion-item>
-      </div>
-    </div>
-  </div>
 </ion-content>

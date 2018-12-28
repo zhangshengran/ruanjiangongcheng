@@ -5,6 +5,7 @@
   </ion-navbar>
 </ion-header>
 <ion-content>
+  <!--
   <ul  *ngFor="let item of arr;"style="text-align: center;">
     <li >
         <ion-item>
@@ -15,5 +16,25 @@
               <p>下单时间：{{item?.order_time}}</p>
               <p>订单编号：{{item?.order_id}}</p>
         </ion-item>
+  </ul>
+-->
+  <ul>
+    <li *ngFor="let item of arr;">
+      <div class="a">
+      <div>
+      <p class="p3">{{item?.tea_name}}{{item?.stu_name}}</p>
+      <p class="p3">{{item?.stu_grade}}{{item?.order_course}}</p>
+      </div>
+      <div>
+          <p class="p3">{{item?.class_time}}</p>
+          <p class="p3">{{item?.order_address}}</p>
+      </div>
+      </div>
+    <div class="b">
+        <p class="p1">下单时间：{{item?.order_time}}</p>
+        <span class="p1">订单编号：{{item?.order_id}}&nbsp;</span>
+        <span class="p1">联系方式：{{item?.stu_phone}}</span>
+    </div>
+    </li>
   </ul>
 </ion-content>

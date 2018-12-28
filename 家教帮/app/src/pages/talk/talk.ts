@@ -70,6 +70,7 @@ export class TalkPage {
     ionViewWillEnter() {
     console.log(localStorage.getItem('phone'));
       $(function($){   //点击笑脸显示表情
+        /*
         $('#face').click(function(){
         if($('#a').css('display')=='none'){
           //console.log('face');
@@ -95,7 +96,45 @@ export class TalkPage {
           $('#a').css("display","none");  
 
       }
-    })
-  })
+    })*/
+  }) 
   }
+    //不需要在同域下即可，因为WebSocket是在TCP层面上传输数据，而”域”的概念在应用层):
+//判断当前浏览器是否支持WebSocket  
+websocket = new WebSocket('ws://localhost:3000'); 
+//连接发生错误的回调方法 
+ionViewDidLoad(){ 
+  var that=this;
+this.websocket.onerror = function(err){  
+    console.log('错误')
+    console.log(err);
+};  
+  
+//连接成功时的回调方法  
+this.websocket.onopen = function(event){  
+    console.log(event);  
+}  
+  
+//接收到消息的回调方法  
+this.websocket.onmessage = function(event){  
+}  
+  
+//连接关闭的回调方法  
+this.websocket.onclose = function(){  
+    console.log("关闭");  
+}  
+//监听窗口关闭事件，当窗口关闭时，主动去关闭websocket连接，防止连接还没断开就关闭窗口，server端会抛异常。  
+window.onbeforeunload = function(){  
+    that.websocket.close();  
+}  
+  /*
+//发送消息  
+$scope.send = function(){  
+    this.websocket.send(this.localStorageService.get('UserID'));  
+}  
+$scope.closeWebSocket = function(){  
+    this.websocket.close();  
+}  
+*/
+}
 }

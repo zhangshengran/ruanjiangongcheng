@@ -21,14 +21,12 @@ export class BeginclassPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private http:HttpClient,public alertCtrl: AlertController) {
   }
-  identy;
+  teacherID;
   is_tea;
   arr;
   stu_id;
   data;
-  goback(){
-    this.navCtrl.pop();
-  }
+  imgcourse;
   presentAlert(data) {
     let alert = this.alertCtrl.create({
       title: '提示！',
@@ -38,41 +36,84 @@ export class BeginclassPage {
     alert.present();
   }
     ionViewDidLoad() {
-      console.log('ionViewDidLoad MycoursePage');
-      this.identy=window.localStorage.getItem('teacherID');
-      if(this.identy=='null'){
-          this.stu_id=window.localStorage.getItem('tokenID');
-          console.log(window.localStorage.getItem('tokenID'));
-          console.log(this.stu_id);
-          this.http.get('http://www.zhuoran.fun:3000'+'/select_order_stu?stu_id='+this.stu_id).subscribe(res => {
+      var that=this;
+      that.teacherID=window.localStorage.getItem('teacherID');
+      that.stu_id=window.localStorage.getItem('tokenID');
+      that
+      if(that.teacherID=='null'||that.teacherID==null){
+        console.log(this.stu_id);
+        this.http.get('http://www.zhuoran.fun:3000'+'/select_order_stu?stu_id='+that.stu_id).subscribe(res => {
+          console.log("res:",res);
+          that.arr=res;
+          //console.log(that.arr);
+          if(res['length']==0){
+              this.presentAlert('您目前还没有课程哦！');
+
+        }else{
+          for(var i=0;i<that.arr.length;i++){  //哪一科图片对应哪一科
+            if(that.arr[i]['stu_courses']=='语文'){
+              that.arr[i]['imgcourse']='../../assets/imgs/yuwen.png'; //插入图片键值对
+            }else if(that.arr[i]['stu_courses']=='数学'){
+              that.arr[i]['imgcourse']='../../assets/imgs/shuxue.png';
+            }else if(that.arr[i]['stu_courses']=='英语'){
+              that.arr[i]['imgcourse']='../../assets/imgs/yingyu.png';
+            }else if(that.arr[i]['stu_courses']=='物理'){
+              that.arr[i]['imgcourse']='../../assets/imgs/wuli.png';
+            }else if(that.arr[i]['stu_courses']=='化学'){
+              that.arr[i]['imgcourse']='../../assets/imgs/huaxue.png';
+            }else if(that.arr[i]['stu_courses']=='生物'){
+              that.arr[i]['imgcourse']='../../assets/imgs/shengwu.png';
+            }else if(that.arr[i]['stu_courses']=='历史'){
+              that.arr[i]['imgcourse']='../../assets/imgs/lishi.png';
+            }else if(that.arr[i]['stu_courses']=='地理'){
+              that.arr[i]['imgcourse']='../../assets/imgs/dili.png';
+            }else{
+              that.arr[i]['imgcourse']='../../assets/imgs/zhengzhi.png';
+            }
+            //console.log(that.arr[i]);
+          }
+
+            }
+         },
+         error=>{
+           console.log("error:",error)
+         });
+      }else{
+        console.log('教师');
+          this.http.get('http://www.zhuoran.fun:3000'+'/select_order_tea?tea_id='+that.teacherID).subscribe(res => {
                console.log("res:",res);
-               this.arr=res;
+               that.arr=res;
                if(res['length']==0){
-                  this.presentAlert('您目前还没有课程哦！');     
-                  // this.navCtrl.pop();
+                  this.presentAlert('您目前还没有课程哦！');
+             }else{
+              for(var i=0;i<that.arr.length;i++){  //哪一科图片对应哪一科
+                if(that.arr[i]['stu_courses']=='语文'){
+                  that.arr[i]['imgcourse']='../../assets/imgs/yuwen.png'; //插入图片键值对
+                }else if(that.arr[i]['stu_courses']=='数学'){
+                  that.arr[i]['imgcourse']='../../assets/imgs/shuxue.png';
+                }else if(that.arr[i]['stu_courses']=='英语'){
+                  that.arr[i]['imgcourse']='../../assets/imgs/yingyu.png';
+                }else if(that.arr[i]['stu_courses']=='物理'){
+                  that.arr[i]['imgcourse']='../../assets/imgs/wuli.png';
+                }else if(that.arr[i]['stu_courses']=='化学'){
+                  that.arr[i]['imgcourse']='../../assets/imgs/huaxue.png';
+                }else if(that.arr[i]['stu_courses']=='生物'){
+                  that.arr[i]['imgcourse']='../../assets/imgs/shengwu.png';
+                }else if(that.arr[i]['stu_courses']=='历史'){
+                  that.arr[i]['imgcourse']='../../assets/imgs/lishi.png';
+                }else if(that.arr[i]['stu_courses']=='地理'){
+                  that.arr[i]['imgcourse']='../../assets/imgs/dili.png';
+                }else{
+                  that.arr[i]['imgcourse']='../../assets/imgs/zhengzhi.png';
+                }
+                //console.log(that.arr[i]);
+              }
              }
              
           },
          error=>{
           console.log("error:",error)
          });
-      }else{
-        console.log(window.localStorage.getItem('tokenID'));
-          this.stu_id=window.localStorage.getItem('teacherID');
-           console.log(this.stu_id);
-          this.http.get('http://www.zhuoran.fun:3000'+'/select_order_tea?tea_id='+this.stu_id).subscribe(res => {
-            console.log("res:",res);
-            this.arr=res;
-            if(res['length']==0){
-              // this.data='您目前还没有课程哦！';
-                this.presentAlert('您目前还没有课程哦！');
-
-              }
-              // this.navCtrl.pop();
-           },
-           error=>{
-             console.log("error:",error)
-           });
   
       }
     }

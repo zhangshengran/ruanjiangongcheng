@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {HttpClient} from "@angular/common/http";
 import $ from 'jquery';
@@ -117,12 +117,26 @@ export class VideoPage {
     })
   }
   u=0;
-  control(idx){
+  num=1;
+  control(idx){  //控制视频播放和暂停 
+    if(this.u==idx&&this.num==1){  //一开始的时候u为0，正好点击第1个，让其播放
+      this.arr0[idx].play();
+      this.num=2;
+      console.log(this.u,this.num,idx);
+    }else if(this.u==idx&&this.num==2){
+      this.arr0[idx].pause();
+      this.num=1;
+      console.log(this.u,this.num,idx);
+    }else{
     console.log(this.arr0);
-    this.arr0[this.u].pause();
     this.arr0[idx].play();
+    this.arr0[this.u].pause();
     this.u=idx;
+    this.num=2;
+    console.log(this.u,this.num,idx);
+    }
   }
+
   ionViewDidLoad() {
     this.getVideo()
   }

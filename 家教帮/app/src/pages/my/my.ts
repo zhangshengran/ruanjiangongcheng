@@ -8,7 +8,7 @@ import { MysettingPage } from '../mysetting/mysetting';
 import 'rxjs/add/operator/toPromise';
 import { MyimgPage } from '../myimg/myimg';
 import { MydownloadPage } from '../mydownload/mydownload';
-
+import { AlertController } from 'ionic-angular';
 /**
  * Generated class for the MyPage page.
  *
@@ -27,7 +27,7 @@ export class MyPage {
   pea_name: string;
   tea_id ;
   isActive;
-  constructor(public http: Http,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public http: Http,public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController,) {
   }
   godata(){
     this.navCtrl.push(MydownloadPage);
@@ -48,6 +48,18 @@ export class MyPage {
   
   goimg(){
     this.navCtrl.push(MyimgPage);
+  }
+  //------------提示框---------
+ presentAlert(data) {
+  let alert = this.alertCtrl.create({
+    title: '提示！',
+    subTitle:data,
+    buttons: ['Ok'],
+  });
+  alert.present();
+}
+  goqidai(){
+       this.presentAlert('敬请期待');
   }
   ionViewWillEnter() {  //一进来时，就会调用,变量就会及时更新
     this.pea_name=window.localStorage.getItem('pea_name');  //名称

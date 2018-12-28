@@ -37,7 +37,7 @@ export class TeachersPage {
 
   }
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TeachersPage');
+   // console.log('ionViewDidLoad TeachersPage');
   }
 
 }

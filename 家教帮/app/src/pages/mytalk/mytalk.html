@@ -23,6 +23,15 @@
     </li>
   </ul>
 -->
+<ul>
+    <li *ngFor="let item of arr;">
+      <p class="p1">{{item?.adv_content}}</p>
+      <div class="p2">
+       <p>{{item?.reply}}</p>
+       <p style="float:right;">{{item?.adv_time}}</p>
+      </div>
+    </li>
+  </ul>
 <textarea placeholder="欢迎您为我们提出宝贵的意见" [(ngModel)]="remark"></textarea>
 <button ion-button  (click)="affirm()">提交</button>
 </ion-content>

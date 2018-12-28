@@ -33,7 +33,7 @@ export class NewsPage {
   }
   ionViewDidLoad() {
     this.getNew()
-    console.log('ionViewDidLoad NewsPage');
+    //console.log('ionViewDidLoad NewsPage');
   }
 
 }

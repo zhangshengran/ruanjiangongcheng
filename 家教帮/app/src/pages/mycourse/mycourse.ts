@@ -29,7 +29,7 @@ presentAlert(data) {
   ionViewDidLoad() {
     console.log('ionViewDidLoad MycoursePage');
     this.identy=window.localStorage.getItem('teacherID');
-    if(this.identy=='null'){
+    if(this.identy=='null'||this.identy==null){
         this.stu_id=window.localStorage.getItem('tokenID');
         console.log(window.localStorage.getItem('tokenID'));
         console.log(this.stu_id);

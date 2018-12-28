@@ -32,6 +32,7 @@ export class MydataPage {
   values;
   tokenID;
   teacherID: string;
+  tea_money;
   ionViewWillEnter() {  //ts语法中没有checked属性    复选框,点击多次
     var that=this;
     $(function($){   
@@ -101,10 +102,8 @@ presentAlert(data) {  //提示框
   goback(){
     this.tokenID=window.localStorage.getItem('tokenID');
     this.teacherID=window.localStorage.getItem('teacherID');
-    if(this.teacherID!='null'){
-      this.presentAlert('您已经注册过一次，不能再次注册！');
-    }else{
-    var emailreg=/^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/; //验证邮箱
+    if(this.teacherID=='null'||this.teacherID==null){
+      var emailreg=/^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/; //验证邮箱
     var idreg=/^[1-9]\d{5}(18|19|20)\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/; //验证身份证 
     if(this.tea_age==null||this.tea_sex==null||this.stu_grade==null||this.stu_courses==null||this.tea_school==null||this.tea_major==null
       ||this.tea_grade==null||this.tea_name==null||this.remark==null){
@@ -124,6 +123,7 @@ presentAlert(data) {  //提示框
     console.log("专业："+this.tea_major);
     console.log("年级："+this.tea_grade);
     console.log("姓名："+this.tea_name);
+    console.log("教师薪酬："+this.tea_money);
     console.log("身份证号："+this.userID);
     console.log("备注："+this.remark);
     var params = {
@@ -137,6 +137,7 @@ presentAlert(data) {  //提示框
       tea_school:this.tea_school,
       tea_major:this.tea_major,
       tea_grade:this.tea_grade,  //老师所在年级  //单选框可以只传一个参数
+      tea_money:this.tea_money,
       userID:this.userID,
       remark:this.remark
       }
@@ -145,12 +146,26 @@ presentAlert(data) {  //提示框
         this.presentAlert(res['message']);
         window.localStorage.setItem('teacherID',res["tea_token"]);
         this.navCtrl.pop();
+        window.localStorage.setItem('pea_name',this.tea_name);
+        window.localStorage.setItem('pea_age',this.tea_age);
+        window.localStorage.setItem('pea_sex',this.tea_sex);
+        window.localStorage.setItem('pea_grade',this.tea_grade);
+        window.localStorage.setItem('pea_email',this.tea_email);
+        window.localStorage.setItem('pea_school',this.tea_school);
+        window.localStorage.setItem('pea_major',this.tea_major);
+        window.localStorage.setItem('stu_grade',this.values);
+        window.localStorage.setItem('stu_courses',this.stu_courses);
+        window.localStorage.setItem('remark',this.remark);
+        window.localStorage.setItem('tea_money',this.tea_money);
       },error =>{
         this.presentAlert('服务器连接错误');
       })
     
   }
-}
+    }else{
+      this.presentAlert('您已经注册过一次，不能再次注册！');
+    
+     }
 }
   constructor(public navCtrl: NavController, public navParams: NavParams,private http:HttpClient,public alertCtrl: AlertController,) {
   }

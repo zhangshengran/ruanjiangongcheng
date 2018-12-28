@@ -5,16 +5,54 @@ page-beginclass {
             text-align:center;
         }
     ion-content{
+        background:url(../../assets/imgs/beginclassbg.jpg);
+        background-size:cover;
+        background-repeat: no-repeat;
         margin:0 auto;
-        text-align:center;
         ul{
-            width:100%;
+            padding:0;
+            width:94%;
+            margin:10% 3%;
             // text-align: center;
             li{
+                margin-top:5%;
                 width:100%!important;
-                margin-left:-5%;
-                border:1px solid gray;
-                text-align: center;
+                border-bottom:1px solid rgb(211,211,211);
+                background-color:rgba(255,255,255,0.6);
+                border-radius:10px;
+                height:90px;
+                img{
+                    float:left;
+                    margin-left:5%;
+                    width:40px;
+                    height:40px;
+                    border-radius:50%;
+                    margin-top:5%;
+                }
+
+                div{
+                    margin-top:5%;
+                    float:left;
+                    width:35%;
+                    .p1{
+                        color:gray;
+                        margin:0;
+                    }
+                    .p2{
+                        color:black;
+                        font-size:20px;
+                        margin:0;
+                        margin-top:5%;
+                    }
+                    .p3{
+                        color:black;
+                        margin:0;
+                    }
+                }
+                .a{
+                    margin-left:10%;
+                    
+                }
             }
         }
         

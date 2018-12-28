@@ -34,7 +34,9 @@ export class LoginPage {
   error:any;
   yzma:Number;
   a:string='3';
+  is_tea_ID;
   t;
+  data;
   isClick(i){
     this.isActive = i;
   }
@@ -70,6 +72,7 @@ presentAlert(data) {
     return new HttpParams({fromObject: params});
   }
   gobpage(){              //登录页面
+    var that=this;
     var telreg = /^((1[3578][0-9]{1})+\d{8})$/;   //验证手机号的合法性
     var pwdreg = /^(\w){6,20}$/;//密码合法性验证
     if(this.logintel==null||this.logintel.length !==11){
@@ -96,16 +99,46 @@ presentAlert(data) {
     
         loading.dismiss();
         if(res["status"]==0){  //登录成功
-          console.log("res",res);
-          window.localStorage.setItem('tokenID',res["tokenID"]);
-          window.localStorage.setItem('teacherID',res["tea_token"]);
-          window.localStorage.setItem('pea_name',res["information"].stu_name);
-          window.localStorage.setItem('pea_sex',res["information"].stu_sex);
-          window.localStorage.setItem('pea_age',res["information"].stu_age);
-          window.localStorage.setItem('head',res["information"].head_src);
-          window.localStorage.setItem('pea_phone',res["information"].stu_phone);
-          console.log('tokenID',window.localStorage.getItem('tokenID'));
-          this.navCtrl.push(TabsPage);
+          that.data=res['information'];
+          console.log(that.data);
+          that.is_tea_ID=that.data['is_tea_ID'];
+          console.log(that.is_tea_ID);
+          if(that.is_tea_ID==null||that.is_tea_ID=='null'){   //判断是否为学生...
+            window.localStorage.setItem('tokenID',that.data["stu_id"]);
+            window.localStorage.setItem('head',that.data['head_src']);
+            window.localStorage.setItem('pea_phone',that.data['stu_phone']);
+            window.localStorage.setItem('pea_name',that.data['stu_name']);
+            window.localStorage.setItem('pea_sex',that.data['stu_sex']);
+            window.localStorage.setItem('pea_age',that.data['stu_age']);
+            window.localStorage.setItem('pea_grade',that.data['stu_grade']);
+            
+        }else{   //为老师...
+          console.log('haha')
+            this.http.get('http://www.zhuoran.fun:3000'+'/showdata_tea?tea_id='+that.is_tea_ID).subscribe(res1 => {
+             console.log("res:",res1);
+             window.localStorage.setItem('pea_name',res1[0]['tea_name']);
+             window.localStorage.setItem('teacherID',res1[0]['tea_id']);
+             window.localStorage.setItem('pea_age',res1[0]['tea_age']);
+             window.localStorage.setItem('pea_sex',res1[0]['tea_sex']);
+             window.localStorage.setItem('pea_grade',res1[0]['tea_grade']);
+             window.localStorage.setItem('pea_email',res1[0]['tea_email']);
+             window.localStorage.setItem('pea_school',res1[0]['tea_school']);
+             window.localStorage.setItem('pea_major',res1[0]['tea_major']);
+             window.localStorage.setItem('stu_grade',res1[0]['stu_grade']);
+             window.localStorage.setItem('stu_courses',res1[0]['stu_courses']);
+             window.localStorage.setItem('remark',res1[0]['remark']);
+
+            },
+           error=>{
+             console.log("error:",error)
+            });
+          window.localStorage.setItem('tokenID',that.data["stu_id"]);
+          window.localStorage.setItem('head',that.data['head_src']);
+          window.localStorage.setItem('pea_phone',that.data['stu_phone']);
+        }
+          this.navCtrl.push(TabsPage,{
+            tea_id:this.is_tea_ID
+          });
         }else{
           console.log(res);
           this.presentAlert(res["message"]);  //登录失败 账号不存在

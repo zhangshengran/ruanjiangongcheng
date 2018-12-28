@@ -5,7 +5,7 @@
 </ion-header>
 <ion-content>
   <div *ngFor="let item1 of arr1;let idx=index;" class="a">
-    <video id="asd" controls (click)="control(idx)" style=" object-fit: fill">
+    <video id="asd" (click)="control(idx)" style=" object-fit: fill">
       <source src="{{item1?.course_src}}" type="video/mp4" />
       Your browser does not support the video tag.
     </video>

@@ -19,10 +19,9 @@ export class MysettingPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,public app:App) {
     
   }
-  clear(){}//清除缓存信息
+  
   gologinPage(){
-    window.localStorage.removeItem('tokenID');
-    window.localStorage.removeItem('teacherID');
+    window.localStorage.clear(); //清除所有缓存
     this.app.getRootNavs()[0].setRoot(LoginPage);
   }
   ionViewDidLoad() {
