@@ -101,5 +101,15 @@
     </plugin>
     <plugin name="com-badrit-base64" spec="^0.2.0" />
     <plugin name="cordova-plugin-filepath" spec="https://github.com/compuhelmac/cordova-plugin-filepath.git" />
+    <preference name="AndroidPersistentFileLocation" value="Internal" />
+    <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,assets,root" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <plugin name="cordova-plugin-android-permissions" spec="^1.0.0" />
+    <platform name="android">
+        <config-file parent="/manifest" target="AndroidManifest.xml" xmlns:android="http://schemas.android.com/apk/res/android">
+            <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+        </config-file>
+    </platform>
+    <plugin name="cordova-plugin-file-opener2" spec="^1.0.11" />
     <engine name="android" spec="7.0.0" />
 </widget>

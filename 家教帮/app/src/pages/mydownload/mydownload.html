@@ -12,10 +12,10 @@
 
 
 <ion-content>
-    <div  *ngFor="let item of arr;">
-      <ion-item>
-          {{item}}
-      </ion-item>
-    </div>
-
+    <ion-item  *ngFor="let item of arr;let i=index;">
+        <p>{{item}}哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p> 
+        <button ion-button  (click)="open(i)" style="color:white!important;
+        background-color: #00adb5!important;">查看</button> 
+      
+     </ion-item>
 </ion-content>

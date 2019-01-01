@@ -1,78 +1,77 @@
 
 <ion-content>
-        <div class="myhead" >
-            <div class="myhead1">
-                <img src="{{head}}" alt="头像" width="60px" height="60px" (click)="goimg()">
-            </div>
-            <div class="myhead2">
-                {{pea_name}}
-            </div>
+    <div class="myhead" >
+        <div class="myhead1">
+            <img src="{{head}}" alt="头像" width="60px" height="60px" (click)="goimg()">
         </div>
-        <div class="e">
-            <ion-card (click)="godata()"> 
-                <div class="a">
-                    <p>
-                    <ion-icon class="e-1" md="md-albums"></ion-icon>
-                    </p>
-                    <p class="e-2">我的下载</p>
-                </div>
-            </ion-card>
-            <ion-card (click)="gocourse()">
-                <div class="a">
-                    <p>
-                        <ion-icon class="e-1" name="book"></ion-icon>
-                      </p>
-                      <p class="e-2">我的家教</p>
-                </div>
-            </ion-card>
-    <div [ngSwitch]="isActive">
-        <div *ngSwitchCase="0"><!--学生模块-->
-            <ion-card (click)="goprove()">
-                <div class="a">
-                    <p>
-                        <ion-icon class="e-1" md="md-bookmark"></ion-icon>
-                    </p>
-                    <p class="e-2">成为老师</p>
-                </div>
-            </ion-card>
-            <ion-card (click)="gotalk()">
-                <div class="a">
-                    <p>
-                        <ion-icon class="e-1" ios="ios-clipboard" md="md-clipboard"></ion-icon>
-                    </p>
-                    <p class="e-2">意见反馈</p>
-                </div>
-            </ion-card>
+        <div class="myhead2">
+            {{pea_name}}
+        </div>
     </div>
-    <div *ngSwitchCase="1"><!--教师模块-->
-            <ion-card (click)="gotalk()">
-                <div class="a">
-                    <p>
-                        <ion-icon class="e-1" ios="ios-clipboard" md="md-clipboard"></ion-icon>
-                    </p>
-                    <p class="e-2">意见反馈</p>
-                </div>
-            </ion-card>
-        <ion-card (click)="goqidai()">
+    <div class="e">
+        <ion-card (click)="godata()"> 
+            <div class="a">
+                <p>
+                <ion-icon class="e-1" md="md-albums"></ion-icon>
+                </p>
+                <p class="e-2">我的下载</p>
+            </div>
+        </ion-card>
+        <ion-card (click)="gocourse()">
+            <div class="a">
+                <p>
+                    <ion-icon class="e-1" name="book"></ion-icon>
+                  </p>
+                  <p class="e-2">我的家教</p>
+            </div>
+        </ion-card>
+<div [ngSwitch]="isActive">
+    <div *ngSwitchCase="0"><!--学生模块-->
+        <ion-card (click)="goprove()">
+            <div class="a">
+                <p>
+                    <ion-icon class="e-1" md="md-bookmark"></ion-icon>
+                </p>
+                <p class="e-2">成为老师</p>
+            </div>
+        </ion-card>
+        <ion-card (click)="gotalk()">
             <div class="a">
                 <p>
                     <ion-icon class="e-1" ios="ios-clipboard" md="md-clipboard"></ion-icon>
                 </p>
-                <p class="e-2">更多</p>
+                <p class="e-2">意见反馈</p>
+            </div>
+        </ion-card>
+</div>
+<div *ngSwitchCase="1"><!--教师模块-->
+        <ion-card (click)="gotalk()">
+            <div class="a">
+                <p>
+                    <ion-icon class="e-1" ios="ios-clipboard" md="md-clipboard"></ion-icon>
+                </p>
+                <p class="e-2">意见反馈</p>
+            </div>
+        </ion-card>
+    <ion-card (click)="goqidai()">
+        <div class="a">
+            <p>
+                <ion-icon class="e-1" ios="ios-clipboard" md="md-clipboard"></ion-icon>
+            </p>
+            <p class="e-2">更多</p>
+        </div>
+    </ion-card>
+</div>
+</div>
+</div>
+    <div class="setting" (click)="gosetting()">
+        <ion-card >
+            <div class="setting1">
+                <p>
+                    <ion-icon class="setting2" ios="ios-cog" md="md-cog"></ion-icon>
+                </p>
+                <p class="e-2">设置</p>
             </div>
         </ion-card>
     </div>
-  </div>
-</div>
-        <div class="setting" (click)="gosetting()">
-            <ion-card >
-                <div class="setting1">
-                    <p>
-                        <ion-icon class="setting2" ios="ios-cog" md="md-cog"></ion-icon>
-                    </p>
-                    <p class="e-2">设置</p>
-                </div>
-            </ion-card>
-        </div>
 </ion-content>
-  

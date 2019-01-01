@@ -7,6 +7,7 @@ import { File } from '@ionic-native/file'; //允许对驻留在设备上的文�
 import { DatamorePage } from '../datamore/datamore';
 import { DatagaoPage } from '../datagao/datagao';
 import { DatayouPage } from '../datayou/datayou';
+import { SearchfilePage } from '../searchfile/searchfile';
 /**
  * Generated class for the DataPage page.
  *
@@ -30,8 +31,9 @@ export class DataPage {
   isClick(i){
     this.isActive=i;
   }
-  goback1(){
-    this.navCtrl.pop();
+  
+  search(){
+   this.navCtrl.push(SearchfilePage);
   }
 
   getfilezhong(){

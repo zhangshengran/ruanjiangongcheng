@@ -1,0 +1,36 @@
+<!--
+  Generated template for the SearchfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="setnav">
+      <ion-searchbar  style="width:80%; float:left;" placeholder="请输入查找的资料" mode="ios"  [(ngModel)]="text"
+      ></ion-searchbar>
+      <div class="search">
+        
+        <span class="sea" (click)="search()">搜索</span>
+      </div>
+     
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="detail"  *ngFor="let item of arr;let idx=index;">
+    <div class="left">
+      <img src="../../assets/imgs/doc.png"/>
+    </div>
+    <div class="middle">
+      <span style="color:black;font-size:16px;">{{item?.file_name}}</span>
+      <span>上传时间{{item?.upload_time}}</span>
+      <span>下载{{item?.up_num}}次</span>
+      <span>贡献者：{{item?.upload_peo}}</span>
+    </div>
+    <div class="right">
+      <span style=" font-size:18px;">评分：{{item?.srore}}</span>
+      <span style="margin-top:10px; font-size:30px;">  <ion-icon ios="ios-cloud-download-outline" md="ios-cloud-download-outline"(click)="download(idx)"></ion-icon></span>
+    </div>
+
+  </div>  
+
+</ion-content>

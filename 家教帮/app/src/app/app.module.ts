@@ -59,7 +59,9 @@ import { MydownloadPage } from '../pages/mydownload/mydownload';
 import { DatamorePage } from '../pages/datamore/datamore';
 import { DatagaoPage } from '../pages/datagao/datagao';
 import { DatayouPage } from '../pages/datayou/datayou';
-
+import { FileOpener } from '@ionic-native/file-opener';
+import { AndroidPermissions } from '@ionic-native/android-permissions';
+import { SearchfilePage } from '../pages/searchfile/searchfile';
 @NgModule({
   declarations: [
     MyApp,
@@ -106,7 +108,8 @@ import { DatayouPage } from '../pages/datayou/datayou';
     MydownloadPage,
     DatamorePage,
     DatagaoPage,
-    DatayouPage
+    DatayouPage,
+    SearchfilePage
   ],
   imports: [
     BrowserModule,
@@ -165,13 +168,16 @@ import { DatayouPage } from '../pages/datayou/datayou';
     MydownloadPage,
     DatamorePage,
     DatagaoPage,
-    DatayouPage
+    DatayouPage,
+    SearchfilePage
   ],
   providers: [
     StatusBar,
     //Camera,
     SplashScreen,
     ImagePicker,
+    FileOpener,
+    AndroidPermissions,
     File,
     Base64,
    FileTransferObject,

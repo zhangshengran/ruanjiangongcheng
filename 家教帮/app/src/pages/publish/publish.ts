@@ -9,6 +9,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { AlertController } from 'ionic-angular';
 import { Base64 } from '@ionic-native/base64';
 import'rxjs/add/operator/map';
+import { FileOpener } from '@ionic-native/file-opener';
 @IonicPage()
 @Component({
   selector: 'page-publish',
@@ -20,7 +21,7 @@ export class PublishPage {
   content;
   poster_id=window.localStorage.getItem('tokenID');
   constructor(public navCtrl: NavController, public navParams: NavParams,private file: File,private transfer: FileTransfer,private imagePicker: ImagePicker,private fileTransfer:FileTransferObject,
-    public actionSheetCtrl:ActionSheetController,private toast: Toast,private http:HttpClient,public alertCtrl: AlertController,private base64: Base64) {
+    public actionSheetCtrl:ActionSheetController,private toast: Toast,private http:HttpClient,public alertCtrl: AlertController,private base64: Base64,private fileOpener: FileOpener) {
     this.fileTransfer= this.transfer.create();
 
   }
@@ -60,6 +61,7 @@ buttons: [
 {
 text: '从手机相册选择',
 handler: ()=> {
+this.imagePicker.requestReadPermission();
 this.openImgPicker();
 }
 },
@@ -75,8 +77,9 @@ actionSheet.present().then(value => {
       return value;
     });
 }
-data;
+data:string;
 // 打开手机相册
+jueduipath;
 private openImgPicker() {
   var that=this;
   this.imagePicker.getPictures(this.imagePickerOpt)
@@ -84,9 +87,9 @@ private openImgPicker() {
   for (var i=0; i
   < results.length; i++) {
   this.temp = results[i];
-  let safeUrl=results[i].toURL();
-   that.data = "<img src=" +safeUrl+" width=\"60px\" height=\"60px\">";
+  this.jueduipath=results[i];
   }
+  this.openFile( this.jueduipath);
 }, (err)=> {
   this.toast.showShortCenter('ERROR:'+ err);//错误：无法从手机相册中选择图片！
   });
@@ -114,6 +117,59 @@ private uploadImg(path:string) {
        }, (err) => {
           that.presentAlert(err); 
     });
+  }
+  //图片预览
+  openFile(path:string){
+    this.fileOpener.open(path, this.getFileMimeType(path.substring(path.lastIndexOf(".")+1,path.length)))
+  .then(//() => this.presentAlert('File is opened')
+  )
+  .catch(e => this.presentAlert('Error opening file'+JSON.stringify(e)));
+  }
+  getFileMimeType(fileType: string): string {
+    let mimeType: string = '';
+  
+    switch (fileType) {
+      case 'txt':
+        mimeType = 'text/plain';
+        break;
+      case 'docx':
+        mimeType = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+        break;
+      case 'doc':
+        mimeType = 'application/msword';
+        break;
+      case 'pptx':
+        mimeType = 'application/vnd.openxmlformats-officedocument.presentationml.presentation';
+        break;
+      case 'ppt':
+        mimeType = 'application/vnd.ms-powerpoint';
+        break;
+      case 'xlsx':
+        mimeType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+        break;
+      case 'xls':
+        mimeType = 'application/vnd.ms-excel';
+        break;
+      case 'zip':
+        mimeType = 'application/x-zip-compressed';
+        break;
+      case 'rar':
+        mimeType = 'application/octet-stream';
+        break;
+      case 'pdf':
+        mimeType = 'application/pdf';
+        break;
+      case 'jpg':
+        mimeType = 'image/jpeg';
+        break;
+      case 'png':
+        mimeType = 'image/png';
+        break;
+      default:
+        mimeType = 'application/' + fileType;
+        break;
+    }
+    return mimeType;
   }
 }
 

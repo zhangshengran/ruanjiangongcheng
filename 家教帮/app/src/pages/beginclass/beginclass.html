@@ -5,27 +5,27 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar  color="setnav">
-    <ion-title>
-      上课提醒
-    </ion-title>
-  
-  </ion-navbar>
-  </ion-header>
-  
-  <ion-content>
-    <ul>
-      <li *ngFor="let item of arr;">
-        <img src="{{item?.imgcourse}}"/>
-        <div class="a">
-        <p class="p1">课&nbsp;{{item?.tea_name}}{{item?.stu_name}}</p>
-        <p class="p2">{{item?.order_course}}</p>
-        </div>
-        <div>
-            <p class="p3">{{item?.class_time}}</p>
-            <p class="p3" style="margin-top:5%;">{{item?.order_address}}</p>
-        </div>
-      </li>
-    </ul>
-  </ion-content>
-  
+    <ion-navbar  color="setnav">
+      <ion-title>
+        上课提醒
+      </ion-title>
+    
+    </ion-navbar>
+    </ion-header>
+    
+    <ion-content>
+      <ul>
+        <li *ngFor="let item of arr;">
+          <img src="{{item?.imgcourse}}"/>
+          <div class="a">
+          <p class="p1">课&nbsp;{{item?.tea_name}}{{item?.stu_name}}</p>
+          <p class="p2">{{item?.order_course}}</p>
+          </div>
+          <div>
+              <p class="p3">{{item?.class_time}}</p>
+              <p class="p3" style="margin-top:5%;">{{item?.order_address}}</p>
+          </div>
+        </li>
+      </ul>
+    </ion-content>
+    

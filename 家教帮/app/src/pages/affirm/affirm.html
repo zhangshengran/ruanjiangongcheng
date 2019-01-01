@@ -5,45 +5,45 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-    <ion-navbar color="setnav">
-        <ion-title>
-           订单详情
-        </ion-title>
-    </ion-navbar>
-  </ion-header>
-  <ion-content>
-      <div class="top">
-          <div class="img"><img src="../../assets/imgs/mine2.png"/></div>   <!--头像-->
-          <div class="jianjie">   <!--简介-->
-              <p>
-                <span>{{tea_content?.tea_name}}</span>  
-                <span>{{tea_content?.tea_sex}}</span>
-                <span>{{tea_content?.tea_age}}</span>   
-              </p>
-              <p class="p1">
-                  <span>授课科目：{{tea_content?.stu_courses}}</span>
-              </p>
-              <p>
-                  <span>学校：{{tea_content?.tea_school}}</span> 
-              </p>
-              <p>
-                  <span>专业：{{tea_content?.tea_major}}</span>
-              </p>
-              <p>
-                <span>薪酬：<span style="color:red;font-size:18px;font-weight:500;">{{tea_content?.tea_money}}/h<span style="color:black;">￥</span></span></span>
-              </p>
-          </div>
-          <button ion-button  (click)="gotalk()">联系教师</button>
-        </div>
-        <div class="middle">
-          <p class="p1">上课时间：{{class_time}}</p>
-          <p>上课地址：{{order_address}}</p>
-          <p class="p1">下单时间：{{order_time}}</p>
-          <p>订单编号：{{order_number}}</p>
-        </div>
-        <div class="bottom">
-            <button ion-button (click)="return()">返回至首页</button>
-        </div>
-  
-  </ion-content>
-  
+        <ion-navbar color="setnav">
+            <ion-title>
+               订单详情
+            </ion-title>
+        </ion-navbar>
+      </ion-header>
+      <ion-content>
+          <div class="top">
+              <div class="img"><img src="../../assets/imgs/mine2.png"/></div>   <!--头像-->
+              <div class="jianjie">   <!--简介-->
+                  <p>
+                    <span>{{tea_content?.tea_name}}</span>  
+                    <span>{{tea_content?.tea_sex}}</span>
+                    <span>{{tea_content?.tea_age}}</span>   
+                  </p>
+                  <p class="p1">
+                      <span>授课科目：{{tea_content?.stu_courses}}</span>
+                  </p>
+                  <p>
+                      <span>学校：{{tea_content?.tea_school}}</span> 
+                  </p>
+                  <p>
+                      <span>专业：{{tea_content?.tea_major}}</span>
+                  </p>
+                  <p>
+                    <span>薪酬：<span style="color:red;font-size:18px;font-weight:500;">{{tea_content?.tea_money}}/h<span style="color:black;">￥</span></span></span>
+                  </p>
+              </div>
+              <button ion-button  (click)="gotalk()">联系教师</button>
+            </div>
+            <div class="middle">
+              <p class="p1">上课时间：{{class_time}}</p>
+              <p>上课地址：{{order_address}}</p>
+              <p class="p1">下单时间：{{order_time}}</p>
+              <p>订单编号：{{order_number}}</p>
+            </div>
+            <div class="bottom">
+                <button ion-button (click)="return()">返回至首页</button>
+            </div>
+      
+      </ion-content>
+      

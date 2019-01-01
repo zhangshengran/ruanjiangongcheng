@@ -6,6 +6,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { Tabs } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { LoginPage } from '../pages/login/login';
+import { FileOpener } from '@ionic-native/file-opener';
 @Component({
   templateUrl: 'app.html'
 })
@@ -32,7 +33,7 @@ export class MyApp {
     }
   }
   constructor(public appCtrl: App,
-    public toastCtrl: ToastController,private platform: Platform, private statusBar: StatusBar, splashScreen: SplashScreen,public storage: Storage) {
+    public toastCtrl: ToastController,private platform: Platform, private statusBar: StatusBar, splashScreen: SplashScreen,public storage: Storage,private fileOpener: FileOpener) {
       storage.set('tokenID', window.localStorage.getItem('tokenID'));
       this.storage.get('tokenID').then((result) => { 
         console.log('Your age is', result);
@@ -47,9 +48,10 @@ export class MyApp {
       });
   
     platform.ready().then(() => {
+      fileOpener;
       splashScreen.hide(); //解决白屏
       statusBar.styleDefault();
-      this.statusBar.backgroundColorByHexString('#C0C0C0');  //状态栏的设置
+      this.statusBar.backgroundColorByHexString('#f7f7f7');  //状态栏的设置
       splashScreen.hide();
       
       this.platform.registerBackButtonAction(() => {

@@ -1,38 +1,38 @@
 <ion-header>
 
-    <ion-navbar color="setnav">
-        <ion-title>
-            社区
-           <ion-icon name="add-circle" style="color:white;font-size:10px!important;float:right;" (click)="go8()"></ion-icon> 
-        </ion-title>
-
-    </ion-navbar>
-
-</ion-header>
-<ion-content>
-    <div class="studyimg">
-        <img src="{{head}}"/>
-        <span>{{pea_name}}</span>
-    </div>
-    <div class="studySpace" *ngFor="let item of arr1">
-            <ion-item no-lines>
-                <ion-avatar item-start>
-                    <img src="{{item.head_src}}" alt="头像"/>        
-                </ion-avatar>
-                <h2>{{item.stu_name}}</h2>
-            </ion-item>
-            <ion-item >
-                <div class="a">{{item.content}}</div>         
-                <ion-avatar item-start>
-                </ion-avatar>
-                <div>
-                    <img src="{{item?.img_src1}}" class="fl icon_img"/>
-                </div>
-            </ion-item>
+        <ion-navbar color="setnav">
+            <ion-title>
+                社区
+               <ion-icon name="add-circle" style="color:white;font-size:10px!important;float:right;" (click)="go8()"></ion-icon> 
+            </ion-title>
+    
+        </ion-navbar>
+    
+    </ion-header>
+    <ion-content>
+        <div class="studyimg">
+            <img src="{{head}}"/>
+            <span>{{pea_name}}</span>
         </div>
-        <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
-            <ion-infinite-scroll-content
-            loadingSpinner="bubbles"
-            loadingText="正在加载"></ion-infinite-scroll-content>
-        </ion-infinite-scroll>
-</ion-content>
+        <div class="studySpace" *ngFor="let item of arr1">
+                <ion-item no-lines>
+                    <ion-avatar item-start>
+                        <img src="{{item.head_src}}" alt="头像"/>        
+                    </ion-avatar>
+                    <h2>{{item.stu_name}}</h2>
+                </ion-item>
+                <ion-item >
+                    <div class="a">{{item.content}}</div>         
+                    <ion-avatar item-start>
+                    </ion-avatar>
+                    <div>
+                        <img src="{{item?.img_src1}}" class="fl icon_img"/>
+                    </div>
+                </ion-item>
+            </div>
+            <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+                <ion-infinite-scroll-content
+                loadingSpinner="bubbles"
+                loadingText="正在加载"></ion-infinite-scroll-content>
+            </ion-infinite-scroll>
+    </ion-content>

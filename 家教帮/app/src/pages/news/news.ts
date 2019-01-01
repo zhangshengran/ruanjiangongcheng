@@ -29,7 +29,8 @@ export class NewsPage {
     })
   }
   gonews(idx){
-    this.navCtrl.push(NewsnextPage,{idx})
+    this.navCtrl.push(NewsnextPage,{idx});
+    this.arr[idx]['num']++;
   }
   ionViewDidLoad() {
     this.getNew()
