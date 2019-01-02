@@ -1,6 +1,6 @@
 
 <div>
-	<img src="API.png.png"/>
+	<img src="API.png"/>
 </div>
 
 <h2>API</h2>
@@ -16,7 +16,7 @@
        <span>请求：GET</span><br/>
        <span>参数：stu_phone   手机号</span><br/>
        <span>调用形式：/verify?stu_phone=15690580872</span><br/>
-       
+        
        成功返回值：
                 {
                     status:0,
@@ -698,4 +698,83 @@
                     message:'数据库错误'
             }    
             ); 
+
+
+
+
+  <h4>获得建议</h4>
+        <span>接口：/advicesel</span><br/>
+        <span>请求：get</span><br/>
+        <span>参数：adv_user (id)<br/>
+            <br/>
+            <br/>
+        </span><br/>
+
+        成功返回值：
+              
+              array[object];
+            }
+        错误返回值:{
+                    status:1,
+                    info:'error',
+                    message:'数据库错误'
+            }    
+            ); 
+
+
+
+<h4>投诉建议</h4>
+        <span>接口：/writeAdvice</span><br/>
+        <span>请求：post</span><br/>
+        <span>参数：adv_user 投诉人id<br/>
+            adv_content 建议内容<br/>
+            adv_time时间<br/>
+        </span><br/>
+
+        成功返回值：
+               status:0,
+                info:'ok',
+                message:'建议成功'
+            }
+        错误返回值:{
+                    status:1,
+                    info:'error',
+                    message:'数据库错误'
+            }    
+            ); 
+
+
+<h4>得到头条内容</h4>
+        <span>接口：/toutiao</span><br/>
+        <span>请求：get</span><br/>
+      
+
+         成功返回值：
+              
+              array[object];
+            }
+        错误返回值:{
+                    status:1,
+                    info:'error',
+                    message:'数据库错误'
+            }    
+            ); 
+
+
+<h4>得到轮播图</h4>
+        <span>接口：/lun</span><br/>
+        <span>请求：get</span><br/>
+      
+
+         成功返回值：
+              
+              array[object];
+            }
+        错误返回值:{
+                    status:1,
+                    info:'error',
+                    message:'数据库错误'
+            }    
+            ); 
+            
 </body>

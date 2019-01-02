@@ -55,3 +55,21 @@ exports.getNews = function(req,res){
        
     })
  }
+ exports.fileSearch = function(req,res){
+     var name = req.query.name;
+    //  con.query(`SELECT * FROM learnFile WHERE file_name LIKE '%${name}%'`,[name],(err,result)=>{
+   
+     con.query('select * from learnFile where file_name like'+con.escape("%"+name+"%"),[name],(err,result)=>{
+        if(err){
+            res.send({
+                status:1,
+                info:'error',
+                message:'服务器连接错误'
+            })
+        }else{
+           
+                res.json(result);
+
+        }
+     })
+ }
